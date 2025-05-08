@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,9 +64,6 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="bg-primary text-foreground hover:bg-primary/90 btn-hover-expand btn-glow">
-            Sign Up
-          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -96,9 +92,6 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-primary text-foreground hover:bg-primary/90 mt-2 btn-glow">
-              Sign Up
-            </Button>
           </div>
         </div>
       )}

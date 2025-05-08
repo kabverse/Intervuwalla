@@ -63,26 +63,26 @@ const Index = () => {
         <Hero />
         
         {/* Registration Banner */}
-        <div className="py-6 bg-primary/20 backdrop-blur-md">
+        <div className="py-6 bg-primary/10 backdrop-blur-md">
           <div className="container">
             <div className="flex flex-col md:flex-row items-center justify-between rounded-xl glass-effect p-6 animate-float">
               <div className="flex items-center mb-4 md:mb-0">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80"
+                  src="/lovable-uploads/f0e019fb-c25f-4348-abaf-73f954784463.png"
                   alt="Anil Gupta"
                   className="h-16 w-16 rounded-full object-cover border-2 border-primary mr-4"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-gradient">Workshop Registration</h3>
-                  <p className="text-muted-foreground">Join Anil Gupta's exclusive interview preparation workshop</p>
+                  <h3 className="text-xl font-semibold text-gradient-blue-yellow">Workshop Registration</h3>
+                  <p className="text-foreground/70">Join Anil Gupta's exclusive interview preparation workshop</p>
                   <div className="mt-1 flex items-center">
-                    <span className="text-lg font-bold text-primary">₹199</span>
-                    <span className="text-xs text-muted-foreground ml-2">per person</span>
+                    <span className="text-lg font-bold text-[hsl(var(--yellow))]">₹199</span>
+                    <span className="text-xs text-foreground/70 ml-2">per person</span>
                   </div>
                 </div>
               </div>
               <Button 
-                className="bg-primary text-foreground hover:bg-primary/90 btn-hover-expand btn-glow animate-pulse-soft"
+                className="bg-primary text-white hover:bg-primary/90 btn-hover-expand btn-glow animate-pulse-soft"
                 size="lg"
                 onClick={() => window.location.href = '/workshops'}
               >
@@ -96,10 +96,10 @@ const Index = () => {
         <section className="section-padding bg-background">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="heading-2 mb-4 text-gradient animate-pulse-soft">
+              <h2 className="heading-2 mb-4 text-gradient-blue-yellow animate-pulse-soft">
                 Popular <span className="text-shimmer">Courses</span>
               </h2>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-foreground/80 text-lg">
                 Join thousands of professionals who have transformed their careers with our specialized interview courses.
               </p>
             </div>

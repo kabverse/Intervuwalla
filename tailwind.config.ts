@@ -57,6 +57,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// New added color
+				yellow: {
+					DEFAULT: 'hsl(var(--yellow))',
+					foreground: 'hsl(var(--yellow-foreground))'
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
