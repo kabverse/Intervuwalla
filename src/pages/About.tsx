@@ -32,27 +32,6 @@ const About = () => {
       label: "Student Rating"
     }
   ];
-  
-  const team = [
-    {
-      name: "Rajiv Mehta",
-      role: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-      bio: "Former HR Director at Microsoft with 15+ years of interview expertise."
-    },
-    {
-      name: "Ananya Desai",
-      role: "Technical Training Director",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
-      bio: "Ex-Google engineer who has interviewed 500+ candidates."
-    },
-    {
-      name: "Karan Singh",
-      role: "Career Coach",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-      bio: "Certified career coach specializing in career transitions."
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -128,48 +107,6 @@ const About = () => {
                   <p className="text-muted-foreground">
                     {stat.label}
                   </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        
-        {/* Team Section */}
-        <section className="py-16 md:py-24">
-          <div className="container">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="heading-2 mb-4">
-                Our <span className="text-primary">Team</span>
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                Meet the experts behind Intervuwalla who bring decades of industry and interview experience.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all group animate-fade-in stagger-item"
-                >
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-display font-semibold mb-1 group-hover:text-primary transition-colors">
-                      {member.name}
-                    </h3>
-                    <p className="text-primary font-medium text-sm mb-3">
-                      {member.role}
-                    </p>
-                    <p className="text-muted-foreground">
-                      {member.bio}
-                    </p>
-                  </div>
                 </div>
               ))}
             </div>

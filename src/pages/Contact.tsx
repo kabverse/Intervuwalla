@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Mail, Phone, MapPin, MessageSquare, Send, CheckCircle, Instagram, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Mail, Phone, MessageSquare, Send, CheckCircle, Instagram, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
@@ -114,20 +114,6 @@ const Contact = () => {
                       <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">
                         +91 98765 43210
                       </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="p-3 rounded-full bg-primary/10 mr-4">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Address</h3>
-                      <address className="text-muted-foreground not-italic">
-                        123 Education Street<br />
-                        Bangalore, Karnataka<br />
-                        India - 560001
-                      </address>
                     </div>
                   </div>
                 </div>
@@ -269,22 +255,6 @@ const Contact = () => {
                     </Button>
                   </div>
                 </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Map Section */}
-        <section className="py-16 bg-primary/5">
-          <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md">
-                <div className="aspect-[16/9] bg-gray-200">
-                  {/* Google Map would go here - placeholder for now */}
-                  <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                    Interactive Map Would Appear Here
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ import { toast } from "sonner";
 interface Workshop {
   id: string;
   title: string;
-  date: string;
+  dates: string[];
   time: string;
   location: string;
   capacity: number;
@@ -23,7 +23,7 @@ interface RegistrationModalProps {
 }
 
 // Simulating payment integration - In a real app, you would integrate with Razorpay or another payment gateway
-const simulatePayment = async (amount: number) => {
+const simulatePayment = async (amount: number, userData: any) => {
   // Simulate API call delay
   await new Promise(resolve => setTimeout(resolve, 1500));
   
@@ -38,7 +38,16 @@ const simulatePayment = async (amount: number) => {
     id: `pay_${Math.random().toString(36).substr(2, 9)}`,
     amount,
     status: 'successful',
+    userData,
   };
+};
+
+// Simulate sending confirmation email
+const sendConfirmationEmail = async (email: string, name: string, workshopTitle: string) => {
+  console.log(`Sending confirmation email to ${email} for ${workshopTitle}`);
+  // In a real app, this would call an API or webhook to send an email
+  await new Promise(resolve => setTimeout(resolve, 800));
+  return true;
 };
 
 const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, workshop }) => {
@@ -46,6 +55,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
     name: '',
     email: '',
     phone: '',
+    company: '', // New field for company/college
     attendees: 1,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -69,7 +79,21 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
     try {
       // Process payment
       const total = formData.attendees * 199;
-      const payment = await simulatePayment(total);
+      
+      // This would be replaced with actual Razorpay integration
+      const payment = await simulatePayment(total, {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+      });
+      
+      // Send confirmation email with workshop details and WhatsApp group link
+      await sendConfirmationEmail(
+        formData.email,
+        formData.name,
+        workshop.title
+      );
       
       // Process successful payment
       setIsSuccess(true);
@@ -79,11 +103,6 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
         description: `You've registered for ${workshop.title}`,
         duration: 5000,
       });
-
-      // In a real app, you would:
-      // 1. Send confirmation email
-      // 2. Add user to WhatsApp group
-      // 3. Store registration in database
       
       // Reset after showing success
       setTimeout(() => {
@@ -93,6 +112,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
           name: '',
           email: '',
           phone: '',
+          company: '',
           attendees: 1,
         });
         setPaymentStep(1);
@@ -148,7 +168,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-4 w-4 mr-2 text-green-500 flex-shrink-0 mt-0.5" />
-                  <span>You'll receive an invite to our private WhatsApp group</span>
+                  <span>Join our private WhatsApp group for updates and materials</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-4 w-4 mr-2 text-green-500 flex-shrink-0 mt-0.5" />
@@ -174,7 +194,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
                 <div className="space-y-2">
                   <div className="flex items-center">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>{workshop.date}</span>
+                    <span>Twice Weekly: {workshop.dates.join(' & ')}</span>
                   </div>
                   <div className="flex items-center">
                     <Clock className="h-4 w-4 mr-2" />
@@ -230,6 +250,18 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
                         className="w-full px-3 py-2 bg-background/50 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
                         placeholder="Your phone number"
                         required
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium text-foreground/80 mb-1">College/Company (Optional)</label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="w-full px-3 py-2 bg-background/50 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                        placeholder="Where you work or study"
                       />
                     </div>
                     
@@ -330,7 +362,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
                       </Button>
                       
                       <p className="text-xs text-center text-muted-foreground mt-3">
-                        Secure payment. Your credit card information is encrypted.
+                        Secure payment processing. Your card information is encrypted.
                       </p>
                     </div>
                   </form>

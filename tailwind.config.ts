@@ -57,7 +57,11 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// New added color
+				// Colors used directly in the codebase
+				intervuwalla: {
+					blue: '#2e5ddd',
+					yellow: '#facf3d',
+				},
 				yellow: {
 					DEFAULT: 'hsl(var(--yellow))',
 					foreground: 'hsl(var(--yellow-foreground))'

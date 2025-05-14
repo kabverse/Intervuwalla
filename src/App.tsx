@@ -10,8 +10,8 @@ import Courses from "./pages/Courses";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import Workshops from "./pages/Workshops"; // We'll need to create this page
-import Blog from "./pages/Blog"; // We'll need to create this page
+import Workshops from "./pages/Workshops";
+import OurMentor from "./pages/OurMentor";
 
 // Create a client
 const queryClient = new QueryClient();
@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/workshops" element={<Workshops />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/our-mentor" element={<OurMentor />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

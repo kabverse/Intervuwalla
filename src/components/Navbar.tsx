@@ -27,7 +27,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Programs", path: "/courses" },
     { name: "Workshops", path: "/workshops" },
-    { name: "Blog", path: "/blog" },
+    { name: "Our Mentor", path: "/our-mentor" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -44,9 +44,11 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-display font-bold text-foreground">
-            <span className="text-gradient animate-pulse-soft">Intervu</span>walla
-          </span>
+          <img 
+            src="/lovable-uploads/c4ba9108-0931-4617-b29f-ea6798196049.png" 
+            alt="Intervuwalla Logo" 
+            className="h-10 md:h-12"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -57,8 +59,8 @@ const Navbar = () => {
               to={link.path}
               className={`text-sm font-medium transition-colors ${
                 isActive(link.path)
-                  ? 'text-primary font-semibold'
-                  : 'text-foreground/80 hover:text-primary'
+                  ? 'text-[#60b7ff] font-semibold'
+                  : 'text-foreground/80 hover:text-[#60b7ff]'
               }`}
             >
               {link.name}
@@ -77,7 +79,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg shadow-md animate-slide-in-bottom border-b border-white/5">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg shadow-md border-b border-white/5">
           <div className="container py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
@@ -85,8 +87,8 @@ const Navbar = () => {
                 to={link.path}
                 className={`text-base font-medium px-4 py-2 rounded-md transition-colors ${
                   isActive(link.path)
-                    ? 'text-primary bg-primary/5'
-                    : 'text-foreground/80 hover:text-primary hover:bg-primary/5'
+                    ? 'text-[#60b7ff] bg-[#60b7ff]/5'
+                    : 'text-foreground/80 hover:text-[#60b7ff] hover:bg-[#60b7ff]/5'
                 }`}
               >
                 {link.name}

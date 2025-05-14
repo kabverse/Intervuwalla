@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CourseCard, { CourseProps } from '@/components/CourseCard';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Courses = () => {
   useEffect(() => {
@@ -59,11 +62,17 @@ const Courses = () => {
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="heading-1 mb-6 animate-fade-in">
-                Our <span className="text-primary">Courses</span>
+                Our <span className="text-gradient-blue-yellow animate-pulse-soft">Premium Programs</span>
               </h1>
               <p className="text-xl text-foreground/80 mb-8 animate-fade-in">
                 Specialized courses designed to help you excel in every aspect of the interview process.
               </p>
+              <Link to="/workshops">
+                <Button className="bg-primary text-white hover:bg-primary/90 btn-glow rounded-full">
+                  Start with our ₹199 Workshop
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
@@ -75,6 +84,26 @@ const Courses = () => {
               {courses.map(course => (
                 <CourseCard key={course.id} {...course} />
               ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Workshop Callout */}
+        <section className="py-12 bg-primary/5 mb-16">
+          <div className="container">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="heading-2 mb-4 text-gradient-blue-yellow">
+                Try Before You Buy
+              </h2>
+              <p className="text-lg mb-8">
+                Join our affordable ₹199 workshop to get a taste of our teaching style and curriculum. It's the perfect way to see if our programs are right for you.
+              </p>
+              <Link to="/workshops">
+                <Button className="bg-[hsl(var(--yellow))] hover:bg-[hsl(var(--yellow))]/90 text-black rounded-full animate-pulse-soft">
+                  Register for Workshop
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
