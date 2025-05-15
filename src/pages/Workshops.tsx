@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { ArrowRight, Calendar, CheckCircle } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import WorkshopsComponent from '@/components/Workshops';
@@ -10,6 +10,12 @@ const WorkshopsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const registrationRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollToRegistration = () => {
+    registrationRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const benefits = [
     "Interactive learning with industry experts",
@@ -45,6 +51,7 @@ const WorkshopsPage = () => {
               <Button 
                 size="lg" 
                 className="bg-primary text-white hover:bg-primary/90 rounded-full btn-hover-expand"
+                onClick={scrollToRegistration}
               >
                 Register Now
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -145,7 +152,9 @@ const WorkshopsPage = () => {
         </section>
         
         {/* Workshop Listings */}
-        <WorkshopsComponent />
+        <div ref={registrationRef}>
+          <WorkshopsComponent />
+        </div>
       </main>
       
       <Footer />
