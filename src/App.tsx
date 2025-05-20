@@ -9,7 +9,7 @@ import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/404";
 import Workshops from "./pages/Workshops";
 import OurMentor from "./pages/OurMentor";
 import ProgramDetail from "./pages/ProgramDetail";
