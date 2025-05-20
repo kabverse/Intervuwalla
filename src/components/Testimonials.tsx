@@ -9,7 +9,6 @@ interface Testimonial {
   name: string;
   role: string;
   company: string;
-  image: string;
 }
 
 const Testimonials = () => {
@@ -19,40 +18,35 @@ const Testimonials = () => {
       quote: "Intervuwalla helped me transform my interview skills. I got 3 job offers after completing their program!",
       name: "Aarav Sharma",
       role: "Software Engineer",
-      company: "Microsoft",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      company: "Microsoft"
     },
     {
       id: 2,
       quote: "The mock interviews and feedback sessions were invaluable. I felt so prepared walking into my actual interviews.",
       name: "Priya Patel",
       role: "Product Manager",
-      company: "Amazon",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      company: "Amazon"
     },
     {
       id: 3,
       quote: "I was struggling with technical interviews until I found Intervuwalla. Their structured approach made all the difference.",
       name: "Vikram Malhotra",
       role: "Data Scientist",
-      company: "Google",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      company: "Google"
     },
     {
       id: 4,
       quote: "Hands down the coolest professor at SOIL! Your real-world CRM and FinTech lessons (who can forget the farmer creditworthiness exercise!) were engaging, practical, and packed with life lessons. Thank you for keeping it so real.",
       name: "Shivam Sood",
       role: "PGPM STUDENT AT SOIL",
-      company: "IT ANALYST",
-      image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      company: "IT ANALYST"
     },
     {
       id: 5,
       quote: "Thank you so much for your mentorship and guidance, I enjoyed your CRM and fintech classes so much and learned a lot! The way you engaged with students is commendable!! Thank you for motivating me when my morale was sinking 2000 ft under water!! You are an amazing teacher and very generous person.",
       name: "Shrey Raj",
       role: "PGPM ANALYTICS",
-      company: "Healthcare Operations | KMC'19",
-      image: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      company: "Healthcare Operations | KMC'19"
     }
   ];
 
@@ -104,29 +98,15 @@ const Testimonials = () => {
                   idx === activeIndex ? 'opacity-100' : 'opacity-0 absolute inset-0'
                 }`}
               >
-                <div className="md:flex items-center gap-8">
-                  <div className="mb-6 md:mb-0 md:w-1/3 flex-shrink-0">
-                    <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">
-                      <img 
-                        src={testimonial.image} 
-                        alt={testimonial.name} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="md:w-2/3">
-                    <blockquote className="text-xl md:text-2xl italic text-gray-800 mb-6">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    
-                    <div>
-                      <p className="font-semibold text-lg">{testimonial.name}</p>
-                      <p className="text-muted-foreground">
-                        {testimonial.role}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
+                <blockquote className="text-xl md:text-2xl italic text-gray-800 mb-6 text-center">
+                  "{testimonial.quote}"
+                </blockquote>
+                
+                <div className="text-center">
+                  <p className="font-semibold text-lg">{testimonial.name}</p>
+                  <p className="text-muted-foreground">
+                    {testimonial.role}, {testimonial.company}
+                  </p>
                 </div>
               </div>
             ))}

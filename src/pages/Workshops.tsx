@@ -105,7 +105,7 @@ const WorkshopsPage = () => {
               <div className="relative order-1 md:order-2">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl animate-float">
                   <img 
-                    src="/lovable-uploads/f0e019fb-c25f-4348-abaf-73f954784463.png" 
+                    src="/images/f0e019fb-c25f-4348-abaf-73f954784463.png" 
                     alt="Anil Gupta" 
                     className="w-full h-auto"
                   />
@@ -119,33 +119,6 @@ const WorkshopsPage = () => {
                 </div>
                 
                 <div className="absolute -right-6 -bottom-6 -z-10 w-full h-full rounded-2xl bg-primary/10"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        {/* Featured Testimonial */}
-        <section className="py-16 bg-primary/5">
-          <div className="container">
-            <div className="max-w-4xl mx-auto glass-card p-8 md:p-12 relative overflow-hidden bg-white/5 backdrop-blur-md border border-white/10">
-              <div className="absolute top-0 left-0 w-20 h-20 text-8xl text-primary/10 font-serif">"</div>
-              
-              <div className="relative z-10">
-                <p className="text-xl md:text-2xl font-medium text-foreground/90 mb-6">
-                  Anil's workshop completely changed my approach to interviews. The techniques we learned were immediately applicable and helped me secure an offer from my dream company within weeks!
-                </p>
-                
-                <div className="flex items-center">
-                  <img 
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80" 
-                    alt="Priya Sharma" 
-                    className="h-12 w-12 rounded-full object-cover mr-4 border border-primary"
-                  />
-                  <div>
-                    <p className="font-semibold">Priya Sharma</p>
-                    <p className="text-sm text-foreground/70">Product Manager at Google</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -65,7 +65,7 @@ const Hero = () => {
             
             <div className="flex items-center gap-3 p-3 rounded-xl glass-effect max-w-md animate-float">
               <img
-                src="/lovable-uploads/f0e019fb-c25f-4348-abaf-73f954784463.png"
+                src="/images/f0e019fb-c25f-4348-abaf-73f954784463.png"
                 alt="Anil Gupta"
                 className="h-12 w-12 rounded-full object-cover border-2 border-[#2e5ddd]"
               />
@@ -81,7 +81,7 @@ const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl animate-float">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#2e5ddd]/30 to-transparent mix-blend-overlay z-10"></div>
               <img 
-                src="/lovable-uploads/f0e019fb-c25f-4348-abaf-73f954784463.png" 
+                src="/images/f0e019fb-c25f-4348-abaf-73f954784463.png" 
                 alt="Anil Gupta" 
                 className="w-full h-auto object-cover"
               />

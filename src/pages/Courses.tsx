@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -74,7 +75,7 @@ const Courses = () => {
       description: "Specialized preparation for academic and business school interviews",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-blue-500/20 to-blue-600/20",
-      image: "/lovable-uploads/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
       programs: [
         { 
           id: "u1", 
@@ -108,7 +109,7 @@ const Courses = () => {
       description: "Personalized guidance for career development and interview excellence",
       icon: <Users className="h-8 w-8" />,
       color: "from-yellow-500/20 to-yellow-600/20",
-      image: "/lovable-uploads/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
       programs: [
         { 
           id: "c1", 
@@ -134,7 +135,7 @@ const Courses = () => {
       description: "Professional development programs for organizations and teams",
       icon: <Briefcase className="h-8 w-8" />,
       color: "from-primary/20 to-indigo-600/20",
-      image: "/lovable-uploads/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
       programs: [
         { 
           id: "ct1", 
@@ -341,7 +342,7 @@ const Courses = () => {
                 
                 <div className="relative overflow-hidden rounded-2xl shadow-xl">
                   <img 
-                    src="/lovable-uploads/25bc291b-fb38-426e-a2a5-80dec983cf49.png" 
+                    src="/images/25bc291b-fb38-426e-a2a5-80dec983cf49.png" 
                     alt="Virtual Training Session" 
                     className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                   />

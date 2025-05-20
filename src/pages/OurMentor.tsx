@@ -8,49 +8,49 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 const workshopImages = [
   {
     id: 1,
-    src: "/lovable-uploads/workshop1.png",
+    src: "/images/workshop1.png",
     alt: "Anil Gupta leading a workshop session",
     span: "col-span-1 md:col-span-2"
   },
   {
     id: 2,
-    src: "/lovable-uploads/workshop2.png",
+    src: "/images/workshop2.png",
     alt: "Interactive session with students",
     span: "col-span-1"
   },
   {
     id: 3,
-    src: "/lovable-uploads/workshop3.png", 
+    src: "/images/workshop3.png", 
     alt: "Corporate training workshop",
     span: "col-span-1"
   },
   {
     id: 4,
-    src: "/lovable-uploads/workshop4.png",
+    src: "/images/workshop4.png",
     alt: "Panel discussion led by Anil Gupta",
     span: "col-span-1 md:col-span-2"
   },
   {
     id: 5,
-    src: "/lovable-uploads/workshop5.png",
+    src: "/images/workshop5.png",
     alt: "Workshop at a leading corporate",
     span: "col-span-1"
   },
   {
     id: 6,
-    src: "/lovable-uploads/workshop6.png",
+    src: "/images/workshop6.png",
     alt: "Student interaction session",
     span: "col-span-1 md:col-span-2"
   },
   {
     id: 7,
-    src: "/lovable-uploads/workshop7.png",
+    src: "/images/workshop7.png",
     alt: "Anil Gupta giving a keynote",
     span: "col-span-1"
   },
   {
     id: 8,
-    src: "/lovable-uploads/workshop8.png",
+    src: "/images/workshop8.png",
     alt: "Group mentoring session",
     span: "col-span-1"
   }
@@ -83,7 +83,7 @@ const OurMentor = () => {
                 <div className="md:w-1/3">
                   <div className="rounded-xl overflow-hidden">
                     <img 
-                      src="/lovable-uploads/f0e019fb-c25f-4348-abaf-73f954784463.png" 
+                      src="/images/f0e019fb-c25f-4348-abaf-73f954784463.png" 
                       alt="Anil Gupta" 
                       className="w-full h-auto"
                     />

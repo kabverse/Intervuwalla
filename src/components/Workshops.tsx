@@ -29,7 +29,7 @@ const Workshops = () => {
       location: "Virtual",
       capacity: 50,
       spotsLeft: 12,
-      imageUrl: "/lovable-uploads/f0e019fb-c25f-4348-abaf-73f954784463.png",
+      imageUrl: "/images/f0e019fb-c25f-4348-abaf-73f954784463.png",
       topics: [
         "Effective communication",
         "Technical interview preparation",

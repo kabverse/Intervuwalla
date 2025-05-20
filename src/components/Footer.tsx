@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="inline-block mb-6">
               <img 
-                src="/lovable-uploads/c4ba9108-0931-4617-b29f-ea6798196049.png" 
+                src="/images/c4ba9108-0931-4617-b29f-ea6798196049.png" 
                 alt="Intervuwalla Logo" 
                 className="h-12"
               />

@@ -69,7 +69,7 @@ const Index = () => {
             <div className="flex flex-col md:flex-row items-center justify-between rounded-xl glass-effect p-6">
               <div className="flex items-center mb-4 md:mb-0">
                 <img
-                  src="/lovable-uploads/f0e019fb-c25f-4348-abaf-73f954784463.png"
+                  src="/images/f0e019fb-c25f-4348-abaf-73f954784463.png"
                   alt="Anil Gupta"
                   className="h-16 w-16 rounded-full object-cover border-2 border-[#2e5ddd] mr-4"
                 />

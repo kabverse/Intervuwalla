@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/c4ba9108-0931-4617-b29f-ea6798196049.png" 
+            src="/images/c4ba9108-0931-4617-b29f-ea6798196049.png" 
             alt="Intervuwalla Logo" 
             className="h-10 md:h-12"
           />
