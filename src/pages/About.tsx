@@ -63,7 +63,7 @@ const About = () => {
               <div className="relative animate-fade-in">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl animate-float">
                   <img 
-                    src="public/lovable-uploads/logo.png" 
+                    src="./lovable-uploads/logo.png" 
                     alt="Our story" 
                     className="w-full h-auto object-cover"
                   />

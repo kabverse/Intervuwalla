@@ -1,6 +1,7 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface Testimonial {
   id: number;
@@ -36,10 +37,35 @@ const Testimonials = () => {
       role: "Data Scientist",
       company: "Google",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    },
+    {
+      id: 4,
+      quote: "Hands down the coolest professor at SOIL! Your real-world CRM and FinTech lessons (who can forget the farmer creditworthiness exercise!) were engaging, practical, and packed with life lessons. Thank you for keeping it so real.",
+      name: "Shivam Sood",
+      role: "PGPM STUDENT AT SOIL",
+      company: "IT ANALYST",
+      image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+    },
+    {
+      id: 5,
+      quote: "Thank you so much for your mentorship and guidance, I enjoyed your CRM and fintech classes so much and learned a lot! The way you engaged with students is commendable!! Thank you for motivating me when my morale was sinking 2000 ft under water!! You are an amazing teacher and very generous person.",
+      name: "Shrey Raj",
+      role: "PGPM ANALYTICS",
+      company: "Healthcare Operations | KMC'19",
+      image: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
     }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const isMobile = useIsMobile();
+  
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
 
   const nextTestimonial = () => {
     setActiveIndex((current) => (current + 1) % testimonials.length);

@@ -93,7 +93,7 @@ const Features = () => {
             <div className="relative h-full min-h-[300px] rounded-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
               <img 
-                src="./public/lovable-uploads/image.png"
+                src="./lovable-uploads/image.png"
                 alt="Anil Gupta" 
                 className="w-full h-full object-cover"
               />
