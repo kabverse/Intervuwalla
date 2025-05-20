@@ -16,23 +16,23 @@ const Testimonials = () => {
     {
       id: 1,
       quote: "Intervuwalla helped me transform my interview skills. I got 3 job offers after completing their program!",
-      name: "Aarav Sharma",
-      role: "Software Engineer",
-      company: "Microsoft"
+      name: "Kabeer Ghai",
+      role: "Web Developer",
+      company: "Cranberri"
     },
     {
       id: 2,
       quote: "The mock interviews and feedback sessions were invaluable. I felt so prepared walking into my actual interviews.",
-      name: "Priya Patel",
-      role: "Product Manager",
-      company: "Amazon"
+      name: "Kanishk Kataria",
+      role: "Web Developer",
+      company: "OnlyJobs"
     },
     {
       id: 3,
       quote: "I was struggling with technical interviews until I found Intervuwalla. Their structured approach made all the difference.",
-      name: "Vikram Malhotra",
-      role: "Data Scientist",
-      company: "Google"
+      name: "Maitri Jha",
+      role: "Content Writer",
+      company: "CAPS"
     },
     {
       id: 4,

@@ -28,7 +28,7 @@ const CourseCard = ({
   rating, 
   category,
   price,
-  featured = false
+  featured = true
 }: CourseProps) => {
   const [isHovered, setIsHovered] = useState(false);
 

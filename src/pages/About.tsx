@@ -24,7 +24,7 @@ const About = () => {
     {
       icon: <BookOpen className="h-8 w-8 text-primary" />,
       value: "25+",
-      label: "Expert Trainers"
+      label: "Years Of Experience"
     },
     {
       icon: <Heart className="h-8 w-8 text-primary" />,
