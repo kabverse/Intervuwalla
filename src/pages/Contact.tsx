@@ -123,32 +123,18 @@ const Contact = () => {
                   <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
                   <div className="flex space-x-4">
                     <a 
-                      href="#" 
+                      href="https://www.instagram.com/intervuwalla/" 
                       className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-colors border border-gray-200"
                       aria-label="Instagram"
                     >
                       <Instagram className="h-5 w-5" />
                     </a>
                     <a 
-                      href="#" 
-                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-colors border border-gray-200"
-                      aria-label="Twitter"
-                    >
-                      <Twitter className="h-5 w-5" />
-                    </a>
-                    <a 
-                      href="#" 
+                      href="https://www.linkedin.com/company/intervuwalla/" 
                       className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-colors border border-gray-200"
                       aria-label="LinkedIn"
                     >
                       <Linkedin className="h-5 w-5" />
-                    </a>
-                    <a 
-                      href="#" 
-                      className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-foreground hover:bg-primary hover:text-white transition-colors border border-gray-200"
-                      aria-label="Facebook"
-                    >
-                      <Facebook className="h-5 w-5" />
                     </a>
                   </div>
                 </div>
