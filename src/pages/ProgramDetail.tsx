@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -90,6 +89,289 @@ const programsData: Record<string, ProgramData> = {
       { title: "Future of CRM", description: "Emerging trends, AI integration, and predictive customer analytics." }
     ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+  },
+  "technical-interview": {
+    id: "p1",
+    name: "Technical Interview Preparation",
+    desc: "Master technical interviews for software engineering roles with comprehensive preparation on algorithms, data structures, and system design.",
+    modules: 8,
+    audience: "Software engineers, computer science graduates, tech professionals",
+    slug: "technical-interview",
+    category: "Professional Development",
+    duration: "8 weeks",
+    startDate: "May 30, 2025",
+    price: 14999,
+    features: [
+      "In-depth coverage of algorithms and data structures",
+      "System design and architecture principles",
+      "Mock technical interviews with feedback",
+      "Problem-solving techniques and patterns",
+      "Time and space complexity optimization",
+      "Language-specific coding best practices"
+    ],
+    curriculum: [
+      { title: "Interview Fundamentals", description: "Understanding technical interview formats and expectations." },
+      { title: "Data Structures", description: "Arrays, linked lists, trees, graphs, hash tables, and their implementations." },
+      { title: "Algorithm Strategies", description: "Sorting, searching, recursion, and dynamic programming." },
+      { title: "Problem Solving", description: "Breaking down complex problems and developing optimal solutions." },
+      { title: "System Design Basics", description: "Principles of designing scalable distributed systems." },
+      { title: "Database Design", description: "Relational and NoSQL database design considerations." },
+      { title: "Mock Interviews", description: "Realistic interview simulations with industry professionals." },
+      { title: "Final Preparation", description: "Review, optimization, and interview strategy development." }
+    ],
+    image: "/images/b88ae8ac-0388-4789-a31d-77d5248a39bb.png"
+  },
+  "behavioral-interview": {
+    id: "p2",
+    name: "Behavioral Interview Mastery",
+    desc: "Learn how to effectively communicate your experience, skills, and cultural fit through structured behavioral interviewing techniques.",
+    modules: 6,
+    audience: "Job seekers across industries, career changers, leadership candidates",
+    slug: "behavioral-interview",
+    category: "Professional Development",
+    duration: "6 weeks",
+    startDate: "June 10, 2025",
+    price: 12999,
+    features: [
+      "STAR method mastery for answering behavioral questions",
+      "Personal branding and storytelling techniques",
+      "Leadership and teamwork scenario preparation",
+      "Conflict resolution and problem-solving frameworks",
+      "Cultural fit demonstration strategies",
+      "Video interview preparation and feedback"
+    ],
+    curriculum: [
+      { title: "Behavioral Interview Fundamentals", description: "Understanding the psychology and purpose behind behavioral questions." },
+      { title: "STAR Method", description: "Situation, Task, Action, Result framework for structured responses." },
+      { title: "Personal Branding", description: "Crafting your professional narrative and communicating your unique value." },
+      { title: "Leadership & Teamwork", description: "Demonstrating collaborative skills and leadership potential." },
+      { title: "Problem Solving & Resilience", description: "Showcasing your approach to challenges and setbacks." },
+      { title: "Final Preparation", description: "Mock interviews, feedback, and personalized improvement strategies." }
+    ],
+    image: "/images/f0e019fb-c25f-4348-abaf-73f954784463.png"
+  },
+  "resume-optimization": {
+    id: "p3",
+    name: "Resume Optimization",
+    desc: "Transform your resume into a powerful marketing tool that highlights your achievements and gets past Applicant Tracking Systems.",
+    modules: 4,
+    audience: "Job seekers, career changers, professionals seeking advancement",
+    slug: "resume-optimization",
+    category: "Professional Development",
+    duration: "4 weeks",
+    startDate: "May 15, 2025",
+    price: 9999,
+    features: [
+      "ATS optimization techniques",
+      "Industry-specific keyword analysis",
+      "Achievement-focused content development",
+      "Professional formatting and design",
+      "LinkedIn profile alignment",
+      "Personalized resume reviews and feedback"
+    ],
+    curriculum: [
+      { title: "Resume Fundamentals", description: "Modern resume structure, formats, and best practices." },
+      { title: "ATS Optimization", description: "Keyword optimization and formatting for applicant tracking systems." },
+      { title: "Achievement Highlighting", description: "Transforming responsibilities into measurable achievements." },
+      { title: "Final Optimization", description: "Personalized review, feedback, and final polishing." }
+    ],
+    image: "/images/4dc0248d-9274-4883-97c4-872cb9c743d3.png"
+  },
+  "business-communication": {
+    id: "u1",
+    name: "Business Communication",
+    desc: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
+    modules: 7,
+    audience: "Professionals from Academia and Corporate background",
+    slug: "business-communication",
+    category: "University / MBA Programs",
+    duration: "8 weeks",
+    startDate: "June 1, 2025",
+    price: 17999,
+    features: [
+      "Effective written communication strategies",
+      "Advanced presentation and verbal communication techniques",
+      "Cross-cultural communication frameworks",
+      "Business etiquette and professional image development",
+      "Strategic negotiation communication",
+      "Digital communication best practices"
+    ],
+    curriculum: [
+      { title: "Business Writing Essentials", description: "Professional formats, persuasive techniques, and clarity in written communication." },
+      { title: "Presentation Mastery", description: "Structuring impactful presentations and confident delivery methods." },
+      { title: "Interpersonal Communication", description: "Active listening, feedback techniques, and relationship building." },
+      { title: "Cross-Cultural Communication", description: "Navigating cultural differences and international business protocols." },
+      { title: "Ethical Communication", description: "Transparency, integrity, and responsible messaging in business contexts." },
+      { title: "Crisis Communication", description: "Strategic response frameworks and reputation management." },
+      { title: "Digital Communication", description: "Email etiquette, virtual meetings, and social media professionalism." }
+    ],
+    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+  },
+  "career-coaching": {
+    id: "c1",
+    name: "Career Coaching & Mentoring",
+    desc: "Detailed understanding of career development strategies, decision-making & problem-solving, goal setting, and personal branding.",
+    modules: 9,
+    audience: "Students, job seekers, career changers and professionals",
+    slug: "career-coaching",
+    category: "Coaching + Mentoring for Students",
+    duration: "12 weeks",
+    startDate: "May 20, 2025",
+    price: 19999,
+    features: [
+      "Personalized career path development",
+      "Professional goal setting and achievement strategies",
+      "Decision-making frameworks for career advancement",
+      "Personal branding and professional image development",
+      "Networking and relationship building techniques",
+      "Work-life balance optimization"
+    ],
+    curriculum: [
+      { title: "Career Assessment", description: "Self-assessment tools, strengths identification, and career alignment." },
+      { title: "Strategic Goal Setting", description: "SMART goals, career roadmaps, and milestone planning." },
+      { title: "Decision Making", description: "Critical thinking, opportunity evaluation, and career pivots." },
+      { title: "Personal Branding", description: "Professional identity, online presence, and value proposition." },
+      { title: "Networking Strategy", description: "Relationship building, professional connections, and community engagement." },
+      { title: "Leadership Development", description: "Leadership styles, team management, and influence cultivation." },
+      { title: "Work-Life Integration", description: "Balance strategies, priority management, and boundary setting." },
+      { title: "Career Advancement", description: "Promotion strategies, negotiation skills, and upward mobility." },
+      { title: "Continuous Learning", description: "Skill development, knowledge acquisition, and lifelong learning plans." }
+    ],
+    image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
+  },
+  "interview-preparation": {
+    id: "c2",
+    name: "Interview Preparation Program",
+    desc: "Guidance on acing job interviews through SWOT analysis, answer structuring, rapport forming, and managing interview anxiety.",
+    modules: 13,
+    audience: "Job seekers, career changers, students and professionals",
+    slug: "interview-preparation",
+    category: "Coaching + Mentoring for Students",
+    duration: "10 weeks",
+    startDate: "June 5, 2025",
+    price: 17999,
+    features: [
+      "Comprehensive interview preparation strategies",
+      "Personal SWOT analysis techniques",
+      "Structured answer frameworks for common questions",
+      "Rapport building and first impression optimization",
+      "Anxiety management and confidence boosting methods",
+      "Mock interview practice with personalized feedback"
+    ],
+    curriculum: [
+      { title: "Interview Psychology", description: "Understanding interviewer perspectives and selection criteria." },
+      { title: "Personal SWOT Analysis", description: "Identifying strengths, weaknesses, opportunities, and threats." },
+      { title: "Research Methods", description: "Investigating companies, roles, and industry trends." },
+      { title: "Question Frameworks", description: "Preparing for behavioral, technical, and situational questions." },
+      { title: "Answer Structuring", description: "STAR method and other effective response techniques." },
+      { title: "First Impressions", description: "Professional appearance, body language, and greeting protocols." },
+      { title: "Rapport Building", description: "Connection strategies and relationship development." },
+      { title: "Effective Storytelling", description: "Engaging narrative construction and delivery." },
+      { title: "Difficult Questions", description: "Navigating challenging or unexpected inquiries." },
+      { title: "Question Formulation", description: "Developing insightful questions to ask interviewers." },
+      { title: "Anxiety Management", description: "Stress reduction techniques and confidence building." },
+      { title: "Virtual Interviews", description: "Technology mastery and online presentation skills." },
+      { title: "Post-Interview Protocol", description: "Follow-up communications and assessment reflection." }
+    ],
+    image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
+  },
+  "leadership-development": {
+    id: "ct1",
+    name: "Leadership Development",
+    desc: "Executive coaching for senior management to enhance leadership capabilities.",
+    modules: 10,
+    audience: "Mid to senior-level managers and executives",
+    slug: "leadership-development",
+    category: "Corporate Training",
+    duration: "14 weeks",
+    startDate: "July 10, 2025",
+    price: 34999,
+    features: [
+      "Strategic leadership vision development",
+      "Executive presence and influential communication",
+      "Team building and organizational culture shaping",
+      "Change management and transformation leadership",
+      "Decision-making frameworks for complex scenarios",
+      "Personal leadership style optimization"
+    ],
+    curriculum: [
+      { title: "Leadership Foundations", description: "Core principles, styles, and the evolution of leadership theory." },
+      { title: "Strategic Vision", description: "Developing and articulating compelling organizational direction." },
+      { title: "Executive Presence", description: "Authority projection, credibility building, and impression management." },
+      { title: "Influential Communication", description: "Persuasive messaging, stakeholder engagement, and storytelling." },
+      { title: "Team Development", description: "Building high-performance teams and managing diverse talents." },
+      { title: "Organizational Culture", description: "Culture assessment, design, and transformation strategies." },
+      { title: "Change Leadership", description: "Leading through uncertainty, resistance management, and agile adaptation." },
+      { title: "Executive Decision-Making", description: "Analytical frameworks, ethical considerations, and decisive action." },
+      { title: "Emotional Intelligence", description: "Self-awareness, relationship management, and empathetic leadership." },
+      { title: "Sustainable Leadership", description: "Work-life integration, burnout prevention, and legacy planning." }
+    ],
+    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
+  },
+  "team-communication": {
+    id: "ct2",
+    name: "Team Communication",
+    desc: "Workshops focused on improving cross-functional team communication and collaboration.",
+    modules: 8,
+    audience: "Teams and departments within corporate organizations",
+    slug: "team-communication",
+    category: "Corporate Training",
+    duration: "8 weeks",
+    startDate: "June 20, 2025",
+    price: 24999,
+    features: [
+      "Cross-functional collaboration frameworks",
+      "Conflict resolution and mediation techniques",
+      "Meeting efficiency and productivity optimization",
+      "Clear messaging and information sharing protocols",
+      "Virtual team communication strategies",
+      "Feedback culture development"
+    ],
+    curriculum: [
+      { title: "Communication Fundamentals", description: "Messaging clarity, channels, and communication styles." },
+      { title: "Cross-Functional Dynamics", description: "Understanding departmental perspectives and collaborative interfaces." },
+      { title: "Effective Meetings", description: "Structuring, facilitating, and maximizing meeting productivity." },
+      { title: "Conflict Resolution", description: "Constructive disagreement, mediation techniques, and solution focus." },
+      { title: "Virtual Communication", description: "Remote collaboration tools, digital etiquette, and engagement strategies." },
+      { title: "Feedback Systems", description: "Constructive feedback frameworks, receptivity, and implementation." },
+      { title: "Information Flow", description: "Knowledge sharing, transparency protocols, and communication architecture." },
+      { title: "Team Alignment", description: "Vision sharing, goal congruence, and collaborative planning." }
+    ],
+    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
+  },
+  "strategic-hiring": {
+    id: "ct3",
+    name: "Strategic Hiring & Talent Management",
+    desc: "Training for HR professionals on identifying and nurturing top talent.",
+    modules: 11,
+    audience: "HR professionals and hiring managers",
+    slug: "strategic-hiring",
+    category: "Corporate Training",
+    duration: "12 weeks",
+    startDate: "August 5, 2025",
+    price: 29999,
+    features: [
+      "Talent acquisition strategy development",
+      "Competency-based interviewing techniques",
+      "Candidate assessment and selection frameworks",
+      "Onboarding program optimization",
+      "Performance management systems",
+      "Succession planning and talent pipeline building"
+    ],
+    curriculum: [
+      { title: "Talent Strategy", description: "Aligning hiring practices with organizational objectives and culture." },
+      { title: "Sourcing Innovation", description: "Creative candidate attraction and diverse talent pool development." },
+      { title: "Competency Frameworks", description: "Identifying, defining, and assessing critical job competencies." },
+      { title: "Interview Excellence", description: "Structured interviewing, bias reduction, and candidate evaluation." },
+      { title: "Assessment Methods", description: "Testing protocols, work samples, and predictive hiring tools." },
+      { title: "Selection Science", description: "Data-driven decision making and predictive success metrics." },
+      { title: "Onboarding Design", description: "Integration systems, knowledge transfer, and early engagement." },
+      { title: "Performance Management", description: "Goal setting, feedback cycles, and development planning." },
+      { title: "Retention Strategies", description: "Engagement drivers, stay interviews, and turnover prevention." },
+      { title: "Succession Planning", description: "Talent review, critical role analysis, and pipeline development." },
+      { title: "Talent Analytics", description: "Hiring metrics, dashboard development, and data-driven improvements." }
+    ],
+    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
   }
 };
 

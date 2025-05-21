@@ -18,41 +18,41 @@ const Index = () => {
 
   const featuredCourses: CourseProps[] = [
     {
-      id: "c1",
-      title: "Master the Technical Interview",
-      description: "Comprehensive preparation for coding interviews at top tech companies.",
-      image: "/images/workshop1.png",
-      duration: "8 weeks",
-      level: "Intermediate",
+      id: "business-communication",
+      title: "Business Communication",
+      description: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      duration: "7 weeks",
+      level: "All Levels",
       students: 1245,
       rating: 4.8,
-      category: "Tech",
-      price: 2999,
+      category: "University / MBA Programs",
+      price: 14999,
       featured: true
     },
     {
-      id: "c2",
-      title: "Behavioral Interview Excellence",
-      description: "Learn to present your experience and skills persuasively in interviews.",
-      image: "/images/workshop2.png",
-      duration: "4 weeks",
+      id: "career-coaching",
+      title: "Career Coaching & Mentoring",
+      description: "Detailed understanding of career development strategies, decision-making & problem-solving, goal setting, and personal branding.",
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      duration: "9 weeks",
       level: "All Levels",
       students: 983,
-      rating: 4.6,
-      category: "Soft Skills",
-      price: 1999
+      rating: 4.7,
+      category: "Coaching + Mentoring",
+      price: 12999
     },
     {
-      id: "c3",
-      title: "Resume & LinkedIn Optimization",
-      description: "Create standout profiles that get you noticed by recruiters and hiring managers.",
-      image: "/images/workshop3.png",
-      duration: "2 weeks",
-      level: "Beginner",
-      students: 1578,
+      id: "leadership-development",
+      title: "Leadership Development",
+      description: "Executive coaching for senior management to enhance leadership capabilities.",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      duration: "10 weeks",
+      level: "Advanced",
+      students: 756,
       rating: 4.9,
-      category: "Career",
-      price: 999
+      category: "Corporate Training",
+      price: 19999
     }
   ];
 

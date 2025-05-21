@@ -50,9 +50,9 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Programs</h3>
             <ul className="space-y-2">
-              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Technical Interview</Link></li>
-              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Behavioral Interview</Link></li>
-              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Resume Optimization</Link></li>
+              <li><Link to="/programs/business-communication" className="text-foreground/70 hover:text-primary">Business Communication</Link></li>
+              <li><Link to="/programs/career-coaching" className="text-foreground/70 hover:text-primary">Career Coaching & Mentoring</Link></li>
+              <li><Link to="/programs/leadership-development" className="text-foreground/70 hover:text-primary">Leadership Development</Link></li>
             </ul>
           </div>
           
@@ -66,7 +66,7 @@ const Footer = () => {
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-2">📱</span>
-                <a href="tel:+918888888888" className="text-foreground/70 hover:text-primary">+91 8888888888</a>
+                <a href="tel:+918888888888" className="text-foreground/70 hover:text-primary">+91 9810000622</a>
               </li>
             </ul>
           </div>

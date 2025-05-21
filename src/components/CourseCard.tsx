@@ -1,7 +1,7 @@
-
 import { useState } from 'react';
 import { Clock, Star, Users, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 export interface CourseProps {
   id: string;
@@ -99,16 +99,18 @@ const CourseCard = ({
             {featured && <span className="ml-2 text-sm line-through text-muted-foreground">₹{Math.floor(price * 1.2)}</span>}
           </div>
           
-          <Button
-            variant="secondary"
-            size="sm"
-            className={`rounded-full group-hover:bg-primary group-hover:text-white transition-colors ${
-              featured ? 'bg-primary text-white' : ''
-            }`}
-          >
-            Enroll
-            <ArrowRight className="ml-1 h-4 w-4" />
-          </Button>
+          <Link to={`/programs/${id}`}>
+            <Button
+              variant="secondary"
+              size="sm"
+              className={`rounded-full group-hover:bg-primary group-hover:text-white transition-colors ${
+                featured ? 'bg-primary text-white' : ''
+              }`}
+            >
+              Learn More
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
