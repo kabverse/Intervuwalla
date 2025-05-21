@@ -76,7 +76,7 @@ const About = () => {
                   Our <span className="text-primary">Story</span>
                 </h2>
                 <p className="text-muted-foreground">
-                  Founded in 2018, Intervuwalla began with a simple observation: most professionals struggle with interviews despite being highly skilled at their jobs. Our founder, Rajiv Mehta, having conducted thousands of interviews at Microsoft, realized there was a gap between talent and presentation.
+                  Founded in 2018, Intervuwalla began with a simple observation: most professionals struggle with interviews despite being highly skilled at their jobs. Our founder, Anil Gupta, having conducted thousands of interviews at Microsoft, realized there was a gap between talent and presentation.
                 </p>
                 <p className="text-muted-foreground">
                   What started as a small workshop series has grown into India's premier interview training platform. Today, we've helped over 12,000 professionals land their dream jobs at top companies worldwide.
