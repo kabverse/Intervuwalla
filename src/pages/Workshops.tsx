@@ -20,10 +20,10 @@ const WorkshopsPage = () => {
   const benefits = [
     "Interactive learning with industry experts",
     "Practical exercises and real-world examples",
-    "Personalized feedback on your approach",
-    "Exclusive resources to take home",
-    "Private community access post-workshop",
-    "Opportunity for follow-up questions"
+    "Structuring interview responses",
+    "Helping with pre- and post- interview strategies",
+    "Crafting resumes and handling negotiations.",
+    "Personalized feedback on your approach"
   ];
 
   return (

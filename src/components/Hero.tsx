@@ -10,9 +10,10 @@ const Hero = () => {
 
   const benefits = [
     "Ace your next interview",
-    "Learn from industry experts",
-    "Interactive mock interviews",
-    "Personalized feedback"
+    "Gain industry-specific skills",
+    "Learn from the experts",
+    "Strategize your career-path",
+    "Get personalised feedback"
   ];
 
   return (

@@ -8,7 +8,6 @@ export interface CourseProps {
   title: string;
   description: string;
   image: string;
-  duration: string;
   level: string;
   students: number;
   rating: number;
@@ -22,7 +21,6 @@ const CourseCard = ({
   title, 
   description, 
   image, 
-  duration, 
   level, 
   students, 
   rating, 
@@ -80,10 +78,6 @@ const CourseCard = ({
         </p>
         
         <div className="flex items-center gap-3 text-xs text-muted-foreground">
-          <div className="flex items-center">
-            <Clock className="w-3.5 h-3.5 mr-1" />
-            {duration}
-          </div>
           <div className="flex items-center">
             <Users className="w-3.5 h-3.5 mr-1" />
             {students} students

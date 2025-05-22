@@ -47,20 +47,20 @@ const programsData: Record<string, ProgramData> = {
     ],
     curriculum: [
       { title: "Introduction to Fintech", description: "Overview of the financial technology ecosystem and its impact on traditional banking." },
-      { title: "Blockchain Fundamentals", description: "Understanding distributed ledger technology and its applications in finance." },
-      { title: "Cryptofinance", description: "Deep dive into cryptocurrencies, tokens, and decentralized finance (DeFi)." },
-      { title: "Lending Technologies", description: "Exploring P2P lending platforms, alternative credit scoring, and automated underwriting." },
-      { title: "Digital Banking", description: "The evolution of online and mobile banking solutions and neobanks." },
-      { title: "Payments Innovation", description: "Modern payment systems, digital wallets, and cross-border transactions." },
-      { title: "Insurtech", description: "Technology disruption in the insurance industry and usage-based models." },
-      { title: "Cybersecurity in Finance", description: "Security protocols, threat detection, and fraud prevention in financial services." },
-      { title: "RegTech Solutions", description: "Regulatory compliance automation, reporting, and risk management." }
+      { title: "Digital Payments Ecosystem", description: "Understanding UPI, IMPS, wallets, QR codes and digital payment business models." },
+      { title: "Lending and Credit Technologies.", description: "Understanding P2P lending, BNPL, and digital lending. Deeper insights into credit scoring using alternative data." },
+      { title: "WealthTech and InsurTech", description: "Understanding robo-advisory, goal-based investing, micro-investment, and digital insurance." },
+      { title: "Blockchain and Cryptofinance", description: "Learning blockchain basics, smart contracts, and DeFi. Understanding crypto exchanges, wallets, and regulation of digital assets in India." },
+      { title: "RegTech, Cybersecurity and Compliance", description: "Understanding KYC/AML automation. Cyber threats in fintech. Regulatory sandboxes and compliance tech." },
+      { title: "Fintech Innovation and Startups", description: "Understanding startup ecosystem and funding trends, business model canvas, incubators, accelerators, and VC interest." },
+      { title: "Future Trends", description: "Embedded finance, neo banking and open banking. Understanding AI/ML application in Fintech. ESG and sustainability in Fintech." },
+      { title: "Group Presentations", description: "Pitching a fintech idea or analysing a real-word case. Final evaluation and feedbacks." }
     ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
   "crm": {
     id: "u3",
-    name: "CRM",
+    name: "Customer Relation Management",
     desc: "Focuses on sales and service automation, customer lifecycle management, campaign management and CRM in marketing.",
     modules: 9,
     audience: "MBA students and professionals from sales & marketing, customer service, banking, startup founders",
@@ -78,15 +78,15 @@ const programsData: Record<string, ProgramData> = {
       "Real-world implementation case studies"
     ],
     curriculum: [
-      { title: "CRM Fundamentals", description: "Introduction to customer relationship management concepts and evolution." },
-      { title: "CRM Strategy", description: "Developing effective customer-centric strategies for business growth." },
-      { title: "Sales Force Automation", description: "Tools and techniques to streamline and optimize sales processes." },
-      { title: "Service Automation", description: "Customer service technologies and support system implementation." },
-      { title: "Customer Lifecycle Management", description: "Understanding and optimizing each stage of the customer journey." },
-      { title: "Campaign Management", description: "Planning, execution and analysis of multi-channel marketing campaigns." },
-      { title: "CRM Analytics", description: "Data-driven insights and performance measurement in CRM." },
-      { title: "CRM Implementation", description: "System selection, deployment strategies and change management." },
-      { title: "Future of CRM", description: "Emerging trends, AI integration, and predictive customer analytics." }
+      { title: "Introduction to CRM", description: "Evolution and fundamentals of CRM and its types. Understanding strategic importance of CRM in modern businesses." },
+      { title: "Customer Lifecycle Management ", description: "Learning customer acquisition, engagement, retention, and loyalty. Insights into CLV (Customer Lifetime Value), churn analysis, CRM metrics and KPIs." },
+      { title: "CRM Technologies & Tools", description: "Overview of leading CRM platforms. Features comparison and selection criteria. Understanding CRM implementation challenges and success factors." },
+      { title: "Sales and Service Automation", description: "Lead management, sales pipeline, and forecasting. Learning customer service automation and ticketing systems. CRM mobile apps and field force management." },
+      { title: "CRM in Marketing and Campaign Management", description: "Email marketing, lead nurturing, and retargeting. Customer segmentation and targeting. Real-life case studies." },
+      { title: "CRM Data & Analytics", description: "Role of big data and predictive analytics in CRM. Dashboards and reporting. AI/ML in CRM." },
+      { title: "Customer Experience and Engagement", description: "Voice of customer (VoC) programs and NPS. Omni channel experience and journey mapping. Understanding behavioural and emotional aspects of CRM" },
+      { title: "CRM Strategy & Implementation", description: "Building a CRM strategy aligned with business goals. Change management and user adoption and measuring CRM ROI." },
+      { title: "Capstone Project / Presentations", description: "Working on CRM case studies or designing CRM strategies for a business along with Final evaluation." }
     ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
@@ -194,16 +194,16 @@ const programsData: Record<string, ProgramData> = {
       "Cross-cultural communication frameworks",
       "Business etiquette and professional image development",
       "Strategic negotiation communication",
-      "Digital communication best practices"
+      "Communication Ethics and Real-World Dilemmas"
     ],
     curriculum: [
-      { title: "Business Writing Essentials", description: "Professional formats, persuasive techniques, and clarity in written communication." },
-      { title: "Presentation Mastery", description: "Structuring impactful presentations and confident delivery methods." },
-      { title: "Interpersonal Communication", description: "Active listening, feedback techniques, and relationship building." },
-      { title: "Cross-Cultural Communication", description: "Navigating cultural differences and international business protocols." },
-      { title: "Ethical Communication", description: "Transparency, integrity, and responsible messaging in business contexts." },
-      { title: "Crisis Communication", description: "Strategic response frameworks and reputation management." },
-      { title: "Digital Communication", description: "Email etiquette, virtual meetings, and social media professionalism." }
+      { title: "Written and Verbal Communication Mastery", description: "Enhance clarity and impact in business writing and practice persuasive and purposeful verbal messaging." },
+      { title: "Interpersonal skills and Executive Presence", description: "Building trust and rapport with stakeholders and decoding non-verbal cues along with active listening cues." },
+      { title: "Presentation skills and Storytelling", description: "Designing visually strong presentation with impactful narrative flow, along with confidence delivery of content and handling QnA sessions." },
+      { title: "Communication and Ethics and Real-world Dilemmas", description: "Understanding ethical implications of communication and frameworks to navigate gray zones." },
+      { title: "Cross-cultural communication and Diplomacy", description: "Appreciating diverse communication styles and applying diplomacy in language and tone." },
+      { title: "Negotiation and Influence", description: "Applying negotiation techniques and usage of empathy and logic to influence outcomes." },
+      { title: "Group Discussion and Time management", description: "Leading structured discussions and navigating communication in a time-bound setting. Collaboration and conflict resolution." }
     ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
@@ -227,15 +227,15 @@ const programsData: Record<string, ProgramData> = {
       "Work-life balance optimization"
     ],
     curriculum: [
-      { title: "Career Assessment", description: "Self-assessment tools, strengths identification, and career alignment." },
-      { title: "Strategic Goal Setting", description: "SMART goals, career roadmaps, and milestone planning." },
-      { title: "Decision Making", description: "Critical thinking, opportunity evaluation, and career pivots." },
-      { title: "Personal Branding", description: "Professional identity, online presence, and value proposition." },
-      { title: "Networking Strategy", description: "Relationship building, professional connections, and community engagement." },
-      { title: "Leadership Development", description: "Leadership styles, team management, and influence cultivation." },
-      { title: "Work-Life Integration", description: "Balance strategies, priority management, and boundary setting." },
-      { title: "Career Advancement", description: "Promotion strategies, negotiation skills, and upward mobility." },
-      { title: "Continuous Learning", description: "Skill development, knowledge acquisition, and lifelong learning plans." }
+      { title: "Introduction to Career Coaching & Mentoring" , description: "Understanding career coaching vs. mentoring, importance of career guidance, role of a career coach & mentor." },
+      { title: " Communication Skills for Career Success", description:"Excelling verbal & non-verbal communication, active listening & empathy. Learning professional email & business communication, public speaking & presentation skills, conflict resolution & workplace communication" },
+      { title: "Career Development Strategies", description: "Career exploration & industry trends, building a career roadmap, skills development & continuous learning. Learning work-life balance & career transitions" },
+      { title: "Goal Setting for Career Success", description: "Understanding SMART goals, short-term vs. long-term career goals. Creating an action plan and tracking progress & staying motivated." },
+      { title: "Decision Making & Problem-Solving", description: "Learning critical thinking in career choices, decision-Making frameworks, overcoming decision paralysis and handling career uncertainty" },
+      { title: "Overcoming Challenges in Career Growth", description: "Dealing with career setbacks & failure, managing stress & workplace challenges, building resilience & growth mindset. Adapting to change & career Shifts" },
+      { title: "Career Visualisation & Personal Branding", description: "Learning career visualisation, creating a personal vision statement. Building a strong personal brand. Leveraging social media (LinkedIn and Personal Website)." },
+      { title: "Defining & Achieving Career Goals", description: "Identifying strengths & interests. Aligning passion with career path. Setting career milestones and seeking opportunities for Growth." },
+      { title: "How to Network Effectively", description: "Understanding the importance of networking. Online & offline networking strategies. Building Professional Relationships and utilising mentors & industry contacts" },
     ],
     image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
   },
@@ -259,19 +259,20 @@ const programsData: Record<string, ProgramData> = {
       "Mock interview practice with personalized feedback"
     ],
     curriculum: [
-      { title: "Interview Psychology", description: "Understanding interviewer perspectives and selection criteria." },
-      { title: "Personal SWOT Analysis", description: "Identifying strengths, weaknesses, opportunities, and threats." },
-      { title: "Research Methods", description: "Investigating companies, roles, and industry trends." },
-      { title: "Question Frameworks", description: "Preparing for behavioral, technical, and situational questions." },
-      { title: "Answer Structuring", description: "STAR method and other effective response techniques." },
-      { title: "First Impressions", description: "Professional appearance, body language, and greeting protocols." },
-      { title: "Rapport Building", description: "Connection strategies and relationship development." },
-      { title: "Effective Storytelling", description: "Engaging narrative construction and delivery." },
-      { title: "Difficult Questions", description: "Navigating challenging or unexpected inquiries." },
-      { title: "Question Formulation", description: "Developing insightful questions to ask interviewers." },
-      { title: "Anxiety Management", description: "Stress reduction techniques and confidence building." },
-      { title: "Virtual Interviews", description: "Technology mastery and online presentation skills." },
-      { title: "Post-Interview Protocol", description: "Follow-up communications and assessment reflection." }
+      { title: "Introduction to Getting Your Dream Job & Course Overview", description: "Overview of the interview process & job market trends. Understanding the importance of interview skills and career goal-setting workshop." },
+      { title: "Mastering Interviewing – Turning Weaknesses into Strengths", description: "Identifying and addressing personal weaknesses through SWOT analysis. Enhancing confidence and building self-awareness for better performance." },
+      { title: "Pre-Interview Preparation & Strategy", description: "Learning what to bring to an interview (checklist & strategies) and researching the about company. Understanding the job description and tailoring responses along with managing interview anxiety." },
+      { title: "Structuring Interview Responses & Answering Difficult Questions", description: "Answering any question confidently using structured frameworks. Learning STAR, CAR, PAR frameworks for interview questions. Knowing when to stop talking & signs of a successful interview." },
+      { title: "Building a Connection with the Interviewer", description: "How to bond with the interviewer and making first impression. Importance of active listening and body language cues and adapting to different interviewer personalities." },
+      { title: "Predicting & Answering Tough Interview Questions", description: "Understanding how interviewers think and what they look for. Analyzing behavioral and situational questions. Strategies for handling aggressive or high-pressure interviews." },
+      { title: "Advanced Interview Techniques & Communication Skills", description: "Learning ideal Body language, tone, and voice modulation, the psychology of persuasion in interviews and the Words to use and words to avoid." },
+      { title: "Dressing for Success – What to Wear in an Interview", description: "Dress codes for different industries and company cultures. Understanding the impact of appearance on first impressions, grooming, accessories, and professional attire tips." },
+      { title: "Strategies for Different Interviewers & Panel Interviews", description: "Adapting interview strategies based on the interviewer’s seniority. Understanding one-on-one vs. panel interviews vs. technical interviews. Psychological tactics based on the type of interviewer." },
+      { title: "Asking the Right Questions in an Interview", description: "Understanding why asking questions is important. The best questions to ask based on the role and interviewer’s position. How to demonstrate enthusiasm and cultural fit through questioning." },
+      { title: "Pre- and Post-Interview Strategies", description: "What to do on the morning of the interview. Post-interview follow-up: Thank-you emails and professional etiquette. Analysing your interview performance and learning from feedback." },
+      { title: "Handling Job Offers, Rejections & Negotiations", description: "Understanding how to negotiate salary and benefits and when and how to decline a job offer professionally. Dealing with rejection & turning interviews into networking opportunities." },
+      { title: "Resume, LinkedIn & Networking for Interview Success", description: "Crafting the perfect resume. Optimizing LinkedIn for job search & recruiter visibility. The power of networking: How to use informational interviews and referrals." },
+      { title: "Final Mock Interviews & Course Wrap-Up", description: "Real-world mock interview with feedback from experts. Personalised career plan moving forward. Q&A session, course reflection, and certification." }
     ],
     image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
   },

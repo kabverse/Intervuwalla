@@ -33,12 +33,11 @@ const Courses = () => {
       title: "Business Communication",
       description: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
       image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
-      duration: "7 weeks",
       level: "All Levels",
       students: 1245,
       rating: 4.8,
       category: "University / MBA Programs",
-      price: 14999,
+      price: 17999,
       featured: true
     },
     {
@@ -46,24 +45,22 @@ const Courses = () => {
       title: "Career Coaching & Mentoring",
       description: "Detailed understanding of career development strategies, decision-making & problem-solving, goal setting, and personal branding.",
       image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
-      duration: "9 weeks",
       level: "All Levels",
       students: 983,
       rating: 4.7,
       category: "Coaching + Mentoring",
-      price: 12999
+      price: 19999
     },
     {
       id: "leadership-development",
       title: "Leadership Development",
       description: "Executive coaching for senior management to enhance leadership capabilities.",
       image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
-      duration: "10 weeks",
       level: "Advanced",
       students: 756,
       rating: 4.9,
       category: "Corporate Training",
-      price: 19999
+      price: 34999
     }
   ];
 
@@ -95,7 +92,7 @@ const Courses = () => {
         },
         { 
           id: "u3", 
-          name: "CRM", 
+          name: "Customer Relation Management", 
           desc: "Focuses on sales and service automation, customer lifecycle management, campaign management and CRM in marketing.",
           modules: 9,
           audience: "MBA students and professionals from sales & marketing, customer service, banking, startup founders",
