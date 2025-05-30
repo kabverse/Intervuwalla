@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { Mail, Phone, MessageSquare, Send, CheckCircle, Instagram, Twitter, Linkedin, Facebook } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   useEffect(() => {
@@ -29,21 +30,33 @@ const Contact = () => {
       [name]: value
     }));
   };
-  
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+  
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      subject: formData.subject,
+      message: formData.message,
+    };
+  
+    try {
+      await emailjs.send(
+        'service_jhlbehc',
+        'template_jbj1scn',
+        templateParams,
+        'xSa4Q0qrbGVXWZ85s'
+      );
+  
       setIsSuccess(true);
-      toast.success("Your message has been sent!", {
+      toast.success("Thank you for contacting us", {
         description: "We'll get back to you shortly.",
         duration: 5000,
       });
-      
-      // Reset form after successful submission
+  
       setFormData({
         name: '',
         email: '',
@@ -51,12 +64,16 @@ const Contact = () => {
         subject: '',
         message: ''
       });
-      
-      setTimeout(() => {
-        setIsSuccess(false);
-      }, 5000);
-    }, 1500);
+  
+      setTimeout(() => setIsSuccess(false), 5000);
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast.error("Message not sent. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+  
 
   return (
     <div className="min-h-screen bg-background">
