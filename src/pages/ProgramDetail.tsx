@@ -15,9 +15,7 @@ interface ProgramData {
   modules: number;
   audience: string;
   slug: string;
-  category: string;
-  duration: string;
-  startDate: string;
+  category: string
   price: number;
   features: string[];
   curriculum: { title: string; description: string }[];
@@ -34,8 +32,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "MBA students, professionals from corporate background",
     slug: "fintech",
     category: "University / MBA Programs",
-    duration: "12 weeks",
-    startDate: "June 15, 2025",
     price: 24999,
     features: [
       "Comprehensive understanding of financial technology landscape",
@@ -66,8 +62,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "MBA students and professionals from sales & marketing, customer service, banking, startup founders",
     slug: "crm",
     category: "University / MBA Programs",
-    duration: "10 weeks",
-    startDate: "July 5, 2025",
     price: 19999,
     features: [
       "Comprehensive CRM strategy development",
@@ -90,6 +84,67 @@ const programsData: Record<string, ProgramData> = {
     ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
+  "strategic-selling": {
+    id: "u5",
+    name: "Strategic Selling Skills & Sales Management Program",
+    desc: "Equip professionals with structured and modern sales techniques and to improve customer relationship management and consultative selling capabilities.",
+    modules: 10,
+    audience: "MBA executives (with 4+ years' experience), sales professionals, mid-level professional, and solution-based consultants",
+    slug: "strategic-selling",
+    category: "University / MBA Programs",
+    price: 24999,
+    features: [
+      "Enhance the ability to identify customer needs and deliver value-driven solutions",
+      "Confidence in handling objections and navigating complex negotiations",
+      "Improving sales planning, forecasting, and performance monitoring",
+      "Tailored techniques to address industry-specific sales challenges",
+      "Greater customer satisfaction and long-term relationship management",
+      "Increased revenue impact and faster sales cycle closure"
+    ],
+    curriculum: [
+      { title: "Sales in the Modern Business Context", description: "Understanding the role of sales in organizations, types of selling, B2B vs B2C." },
+      { title: "The Psychology of Selling", description: "Understanding buyer behavior, decision-making process, trust, and rapport building." },
+      { title: "Consultative & Solution Selling", description: "Identifying pain points, customizing solutions, and value-based conversations." },
+      { title: "Sales Planning and Prospecting", description: "Insights into target setting, funnel management, using CRM tools, and identifying decision-makers." },
+      { title: "Effective Communication & Presentation", description: "Learning sales pitch design, storytelling, listening, and handling Q&A." },
+      { title: "Objection Handling and Negotiation", description: "Understanding types of objections, negotiation techniques, and closing strategies." },
+      { title: "Sales Metrics and Performance Management", description: "Understanding KPIs, pipeline analysis, forecasting, and territory management." },
+      { title: "Sector-Specific Sales Approaches", description: "Adapting selling strategies in, BFSI, retail, agriculture, channel/dealer sales, consulting services, and government sales." },
+      { title: "Team Selling and Collaboration", description: "Working with marketing, service, and product teams; managing internal stakeholders." },
+      { title: "Digital Tools & the Future of Sales", description: "Social selling, AI & data-driven sales, remote selling strategies." }
+    ],
+    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+  },
+  "business-negotiation": {
+    id: "u4",
+    name: "Business Negotiation Skills",
+    desc: "Build foundational and advanced negotiation skills, while also developing strategies for value creation, conflict resolution and stakeholder alignment.",
+    modules: 10,
+    audience: "MBA students with 4+ years of experience, Mid-level executives transitioning to leadership, international trade, and strategic partnership professionals",
+    slug: "business-negotiation",
+    category: "University / MBA Programs",
+    price: 22999,
+    features: [
+      "Sharpen negotiation skills relevant in international and cross-cultural contexts",
+      "Enhancing confidence, communication, and adaptability",
+      "Learning verbal and non-verbal communication, persuasion, and assertiveness",
+      "Enhancing ability to manage conflicts, close deals, and build partnerships",
+      "Applying negotiation techniques in real-world scenario"
+    ],
+    curriculum: [
+      { title: "Introduction to Negotiation", description: "Nature, types, and myths of negotiation; distributive vs integrative approaches." },
+      { title: "International Business Context", description: "Cultural intelligence, institutional differences, global legal frameworks." },
+      { title: "Negotiation Planning", description: "Setting objectives, BATNA, ZOPA, stakeholder mapping, negotiation checklists." },
+      { title: "Communication and Influence", description: "Verbal & non-verbal communication, persuasion, listening skills, assertiveness." },
+      { title: "Cross-Cultural Negotiation", description: "Hofstede's dimensions, case examples (e.g., US vs Japan, India vs EU), dos and don'ts." },
+      { title: "Multi-party and Team Negotiations", description: "Coalition building, internal alignment, managing competing interests." },
+      { title: "Negotiation Simulations", description: "Real-world role-plays (mergers, trade agreements, supply chain disputes)." },
+      { title: "Ethics and Power in Negotiation", description: "Ethical dilemmas, power dynamics, trust building, long-term relationship management." },
+      { title: "Conflict Resolution & Mediation", description: "Handling impasses, mediation tactics, win-win frameworks." },
+      { title: "Negotiation in the Digital World", description: "Virtual negotiation tools, cross-border online platforms, AI in negotiation." }
+    ],
+    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+  },
   "technical-interview": {
     id: "p1",
     name: "Technical Interview Preparation",
@@ -98,8 +153,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "Software engineers, computer science graduates, tech professionals",
     slug: "technical-interview",
     category: "Professional Development",
-    duration: "8 weeks",
-    startDate: "May 30, 2025",
     price: 14999,
     features: [
       "In-depth coverage of algorithms and data structures",
@@ -129,8 +182,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "Job seekers across industries, career changers, leadership candidates",
     slug: "behavioral-interview",
     category: "Professional Development",
-    duration: "6 weeks",
-    startDate: "June 10, 2025",
     price: 12999,
     features: [
       "STAR method mastery for answering behavioral questions",
@@ -158,8 +209,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "Job seekers, career changers, professionals seeking advancement",
     slug: "resume-optimization",
     category: "Professional Development",
-    duration: "4 weeks",
-    startDate: "May 15, 2025",
     price: 9999,
     features: [
       "ATS optimization techniques",
@@ -185,8 +234,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "Professionals from Academia and Corporate background",
     slug: "business-communication",
     category: "University / MBA Programs",
-    duration: "8 weeks",
-    startDate: "June 1, 2025",
     price: 17999,
     features: [
       "Effective written communication strategies",
@@ -215,8 +262,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "Students, job seekers, career changers and professionals",
     slug: "career-coaching",
     category: "Coaching + Mentoring for Students",
-    duration: "12 weeks",
-    startDate: "May 20, 2025",
     price: 19999,
     features: [
       "Personalized career path development",
@@ -247,8 +292,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "Job seekers, career changers, students and professionals",
     slug: "interview-preparation",
     category: "Coaching + Mentoring for Students",
-    duration: "10 weeks",
-    startDate: "June 5, 2025",
     price: 17999,
     features: [
       "Comprehensive interview preparation strategies",
@@ -284,8 +327,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "Mid to senior-level managers and executives",
     slug: "leadership-development",
     category: "Corporate Training",
-    duration: "14 weeks",
-    startDate: "July 10, 2025",
     price: 34999,
     features: [
       "Strategic leadership vision development",
@@ -317,8 +358,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "Teams and departments within corporate organizations",
     slug: "team-communication",
     category: "Corporate Training",
-    duration: "8 weeks",
-    startDate: "June 20, 2025",
     price: 24999,
     features: [
       "Cross-functional collaboration frameworks",
@@ -348,8 +387,6 @@ const programsData: Record<string, ProgramData> = {
     audience: "HR professionals and hiring managers",
     slug: "strategic-hiring",
     category: "Corporate Training",
-    duration: "12 weeks",
-    startDate: "August 5, 2025",
     price: 29999,
     features: [
       "Talent acquisition strategy development",
@@ -371,6 +408,68 @@ const programsData: Record<string, ProgramData> = {
       { title: "Retention Strategies", description: "Engagement drivers, stay interviews, and turnover prevention." },
       { title: "Succession Planning", description: "Talent review, critical role analysis, and pipeline development." },
       { title: "Talent Analytics", description: "Hiring metrics, dashboard development, and data-driven improvements." }
+    ],
+    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
+  },
+  "executive-leadership": {
+    id: "l1",
+    name: "Executive Leadership Development",
+    desc: "Comprehensive leadership training for senior executives and C-suite professionals.",
+    modules: 12,
+    audience: "Senior executives, C-suite professionals, and aspiring leaders",
+    slug: "executive-leadership",
+    category: "Leadership Development Programs",
+    price: 39999,
+    features: [
+      "Strategic vision development and organizational transformation",
+      "Advanced decision-making frameworks for complex scenarios",
+      "Executive presence and influential communication mastery",
+      "Change leadership and crisis management capabilities",
+      "Building high-performance leadership teams",
+      "Sustainable leadership practices and legacy building"
+    ],
+    curriculum: [
+      { title: "Strategic Leadership Foundations", description: "Core principles of executive leadership and organizational impact." },
+      { title: "Vision & Strategy Development", description: "Creating compelling organizational vision and strategic direction." },
+      { title: "Executive Decision Making", description: "Advanced frameworks for complex decision-making under uncertainty." },
+      { title: "Leading Organizational Change", description: "Change management, transformation leadership, and cultural evolution." },
+      { title: "Executive Communication", description: "Influential communication, stakeholder management, and public speaking." },
+      { title: "Building Leadership Teams", description: "Developing and managing high-performance leadership teams." },
+      { title: "Crisis Leadership", description: "Leading through crisis, uncertainty, and organizational challenges." },
+      { title: "Innovation & Digital Leadership", description: "Leading digital transformation and fostering innovation culture." },
+      { title: "Global Leadership", description: "Cross-cultural leadership and managing global teams." },
+      { title: "Ethical Leadership", description: "Values-based leadership, governance, and ethical decision-making." },
+      { title: "Performance & Results", description: "Driving organizational performance and achieving sustainable results." },
+      { title: "Leadership Legacy", description: "Succession planning, mentoring, and building lasting leadership impact." }
+    ],
+    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
+  },
+  "team-leadership": {
+    id: "l2",
+    name: "Team Leadership & Management",
+    desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
+    modules: 8,
+    audience: "Team leaders, department heads, and emerging managers",
+    slug: "team-leadership",
+    category: "Leadership Development Programs",
+    price: 19999,
+    features: [
+      "Effective team building and collaboration strategies",
+      "Performance management and feedback systems",
+      "Conflict resolution and team dynamics optimization",
+      "Delegation and empowerment techniques",
+      "Motivational leadership and employee engagement",
+      "Goal setting and accountability frameworks"
+    ],
+    curriculum: [
+      { title: "Foundations of Team Leadership", description: "Understanding team dynamics, leadership styles, and management principles." },
+      { title: "Building High-Performance Teams", description: "Team formation, role clarity, and creating collaborative environments." },
+      { title: "Communication & Feedback", description: "Effective communication strategies and constructive feedback systems." },
+      { title: "Performance Management", description: "Goal setting, performance monitoring, and improvement planning." },
+      { title: "Conflict Resolution", description: "Managing team conflicts, mediation techniques, and resolution strategies." },
+      { title: "Delegation & Empowerment", description: "Effective delegation, empowering team members, and building autonomy." },
+      { title: "Motivation & Engagement", description: "Understanding motivation, employee engagement, and retention strategies." },
+      { title: "Leading Change at Team Level", description: "Managing team transitions, change adoption, and continuous improvement." }
     ],
     image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
   }
@@ -458,22 +557,6 @@ const ProgramDetail = () => {
                       <span className="font-medium">Modules</span>
                     </div>
                     <span className="text-2xl font-semibold">{program.modules}</span>
-                  </div>
-                  
-                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-4 shadow-sm">
-                    <div className="flex items-center text-primary mb-2">
-                      <Clock className="h-5 w-5 mr-2" />
-                      <span className="font-medium">Duration</span>
-                    </div>
-                    <span className="text-2xl font-semibold">{program.duration}</span>
-                  </div>
-                  
-                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-4 shadow-sm">
-                    <div className="flex items-center text-[hsl(var(--yellow))] mb-2">
-                      <Calendar className="h-5 w-5 mr-2" />
-                      <span className="font-medium">Start Date</span>
-                    </div>
-                    <span className="text-lg font-semibold">{program.startDate}</span>
                   </div>
                 </div>
                 
