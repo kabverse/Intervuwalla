@@ -148,7 +148,7 @@ const Courses = () => {
       description: "Advanced leadership and management training for executives",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-purple-500/20 to-purple-600/20",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      image: "/images/workshop2.png",
       programs: [
         { 
           id: "l1", 
