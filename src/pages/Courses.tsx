@@ -37,7 +37,7 @@ const Courses = () => {
       students: 1245,
       rating: 4.8,
       category: "University / MBA Programs",
-      price: 17999,
+      price: 14999,
       featured: true
     },
     {
@@ -49,7 +49,7 @@ const Courses = () => {
       students: 983,
       rating: 4.7,
       category: "Coaching + Mentoring",
-      price: 19999
+      price: 12999
     },
     {
       id: "leadership-development",
@@ -60,7 +60,7 @@ const Courses = () => {
       students: 756,
       rating: 4.9,
       category: "Corporate Training",
-      price: 34999
+      price: 19999
     }
   ];
 
@@ -92,11 +92,27 @@ const Courses = () => {
         },
         { 
           id: "u3", 
-          name: "Customer Relation Management", 
+          name: "CRM", 
           desc: "Focuses on sales and service automation, customer lifecycle management, campaign management and CRM in marketing.",
           modules: 9,
           audience: "MBA students and professionals from sales & marketing, customer service, banking, startup founders",
           slug: "crm"
+        },
+        { 
+          id: "u4", 
+          name: "Business Negotiation Skills", 
+          desc: "Build foundational and advanced negotiation skills, while also developing strategies for value creation, conflict resolution and stakeholder alignment.",
+          modules: 10,
+          audience: "MBA students with 4+ years of experience, Mid-level executives transitioning to leadership, international trade, and strategic partnership professionals",
+          slug: "business-negotiation"
+        },
+        { 
+          id: "u5", 
+          name: "Strategic Selling Skills & Sales Management Program", 
+          desc: "Equip professionals with structured and modern sales techniques and to improve customer relationship management and consultative selling capabilities.",
+          modules: 10,
+          audience: "MBA executives (with 4+ years' experience), sales professionals, mid-level professional, and solution-based consultants",
+          slug: "strategic-selling"
         },
       ]
     },
@@ -123,6 +139,32 @@ const Courses = () => {
           modules: 13,
           audience: "Job seekers, career changers, students and professionals",
           slug: "interview-preparation"
+        }
+      ]
+    },
+    {
+      id: "leadership",
+      title: "Leadership Development Programs",
+      description: "Advanced leadership and management training for executives",
+      icon: <GraduationCap className="h-8 w-8" />,
+      color: "from-purple-500/20 to-purple-600/20",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      programs: [
+        { 
+          id: "l1", 
+          name: "Executive Leadership Development", 
+          desc: "Comprehensive leadership training for senior executives and C-suite professionals.",
+          modules: 12,
+          audience: "Senior executives, C-suite professionals, and aspiring leaders",
+          slug: "executive-leadership"
+        },
+        { 
+          id: "l2", 
+          name: "Team Leadership & Management", 
+          desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
+          modules: 8,
+          audience: "Team leaders, department heads, and emerging managers",
+          slug: "team-leadership"
         }
       ]
     },
