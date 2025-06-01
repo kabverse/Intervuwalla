@@ -94,16 +94,8 @@ const OurMentor = () => {
                   <div className="glass-card p-6">
                     <div className="space-y-4">
                       <div className="flex items-center text-foreground/80">
-                        <MapPin className="mr-3 h-4 w-4 text-[#2e5ddd]" />
-                        <span>New Delhi</span>
-                      </div>
-                      <div className="flex items-center text-foreground/80">
-                        <Mail className="mr-3 h-4 w-4 text-[#2e5ddd]" />
-                        <a href="mailto:anug2901@gmail.com" className="hover:text-[#2e5ddd]">anug2901@gmail.com</a>
-                      </div>
-                      <div className="flex items-center text-foreground/80">
                         <Linkedin className="mr-3 h-4 w-4 text-[#2e5ddd]" />
-                        <span>LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/anil-gupta-9143b58/" className="hover:text-[#2e5ddd]"><span>LinkedIn</span></a>
                       </div>
                     </div>
                   </div>
