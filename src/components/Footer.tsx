@@ -62,7 +62,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <span className="text-primary mr-2">📧</span>
-                <a href="mailto:contact@intervuwalla.com" className="text-foreground/70 hover:text-primary">contact@intervuwalla.com</a>
+                <a href="mailto:contact@intervuwalla.com" className="text-foreground/70 hover:text-primary">info@intervuwalla.com</a>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-2">📱</span>
