@@ -9,49 +9,49 @@ import { Mail, MapPin, Linkedin, GraduationCap, Users, Award, Briefcase } from '
 const workshopImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    src: "/images/workshop1.png",
     alt: "Anil Gupta leading a workshop session",
     span: "col-span-1 md:col-span-2"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    src: "/images/workshop2.png",
     alt: "Interactive session with students",
     span: "col-span-1"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80", 
+    src: "/images/workshop3.png", 
     alt: "Corporate training workshop",
     span: "col-span-1"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+    src: "/images/workshop4.png",
     alt: "Panel discussion led by Anil Gupta",
     span: "col-span-1 md:col-span-2"
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1560439513-74b037a25d84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    src: "/images/workshop5.png",
     alt: "Workshop at a leading corporate",
     span: "col-span-1"
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    src: "/images/workshop6.png",
     alt: "Student interaction session",
     span: "col-span-1 md:col-span-2"
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+    src: "/images/workshop7.png",
     alt: "Anil Gupta giving a keynote",
     span: "col-span-1"
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1601379329542-31c59347e2b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1457&q=80",
+    src: "/images/workshop8.png",
     alt: "Group mentoring session",
     span: "col-span-1"
   }
