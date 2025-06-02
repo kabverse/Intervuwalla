@@ -164,9 +164,6 @@ const About = () => {
           </div>
         </section>
         
-        {/* Animated Stats Section */}
-        <AnimatedStats />
-        
         {/* CTA Section */}
         <section className="py-16 md:py-24">
           <div className="container max-w-4xl">

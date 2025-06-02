@@ -46,13 +46,16 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Programs */}
+          {/* Featured Programs */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Programs</h3>
+            <h3 className="font-semibold text-lg mb-4">Featured Programs</h3>
             <ul className="space-y-2">
-              <li><Link to="/programs/business-communication" className="text-foreground/70 hover:text-primary">Business Communication</Link></li>
-              <li><Link to="/programs/career-coaching" className="text-foreground/70 hover:text-primary">Career Coaching & Mentoring</Link></li>
-              <li><Link to="/programs/leadership-development" className="text-foreground/70 hover:text-primary">Leadership Development</Link></li>
+              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Job Interview Prep</Link></li>
+              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Coaching</Link></li>
+              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Leadership Program</Link></li>
+              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Business Communication</Link></li>
+              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Fintech Program</Link></li>
+              <li><Link to="/courses" className="text-foreground/70 hover:text-primary">Entrepreneurship</Link></li>
             </ul>
           </div>
           

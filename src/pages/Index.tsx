@@ -10,6 +10,7 @@ import Associations from '@/components/Associations';
 import CourseCard, { CourseProps } from '@/components/CourseCard';
 import Footer from '@/components/Footer';
 import { Button } from "@/components/ui/button";
+import AnimatedStats from '@/components/AnimatedStats';
 
 const Index = () => {
   useEffect(() => {
@@ -26,7 +27,7 @@ const Index = () => {
       students: 1245,
       rating: 4.8,
       category: "University / MBA Programs",
-      price: 17999,
+      price: 14999,
       featured: true
     },
     {
@@ -38,7 +39,7 @@ const Index = () => {
       students: 983,
       rating: 4.7,
       category: "Coaching + Mentoring",
-      price: 19999
+      price: 12999
     },
     {
       id: "leadership-development",
@@ -49,7 +50,41 @@ const Index = () => {
       students: 756,
       rating: 4.9,
       category: "Corporate Training",
-      price: 34999
+      price: 19999
+    },
+    {
+      id: "interview-preparation",
+      title: "Interview Preparation Program",
+      description: "Comprehensive guidance on acing job interviews through SWOT analysis, answer structuring, and managing interview anxiety.",
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      level: "All Levels",
+      students: 892,
+      rating: 4.6,
+      category: "Coaching + Mentoring",
+      price: 11999
+    },
+    {
+      id: "fintech",
+      title: "Fintech Program",
+      description: "Understanding financial technology, lending & credit technologies, Blockchain & Cryptofinance, and RegTech.",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      level: "Intermediate",
+      students: 634,
+      rating: 4.5,
+      category: "University / MBA Programs",
+      price: 16999
+    },
+    {
+      id: "strategic-selling",
+      title: "Strategic Selling Skills & Sales Management",
+      description: "Equip professionals with structured sales techniques and improve customer relationship management capabilities.",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      level: "Advanced",
+      students: 567,
+      rating: 4.7,
+      category: "University / MBA Programs",
+      price: 18999,
+      featured: true
     }
   ];
 
@@ -89,6 +124,9 @@ const Index = () => {
             </div>
           </div>
         </div>
+
+        {/* Animated Stats Section */}
+        <AnimatedStats />
         
         {/* Featured Courses */}
         <section className="section-padding bg-background">

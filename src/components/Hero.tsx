@@ -52,16 +52,6 @@ const Hero = () => {
                 Browse Courses
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="rounded-full border-[#2e5ddd]/20 text-foreground hover:bg-[#2e5ddd]/5 btn-pulse"
-                onClick={() => setIsVideoModalOpen(true)}
-              >
-                <PlayCircle className="mr-2 h-5 w-5 text-[#2e5ddd]" />
-                Watch Demo
-              </Button>
             </div>
             
             <div className="flex items-center gap-3 p-3 rounded-xl glass-effect max-w-md animate-float">

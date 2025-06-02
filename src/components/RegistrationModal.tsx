@@ -88,7 +88,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
         company: formData.company,
       });
       
-      // Send confirmation email with workshop details and WhatsApp group link
+      // Send confirmation email with workshop details and WhatsApp groi link
       await sendConfirmationEmail(
         formData.email,
         formData.name,

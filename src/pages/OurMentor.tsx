@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Mail, MapPin, Linkedin, GraduationCap, Users, Award, Briefcase } from 'lucide-react';
+import Testimonials from '@/components/Testimonials';
 
 // Sample workshop images - these would be replaced with actual images
 const workshopImages = [
@@ -54,6 +55,33 @@ const workshopImages = [
     src: "/images/workshop8.png",
     alt: "Group mentoring session",
     span: "col-span-1"
+  }
+];
+
+const teamMembers = [
+  {
+    id: 1,
+    name: "Maitri Jha",
+    role: "Wizard",
+    image: "/images/maitri.png",
+    description: "Maitri loves talking to people but not after 8 PM. One can find her writing poems and stories in complete darkness, listening to random violin. Says just one episode and binges the entire series.",
+    mantra: "Eat, sleep and repeat."
+  },
+  {
+    id: 2,
+    name: "Kabeer Ghai",
+    role: "Operator",
+    image: "/images/kabeer.png",
+    description: "Kabeer is the cutie on our team, actively trying to crack bad jokes. Looks twice in the mirror wondering how to look less handsome. He is what we call, the G(r)eek God.",
+    mantra: "What's there in the looks? Everything!"
+  },
+  {
+    id: 3,
+    name: "Kanishk Kataria",
+    role: "Strategist",
+    image: "/images/kanishk.png",
+    description: "Kanishk is the sweet and loving guy of our team. Developed leadership since he monitored his class. Says, he comes from a line of people with something wrong in them, and honestly his team totally feels it.",
+    mantra: "I think therefore I am (very philosophical)!"
   }
 ];
 
@@ -122,110 +150,44 @@ const OurMentor = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Academic Excellence */}
+
+            {/* Team Members Section */}
             <div className="mb-16">
-              <div className="glass-card p-8">
-                <div className="flex items-center mb-6">
-                  <GraduationCap className="h-8 w-8 text-[#2e5ddd] mr-3" />
-                  <h3 className="text-2xl font-bold">Academic Excellence</h3>
-                </div>
-                <p className="text-foreground/90 mb-4">
-                  Anil has taught at India's and the world's leading institutions, including:
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {["IIT Delhi", "IIFT", "BIMTECH", "IMI", "Great Lakes", "SOIL", "TERI", "Amity", "GD Goenka", "Krems University (Austria)"].map((institution, index) => (
-                    <div key={index} className="bg-[#2e5ddd]/10 rounded-lg p-3 text-center">
-                      <span className="font-medium">{institution}</span>
+              <h2 className="text-3xl font-bold mb-8 text-center text-[#2e5ddd]">
+                Our <span className="text-[#facf3d]">Team</span>
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {teamMembers.map((member) => (
+                  <div key={member.id} className="glass-card p-6 text-center">
+                    <div className="relative mb-6">
+                      <img 
+                        src={member.image} 
+                        alt={member.name} 
+                        className="w-full h-64 object-cover rounded-lg"
+                      />
+                      <div className="absolute top-4 right-4 bg-[#2e5ddd] text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {member.role}
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            
-            {/* Expertise Areas */}
-            <div className="mb-16">
-              <div className="glass-card p-8">
-                <div className="flex items-center mb-6">
-                  <Award className="h-8 w-8 text-[#2e5ddd] mr-3" />
-                  <h3 className="text-2xl font-bold">Areas of Expertise</h3>
-                </div>
-                <p className="text-foreground/90 mb-4">
-                  His expertise lies in Executive Education, PGDM, MBA, and Management Development Programs, with core teaching areas including:
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {["Sales Management", "CRM", "Business Communication", "Social Leadership", "International Business Negotiations", "B2B Marketing", "Service Strategy"].map((area, index) => (
-                    <div key={index} className="flex items-center">
-                      <div className="w-2 h-2 bg-[#facf3d] rounded-full mr-3"></div>
-                      <span>{area}</span>
+                    
+                    <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+                    <p className="text-foreground/80 text-sm mb-4 leading-relaxed">
+                      {member.description}
+                    </p>
+                    
+                    <div className="p-3 bg-[#facf3d]/10 rounded-lg border-l-4 border-[#facf3d]">
+                      <p className="text-sm font-medium text-[#2e5ddd]">
+                        Mantra: <span className="italic">{member.mantra}</span>
+                      </p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
-            
-            {/* Corporate Training */}
-            <div className="mb-16">
-              <div className="glass-card p-8">
-                <div className="flex items-center mb-6">
-                  <Briefcase className="h-8 w-8 text-[#2e5ddd] mr-3" />
-                  <h3 className="text-2xl font-bold">Corporate Training Excellence</h3>
-                </div>
-                <p className="text-foreground/90 mb-4">
-                  He has delivered corporate training to leading public and private sector organizations such as:
-                </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {["NTPC", "BHEL", "Power Grid", "IBM", "Schneider Electric", "Infosys", "Macquarie AMC (Australia)", "Network International (UAE & Africa)"].map((company, index) => (
-                    <div key={index} className="bg-[#facf3d]/10 rounded-lg p-3 text-center">
-                      <span className="font-medium text-sm">{company}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            
-            {/* Leadership Roles */}
-            <div className="mb-16">
-              <div className="glass-card p-8">
-                <div className="flex items-center mb-6">
-                  <Users className="h-8 w-8 text-[#2e5ddd] mr-3" />
-                  <h3 className="text-2xl font-bold">Leadership & Advisory Roles</h3>
-                </div>
-                <p className="text-foreground/90 mb-4">
-                  Anil's influence extends beyond the classroom—he is a member of:
-                </p>
-                <div className="space-y-3">
-                  {[
-                    "Selection Advisory Board – IIFT",
-                    "Academic Advisory Board – BIMTECH", 
-                    "Placement Advisory Board – TERI University",
-                    "Mentor – School of Inspired Leadership (SOIL)"
-                  ].map((role, index) => (
-                    <div key={index} className="flex items-center p-3 border border-[#2e5ddd]/20 rounded-lg">
-                      <div className="w-3 h-3 bg-[#2e5ddd] rounded-full mr-4"></div>
-                      <span className="font-medium">{role}</span>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-foreground/90 mt-4">
-                  His coaching and mentoring acumen is sought by CXOs, entrepreneurs, and mid-career professionals navigating complex transitions.
-                </p>
-              </div>
-            </div>
-            
-            {/* Philosophy */}
-            <div className="mb-16">
-              <div className="glass-card p-8 bg-gradient-to-r from-[#2e5ddd]/5 to-[#facf3d]/5">
-                <h3 className="text-2xl font-bold mb-4 text-center">Philosophy & Vision</h3>
-                <p className="text-foreground/90 text-center mb-6">
-                  Anil is not just an educator—he is a builder of future leaders. His sessions are a rare blend of intellectual rigor, strategic insight, and pragmatic industry wisdom. Whether it is a classroom, a boardroom, or a career crossroads, Anil empowers individuals and institutions to evolve, compete, and lead with purpose.
-                </p>
-                <blockquote className="text-center text-xl font-medium text-[#2e5ddd] italic border-l-4 border-[#facf3d] pl-6">
-                  "Education must translate into employability, leadership, and impact. That's the mission I've devoted my life to."
-                  <footer className="text-base font-normal text-foreground/70 mt-2">— Anil Gupta</footer>
-                </blockquote>
-              </div>
-            </div>
+
+            {/* Testimonials Section */}
+            <Testimonials />
             
             {/* Workshop Gallery Section */}
             <div className="mt-16">

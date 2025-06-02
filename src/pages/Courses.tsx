@@ -1,10 +1,9 @@
-
 import { useEffect, useRef } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CourseCard, { CourseProps } from '@/components/CourseCard';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BookOpen, GraduationCap, Users, Briefcase } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, Users, Briefcase, Target, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { 
   Accordion,
@@ -61,6 +60,124 @@ const Courses = () => {
       rating: 4.9,
       category: "Corporate Training",
       price: 19999
+    },
+    {
+      id: "interview-preparation",
+      title: "Interview Preparation Program",
+      description: "Comprehensive guidance on acing job interviews through SWOT analysis, answer structuring, and managing interview anxiety.",
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      level: "All Levels",
+      students: 892,
+      rating: 4.6,
+      category: "Coaching + Mentoring",
+      price: 11999
+    },
+    {
+      id: "fintech",
+      title: "Fintech Program",
+      description: "Understanding financial technology, lending & credit technologies, Blockchain & Cryptofinance, and RegTech.",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      level: "Intermediate",
+      students: 634,
+      rating: 4.5,
+      category: "University / MBA Programs",
+      price: 16999
+    },
+    {
+      id: "strategic-selling",
+      title: "Strategic Selling Skills & Sales Management",
+      description: "Equip professionals with structured sales techniques and improve customer relationship management capabilities.",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      level: "Advanced",
+      students: 567,
+      rating: 4.7,
+      category: "University / MBA Programs",
+      price: 18999,
+      featured: true
+    }
+  ];
+
+  // Updated program categories with the 6 featured programs from the image
+  const featuredPrograms = [
+    {
+      id: "job-interview-prep",
+      title: "Job Interview Prep",
+      description: "Comprehensive interview preparation including job interview prep, resume review & building, and LinkedIn networking",
+      icon: <Target className="h-8 w-8" />,
+      color: "from-blue-500/20 to-blue-600/20",
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      items: [
+        "Job interview prep",
+        "Resume review & building", 
+        "LinkedIn networking"
+      ]
+    },
+    {
+      id: "coaching",
+      title: "Coaching",
+      description: "Personalized guidance for career development and professional growth",
+      icon: <MessageCircle className="h-8 w-8" />,
+      color: "from-green-500/20 to-green-600/20",
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      items: [
+        "Career coaching",
+        "Personal development",
+        "Professional mentoring"
+      ]
+    },
+    {
+      id: "leadership-program",
+      title: "Leadership Program",
+      description: "Advanced leadership training including social leadership, business negotiations, CRM, service strategy, and sales management",
+      icon: <GraduationCap className="h-8 w-8" />,
+      color: "from-purple-500/20 to-purple-600/20",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      items: [
+        "Social leadership",
+        "Business Negotiations",
+        "CRM",
+        "Service Strategy",
+        "Sales Management"
+      ]
+    },
+    {
+      id: "business-communication",
+      title: "Business Communication",
+      description: "Professional communication skills for modern workplace success",
+      icon: <BookOpen className="h-8 w-8" />,
+      color: "from-orange-500/20 to-orange-600/20",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      items: [
+        "Written communication",
+        "Verbal communication",
+        "Cross-cultural communication"
+      ]
+    },
+    {
+      id: "fintech-program",
+      title: "Fintech Program",
+      description: "Understanding financial technology and modern financial services",
+      icon: <Briefcase className="h-8 w-8" />,
+      color: "from-indigo-500/20 to-indigo-600/20",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      items: [
+        "Financial technology",
+        "Digital banking",
+        "Blockchain & crypto"
+      ]
+    },
+    {
+      id: "entrepreneurship",
+      title: "Entrepreneurship",
+      description: "Business development and startup fundamentals (content to be shared with Maitri)",
+      icon: <Users className="h-8 w-8" />,
+      color: "from-yellow-500/20 to-yellow-600/20",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      items: [
+        "Business planning",
+        "Startup fundamentals",
+        "Innovation strategies"
+      ]
     }
   ];
 
@@ -148,7 +265,7 @@ const Courses = () => {
       description: "Advanced leadership and management training for executives",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-purple-500/20 to-purple-600/20",
-      image: "/images/workshop2.png",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
       programs: [
         { 
           id: "l1", 
@@ -236,43 +353,47 @@ const Courses = () => {
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
         </section>
         
-        {/* Program Categories Section with Visual Cards */}
+        {/* Featured Programs Section */}
         <section className="py-16 bg-white relative">
           <div className="container relative z-10">
             <h2 className="heading-2 mb-4 text-center">
-              <span className="text-gradient-blue-yellow">Explore Our Programs</span>
+              <span className="text-gradient-blue-yellow">Featured Programs</span>
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Discover our specialized programs designed to help you excel in different professional contexts
+              Discover our comprehensive program categories designed to help you excel in different professional contexts
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-              {programCategories.map((category) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              {featuredPrograms.map((program) => (
                 <div 
-                  key={category.id} 
+                  key={program.id} 
                   className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/5 h-[320px]"
                 >
                   {/* Background Image with Overlay */}
                   <div className="absolute inset-0">
                     <img 
-                      src={category.image} 
-                      alt={category.title}
+                      src={program.image} 
+                      alt={program.title}
                       className="w-full h-full object-cover object-center"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-90`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${program.color} opacity-90`}></div>
                   </div>
                   
                   {/* Content */}
                   <div className="relative p-6 h-full flex flex-col z-10">
                     <div className="bg-white/90 rounded-full p-4 mb-4 w-16 h-16 flex items-center justify-center text-primary shadow-md">
-                      {category.icon}
+                      {program.icon}
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-white">{category.title}</h3>
-                    <p className="text-sm text-white/90 mb-4">{category.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-white">{program.title}</h3>
+                    <p className="text-sm text-white/90 mb-4">{program.description}</p>
                     
-                    {/* Program count badge */}
-                    <div className="inline-flex items-center bg-black/30 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm mt-2 w-fit">
-                      <span>{category.programs.length} Programs Available</span>
+                    {/* Program items */}
+                    <div className="space-y-1 mb-4">
+                      {program.items.map((item, idx) => (
+                        <div key={idx} className="text-xs text-white/80">
+                          • {item}
+                        </div>
+                      ))}
                     </div>
                     
                     <div className="mt-auto">
@@ -281,7 +402,7 @@ const Courses = () => {
                         className="bg-white/80 backdrop-blur-sm hover:bg-white/95 text-foreground group-hover:translate-x-1 transition-transform"
                         onClick={scrollToCourses}
                       >
-                        View More
+                        Learn More
                         <ArrowRight className="ml-1 h-4 w-4 group-hover:ml-2 transition-all" />
                       </Button>
                     </div>
