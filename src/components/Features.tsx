@@ -54,7 +54,7 @@ const Features = () => {
               className="relative glass-card p-8 hover:shadow-lg transition-all duration-300 group"
             >
               <div className="mb-5 relative">
-                <div className="absolute -inset-1 rounded-full bg-[#60b7ff]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute -inset-1 rounded-full bg-[#60b7ff]/10 opacity-0  transition-opacity duration-300"></div>
                 <div className="relative">{feature.icon}</div>
               </div>
               <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-[#60b7ff] transition-colors">
