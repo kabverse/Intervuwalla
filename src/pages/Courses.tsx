@@ -165,20 +165,20 @@ const Courses = () => {
       image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
       programs: [
         { 
+          id: "c2", 
+          name: "Interview Preparation Program", 
+          desc: "Guidance on acing job interviews through SWOT analysis, answer structuring, rapport forming, and managing interview anxiety.",
+          modules: 13,
+          audience: "Job seekers, career changers, students and professionals",
+          slug: "interview-preparation"
+        },
+        { 
           id: "u1", 
           name: "Business Communication", 
           desc: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
           modules: 7,
           audience: "Professionals from Academia and Corporate background",
           slug: "business-communication"
-        },
-        { 
-          id: "u2", 
-          name: "Fintech", 
-          desc: "Understanding financial technology, lending & credit technologies, Blockchain & Cryptofinance, Cybersecurity and RegTech.",
-          modules: 9,
-          audience: "MBA students, professionals from corporate background",
-          slug: "fintech"
         },
         { 
           id: "u3", 
@@ -221,14 +221,6 @@ const Courses = () => {
           modules: 9,
           audience: "Students, job seekers, career changers and professionals",
           slug: "career-coaching"
-        },
-        { 
-          id: "c2", 
-          name: "Interview Preparation Program", 
-          desc: "Guidance on acing job interviews through SWOT analysis, answer structuring, rapport forming, and managing interview anxiety.",
-          modules: 13,
-          audience: "Job seekers, career changers, students and professionals",
-          slug: "interview-preparation"
         }
       ]
     },
@@ -290,6 +282,24 @@ const Courses = () => {
           audience: "HR professionals and hiring managers",
           slug: "strategic-hiring"
         },
+      ]
+    },
+    {
+      id: "fintech",
+      title: "Fintech Program",
+      description: "Professional development programs for organizations and teams",
+      icon: <Briefcase className="h-8 w-8" />,
+      color: "from-primary/20 to-indigo-600/20",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      programs: [
+        { 
+          id: "u2", 
+          name: "Fintech", 
+          desc: "Understanding financial technology, lending & credit technologies, Blockchain & Cryptofinance, Cybersecurity and RegTech.",
+          modules: 9,
+          audience: "MBA students, professionals from corporate background",
+          slug: "fintech"
+        }
       ]
     },
     {
