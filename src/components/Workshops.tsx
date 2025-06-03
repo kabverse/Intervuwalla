@@ -48,9 +48,9 @@ const Workshops = () => {
     <section className="section-padding bg-background/5 relative overflow-hidden">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center rounded-full bg-[hsl(var(--yellow))]/10 px-3 py-1 text-sm font-medium text-[hsl(var(--yellow))] mb-4">
+          <div className="inline-flex items-center rounded-full bg-[#2e5ddd]/10 px-3 py-1 text-sm font-medium text-[#2e5ddd] mb-4">
             <span className="font-medium">Limited Seats</span>
-            <span className="ml-1 text-[hsl(var(--yellow))]/80">Book Now</span>
+            <span className="ml-1 text-[#2e5ddd]/60">Book Now</span>
           </div>
           
           <h2 className="heading-2 mb-4 text-gradient-blue-yellow animate-pulse-soft">

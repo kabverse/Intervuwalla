@@ -35,9 +35,9 @@ const WorkshopsPage = () => {
         <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden hero-gradient">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto">
-              <div className="inline-flex items-center rounded-full bg-[hsl(var(--yellow))]/10 px-3 py-1 text-sm font-medium text-[hsl(var(--yellow))] mb-4">
+              <div className="inline-flex items-center rounded-full bg-[#2e5ddd]/10 px-3 py-1 text-sm font-medium text-[#2e5ddd] mb-4">
                 <span className="font-medium">Limited Time Offer</span>
-                <span className="ml-1 text-[hsl(var(--yellow))]/60">Only ₹199</span>
+                <span className="ml-1 text-[#2e5ddd]/60">Only ₹199</span>
               </div>
               
               <h1 className="heading-1 mb-6 text-gradient-blue-yellow animate-pulse-soft">

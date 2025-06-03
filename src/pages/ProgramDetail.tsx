@@ -15,11 +15,14 @@ interface ProgramData {
   modules: number;
   audience: string;
   slug: string;
-  category: string
+  category: string;
+  duration: string;
+  startDate: string;
   price: number;
   features: string[];
   curriculum: { title: string; description: string }[];
   image?: string;
+  learningOutcomes?: string[];
 }
 
 // Sample program data (would typically come from a database)
@@ -32,6 +35,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "MBA students, professionals from corporate background",
     slug: "fintech",
     category: "University / MBA Programs",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 24999,
     features: [
       "Comprehensive understanding of financial technology landscape",
@@ -52,6 +57,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Future Trends", description: "Embedded finance, neo banking and open banking. Understanding AI/ML application in Fintech. ESG and sustainability in Fintech." },
       { title: "Group Presentations", description: "Pitching a fintech idea or analysing a real-word case. Final evaluation and feedbacks." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
   "crm": {
@@ -62,6 +76,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "MBA students and professionals from sales & marketing, customer service, banking, startup founders",
     slug: "crm",
     category: "University / MBA Programs",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 19999,
     features: [
       "Comprehensive CRM strategy development",
@@ -82,6 +98,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "CRM Strategy & Implementation", description: "Building a CRM strategy aligned with business goals. Change management and user adoption and measuring CRM ROI." },
       { title: "Capstone Project / Presentations", description: "Working on CRM case studies or designing CRM strategies for a business along with Final evaluation." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
   "strategic-selling": {
@@ -92,6 +117,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "MBA executives (with 4+ years' experience), sales professionals, mid-level professional, and solution-based consultants",
     slug: "strategic-selling",
     category: "University / MBA Programs",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 24999,
     features: [
       "Enhance the ability to identify customer needs and deliver value-driven solutions",
@@ -113,6 +140,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Team Selling and Collaboration", description: "Working with marketing, service, and product teams; managing internal stakeholders." },
       { title: "Digital Tools & the Future of Sales", description: "Social selling, AI & data-driven sales, remote selling strategies." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
   "business-negotiation": {
@@ -123,6 +159,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "MBA students with 4+ years of experience, Mid-level executives transitioning to leadership, international trade, and strategic partnership professionals",
     slug: "business-negotiation",
     category: "University / MBA Programs",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 22999,
     features: [
       "Sharpen negotiation skills relevant in international and cross-cultural contexts",
@@ -143,6 +181,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Conflict Resolution & Mediation", description: "Handling impasses, mediation tactics, win-win frameworks." },
       { title: "Negotiation in the Digital World", description: "Virtual negotiation tools, cross-border online platforms, AI in negotiation." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
   "technical-interview": {
@@ -153,6 +200,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Software engineers, computer science graduates, tech professionals",
     slug: "technical-interview",
     category: "Professional Development",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 14999,
     features: [
       "In-depth coverage of algorithms and data structures",
@@ -172,6 +221,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Mock Interviews", description: "Realistic interview simulations with industry professionals." },
       { title: "Final Preparation", description: "Review, optimization, and interview strategy development." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/b88ae8ac-0388-4789-a31d-77d5248a39bb.png"
   },
   "behavioral-interview": {
@@ -182,6 +240,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Job seekers across industries, career changers, leadership candidates",
     slug: "behavioral-interview",
     category: "Professional Development",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 12999,
     features: [
       "STAR method mastery for answering behavioral questions",
@@ -199,6 +259,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Problem Solving & Resilience", description: "Showcasing your approach to challenges and setbacks." },
       { title: "Final Preparation", description: "Mock interviews, feedback, and personalized improvement strategies." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/f0e019fb-c25f-4348-abaf-73f954784463.png"
   },
   "resume-optimization": {
@@ -209,6 +278,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Job seekers, career changers, professionals seeking advancement",
     slug: "resume-optimization",
     category: "Professional Development",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 9999,
     features: [
       "ATS optimization techniques",
@@ -224,6 +295,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Achievement Highlighting", description: "Transforming responsibilities into measurable achievements." },
       { title: "Final Optimization", description: "Personalized review, feedback, and final polishing." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/4dc0248d-9274-4883-97c4-872cb9c743d3.png"
   },
   "business-communication": {
@@ -234,6 +314,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Professionals from Academia and Corporate background",
     slug: "business-communication",
     category: "University / MBA Programs",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 17999,
     features: [
       "Effective written communication strategies",
@@ -252,6 +334,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Negotiation and Influence", description: "Applying negotiation techniques and usage of empathy and logic to influence outcomes." },
       { title: "Group Discussion and Time management", description: "Leading structured discussions and navigating communication in a time-bound setting. Collaboration and conflict resolution." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
   "career-coaching": {
@@ -262,6 +353,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Students, job seekers, career changers and professionals",
     slug: "career-coaching",
     category: "Coaching + Mentoring for Students",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 19999,
     features: [
       "Personalized career path development",
@@ -282,6 +375,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Defining & Achieving Career Goals", description: "Identifying strengths & interests. Aligning passion with career path. Setting career milestones and seeking opportunities for Growth." },
       { title: "How to Network Effectively", description: "Understanding the importance of networking. Online & offline networking strategies. Building Professional Relationships and utilising mentors & industry contacts" },
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
   },
   "interview-preparation": {
@@ -292,6 +394,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Job seekers, career changers, students and professionals",
     slug: "interview-preparation",
     category: "Coaching + Mentoring for Students",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 17999,
     features: [
       "Comprehensive interview preparation strategies",
@@ -317,6 +421,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Resume, LinkedIn & Networking for Interview Success", description: "Crafting the perfect resume. Optimizing LinkedIn for job search & recruiter visibility. The power of networking: How to use informational interviews and referrals." },
       { title: "Final Mock Interviews & Course Wrap-Up", description: "Real-world mock interview with feedback from experts. Personalised career plan moving forward. Q&A session, course reflection, and certification." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
   },
   "leadership-development": {
@@ -327,6 +440,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Mid to senior-level managers and executives",
     slug: "leadership-development",
     category: "Corporate Training",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 34999,
     features: [
       "Strategic leadership vision development",
@@ -348,6 +463,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Emotional Intelligence", description: "Self-awareness, relationship management, and empathetic leadership." },
       { title: "Sustainable Leadership", description: "Work-life integration, burnout prevention, and legacy planning." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
   },
   "team-communication": {
@@ -358,6 +482,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Teams and departments within corporate organizations",
     slug: "team-communication",
     category: "Corporate Training",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 24999,
     features: [
       "Cross-functional collaboration frameworks",
@@ -377,6 +503,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Information Flow", description: "Knowledge sharing, transparency protocols, and communication architecture." },
       { title: "Team Alignment", description: "Vision sharing, goal congruence, and collaborative planning." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
   },
   "strategic-hiring": {
@@ -387,6 +522,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "HR professionals and hiring managers",
     slug: "strategic-hiring",
     category: "Corporate Training",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 29999,
     features: [
       "Talent acquisition strategy development",
@@ -409,6 +546,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Succession Planning", description: "Talent review, critical role analysis, and pipeline development." },
       { title: "Talent Analytics", description: "Hiring metrics, dashboard development, and data-driven improvements." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
   },
   "executive-leadership": {
@@ -419,6 +565,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Senior executives, C-suite professionals, and aspiring leaders",
     slug: "executive-leadership",
     category: "Leadership Development Programs",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 39999,
     features: [
       "Strategic vision development and organizational transformation",
@@ -442,6 +590,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Performance & Results", description: "Driving organizational performance and achieving sustainable results." },
       { title: "Leadership Legacy", description: "Succession planning, mentoring, and building lasting leadership impact." }
     ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
+    ],
     image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
   },
   "team-leadership": {
@@ -452,6 +609,8 @@ const programsData: Record<string, ProgramData> = {
     audience: "Team leaders, department heads, and emerging managers",
     slug: "team-leadership",
     category: "Leadership Development Programs",
+    duration: "10 hours (Customized for groups)",
+    startDate: "Rolling admissions",
     price: 19999,
     features: [
       "Effective team building and collaboration strategies",
@@ -470,6 +629,15 @@ const programsData: Record<string, ProgramData> = {
       { title: "Delegation & Empowerment", description: "Effective delegation, empowering team members, and building autonomy." },
       { title: "Motivation & Engagement", description: "Understanding motivation, employee engagement, and retention strategies." },
       { title: "Leading Change at Team Level", description: "Managing team transitions, change adoption, and continuous improvement." }
+    ],
+    learningOutcomes: [
+      "Demonstrate clear, confident, and tailored responses across all interview types",
+      "Apply structured frameworks to answer behavioural and situational questions",
+      "Adapt communication and body language based on interviewer style and setting",
+      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
+      "Present a professional image through attire, LinkedIn profile, and resume alignment",
+      "Engage in strategic questioning to show interest, fit, and long-term potential",
+      "Navigate job offers, rejections, and follow-up communications with professionalism"
     ],
     image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
   }
@@ -557,6 +725,22 @@ const ProgramDetail = () => {
                       <span className="font-medium">Modules</span>
                     </div>
                     <span className="text-2xl font-semibold">{program.modules}</span>
+                  </div>
+
+                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-4 shadow-sm">
+                    <div className="flex items-center text-primary mb-2">
+                      <Clock className="h-5 w-5 mr-2" />
+                      <span className="font-medium">Duration</span>
+                    </div>
+                    <span className="text-2xl font-semibold">{program.duration}</span>
+                  </div>
+                  
+                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-4 shadow-sm">
+                    <div className="flex items-center text-[hsl(var(--yellow))] mb-2">
+                      <Calendar className="h-5 w-5 mr-2" />
+                      <span className="font-medium">Start Date</span>
+                    </div>
+                    <span className="text-lg font-semibold">{program.startDate}</span>
                   </div>
                 </div>
                 
@@ -666,6 +850,31 @@ const ProgramDetail = () => {
             </div>
           </div>
         </section>
+
+        {/* Learning Outcomes Section */}
+        {program.learningOutcomes && (
+          <section className="py-16 bg-white">
+            <div className="container">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="heading-2 mb-8 text-center">
+                  <span className="text-gradient-blue-yellow">Learning Outcomes</span>
+                </h2>
+                
+                <div className="grid gap-4">
+                  {program.learningOutcomes.map((outcome, index) => (
+                    <div 
+                      key={index} 
+                      className="flex items-start p-4 rounded-lg bg-yellow/5 border border-yellow/10"
+                    >
+                      <CheckCircle className="h-6 w-6 text-[hsl(var(--yellow))] mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg">{outcome}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
         
         {/* CTA Section */}
         <section className="py-16 relative overflow-hidden">

@@ -1,7 +1,6 @@
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, CheckCircle, PlayCircle, X } from 'lucide-react';
+import { ArrowRight, Star, PlayCircle, X, Target, Users, Award, TrendingUp, User } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -9,11 +8,11 @@ const Hero = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   const benefits = [
-    "Ace your next interview",
-    "Gain industry-specific skills",
-    "Learn from the experts",
-    "Strategize your career-path",
-    "Get personalised feedback"
+    { icon: <Target className="h-5 w-5" />, text: "Ace Your Next Interview" },
+    { icon: <Award className="h-5 w-5" />, text: "Get Industry-Specific Coaching" },
+    { icon: <Star className="h-5 w-5" />, text: "Learn from Proven Experts" },
+    { icon: <TrendingUp className="h-5 w-5" />, text: "Strategize Your Career" },
+    { icon: <User className="h-5 w-5" />, text: "Get Personalized 1:1" }
   ];
 
   return (
@@ -21,27 +20,47 @@ const Hero = () => {
       <div className="container relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center rounded-full bg-[#facf3d]/10 px-3 py-1 text-sm font-medium text-[#facf3d]">
-              <span className="font-medium">New Workshop</span>
-              <span className="ml-1 text-[#facf3d]/60">Starting This Week</span>
+            <div className="inline-flex items-center rounded-full bg-[#2e5ddd]/10 px-3 py-1 text-sm font-medium text-[#2e5ddd]">
+              <span className="font-medium">Expert Training</span>
+              <span className="ml-1 text-[#2e5ddd]/60">Starting This Week</span>
             </div>
             
-            <h1 className="heading-1 text-[#2e5ddd]">
-              Master Your <span className="text-[#facf3d]">Interview Skills</span> With Confidence
-            </h1>
+            <div className="space-y-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display tracking-tight text-[#2e5ddd]">
+                7 out of 10 People Feel <span className="text-[#facf3d] underline">Underconfident</span> for a Job Interview
+              </h1>
+              <h2 className="text-xl md:text-2xl font-semibold text-[#2e5ddd]/80">
+                – Don't Be One of Them
+              </h2>
+            </div>
             
-            <p className="text-xl text-foreground/80 max-w-lg">
-              Interactive training to help you prepare, practice, and perform perfectly in your next interview.
+            <h3 className="text-xl md:text-2xl font-medium text-[#2e5ddd] leading-relaxed">
+              Walk into Your Next Job Interview with <span className="text-[#facf3d]">Confidence and Clarity</span>
+            </h3>
+            
+            <p className="text-lg text-foreground/80 leading-relaxed">
+              Whether you are a fresher, mid-career professional, or aiming for a leadership role, your interview is the opportunity to demonstrate your personality and skills beyond the confinements of a resume. Through our expert-led, interactive training program, we help you equip real-world skills, strategy, and confidence you need to stand out and succeed.
             </p>
             
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {benefits.map((benefit, index) => (
                 <li key={index} className="flex items-center text-foreground/80">
-                  <CheckCircle className="mr-2 h-5 w-5 flex-shrink-0 text-[#2e5ddd]" />
-                  <span>{benefit}</span>
+                  <div className="mr-3 h-6 w-6 flex-shrink-0 text-[#2e5ddd] bg-[#2e5ddd]/10 rounded-full flex items-center justify-center">
+                    {benefit.icon}
+                  </div>
+                  <span className="font-medium">{benefit.text}</span>
                 </li>
               ))}
             </ul>
+            
+            <div className="p-6 rounded-xl glass-effect border-l-4 border-[#facf3d]">
+              <p className="text-lg font-semibold text-[#2e5ddd] mb-2">
+                Candidates who practice with a coach are <span className="text-[#facf3d]">3X more likely</span> to land their desired job.
+              </p>
+              <p className="text-foreground/80">
+                So, strategize your interview preparation and leave a strong impression.
+              </p>
+            </div>
             
             <div className="flex flex-wrap gap-4 pt-2">
               <Button 
@@ -49,7 +68,7 @@ const Hero = () => {
                 className="rounded-full bg-[#2e5ddd] hover:bg-[#2e5ddd]/90 text-white font-medium btn-hover-expand btn-glow"
                 onClick={() => navigate('/courses')}
               >
-                Browse Courses
+                Check out our courses
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>

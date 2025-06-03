@@ -44,6 +44,7 @@ const Courses = () => {
       title: "Career Coaching & Mentoring",
       description: "Detailed understanding of career development strategies, decision-making & problem-solving, goal setting, and personal branding.",
       image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+
       level: "All Levels",
       students: 983,
       rating: 4.7,
@@ -55,6 +56,7 @@ const Courses = () => {
       title: "Leadership Development",
       description: "Executive coaching for senior management to enhance leadership capabilities.",
       image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+
       level: "Advanced",
       students: 756,
       rating: 4.9,
@@ -66,6 +68,7 @@ const Courses = () => {
       title: "Interview Preparation Program",
       description: "Comprehensive guidance on acing job interviews through SWOT analysis, answer structuring, and managing interview anxiety.",
       image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+
       level: "All Levels",
       students: 892,
       rating: 4.6,
@@ -77,6 +80,7 @@ const Courses = () => {
       title: "Fintech Program",
       description: "Understanding financial technology, lending & credit technologies, Blockchain & Cryptofinance, and RegTech.",
       image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+
       level: "Intermediate",
       students: 634,
       rating: 4.5,
@@ -88,6 +92,7 @@ const Courses = () => {
       title: "Strategic Selling Skills & Sales Management",
       description: "Equip professionals with structured sales techniques and improve customer relationship management capabilities.",
       image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+
       level: "Advanced",
       students: 567,
       rating: 4.7,
@@ -105,12 +110,7 @@ const Courses = () => {
       description: "Comprehensive interview preparation including job interview prep, resume review & building, and LinkedIn networking",
       icon: <Target className="h-8 w-8" />,
       color: "from-blue-500/20 to-blue-600/20",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
-      items: [
-        "Job interview prep",
-        "Resume review & building", 
-        "LinkedIn networking"
-      ]
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
     },
     {
       id: "coaching",
@@ -118,12 +118,7 @@ const Courses = () => {
       description: "Personalized guidance for career development and professional growth",
       icon: <MessageCircle className="h-8 w-8" />,
       color: "from-green-500/20 to-green-600/20",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
-      items: [
-        "Career coaching",
-        "Personal development",
-        "Professional mentoring"
-      ]
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
     },
     {
       id: "leadership-program",
@@ -131,14 +126,7 @@ const Courses = () => {
       description: "Advanced leadership training including social leadership, business negotiations, CRM, service strategy, and sales management",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-purple-500/20 to-purple-600/20",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
-      items: [
-        "Social leadership",
-        "Business Negotiations",
-        "CRM",
-        "Service Strategy",
-        "Sales Management"
-      ]
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
     },
     {
       id: "business-communication",
@@ -146,12 +134,7 @@ const Courses = () => {
       description: "Professional communication skills for modern workplace success",
       icon: <BookOpen className="h-8 w-8" />,
       color: "from-orange-500/20 to-orange-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
-      items: [
-        "Written communication",
-        "Verbal communication",
-        "Cross-cultural communication"
-      ]
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
     },
     {
       id: "fintech-program",
@@ -159,12 +142,7 @@ const Courses = () => {
       description: "Understanding financial technology and modern financial services",
       icon: <Briefcase className="h-8 w-8" />,
       color: "from-indigo-500/20 to-indigo-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
-      items: [
-        "Financial technology",
-        "Digital banking",
-        "Blockchain & crypto"
-      ]
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
     },
     {
       id: "entrepreneurship",
@@ -172,12 +150,7 @@ const Courses = () => {
       description: "Business development and startup fundamentals (content to be shared with Maitri)",
       icon: <Users className="h-8 w-8" />,
       color: "from-yellow-500/20 to-yellow-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
-      items: [
-        "Business planning",
-        "Startup fundamentals",
-        "Innovation strategies"
-      ]
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
     }
   ];
 
@@ -185,7 +158,7 @@ const Courses = () => {
   const programCategories = [
     {
       id: "university",
-      title: "University / MBA Programs",
+      title: "Job Interview Prep",
       description: "Specialized preparation for academic and business school interviews",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-blue-500/20 to-blue-600/20",
@@ -235,7 +208,7 @@ const Courses = () => {
     },
     {
       id: "coaching",
-      title: "Coaching + Mentoring for Students",
+      title: "Coaching",
       description: "Personalized guidance for career development and interview excellence",
       icon: <Users className="h-8 w-8" />,
       color: "from-yellow-500/20 to-yellow-600/20",
@@ -261,7 +234,7 @@ const Courses = () => {
     },
     {
       id: "leadership",
-      title: "Leadership Development Programs",
+      title: "Leadership Programs",
       description: "Advanced leadership and management training for executives",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-purple-500/20 to-purple-600/20",
@@ -287,7 +260,41 @@ const Courses = () => {
     },
     {
       id: "corporate",
-      title: "Corporate Training",
+      title: "Business Communication",
+      description: "Professional development programs for organizations and teams",
+      icon: <Briefcase className="h-8 w-8" />,
+      color: "from-primary/20 to-indigo-600/20",
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      programs: [
+        { 
+          id: "ct1", 
+          name: "Leadership Development", 
+          desc: "Executive coaching for senior management to enhance leadership capabilities.", 
+          modules: 10,
+          audience: "Mid to senior-level managers and executives",
+          slug: "leadership-development"
+        },
+        { 
+          id: "ct2", 
+          name: "Team Communication", 
+          desc: "Workshops focused on improving cross-functional team communication and collaboration.", 
+          modules: 8,
+          audience: "Teams and departments within corporate organizations",
+          slug: "team-communication"
+        },
+        { 
+          id: "ct3", 
+          name: "Strategic Hiring & Talent Management", 
+          desc: "Training for HR professionals on identifying and nurturing top talent.", 
+          modules: 11,
+          audience: "HR professionals and hiring managers",
+          slug: "strategic-hiring"
+        },
+      ]
+    },
+    {
+      id: "entrepreneurship",
+      title: "Entrepreneurship",
       description: "Professional development programs for organizations and teams",
       icon: <Briefcase className="h-8 w-8" />,
       color: "from-primary/20 to-indigo-600/20",
@@ -387,14 +394,6 @@ const Courses = () => {
                     <h3 className="text-xl font-semibold mb-2 text-white">{program.title}</h3>
                     <p className="text-sm text-white/90 mb-4">{program.description}</p>
                     
-                    {/* Program items */}
-                    <div className="space-y-1 mb-4">
-                      {program.items.map((item, idx) => (
-                        <div key={idx} className="text-xs text-white/80">
-                          • {item}
-                        </div>
-                      ))}
-                    </div>
                     
                     <div className="mt-auto">
                       <Button 
