@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,13 +34,50 @@
 
     --radius: 0.5rem;
     
-    /* Custom color for yellow highlights */
-    --yellow: 43 95% 61%;
+    /* Yellow color scheme */
+    --yellow: 45 93% 47%;
+    --yellow-foreground: 20 10% 5%;
+  }
+
+  .dark {
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    /* Yellow for dark mode */
+    --yellow: 45 93% 47%;
     --yellow-foreground: 20 10% 5%;
   }
 }
 
 @layer base {
+  * {
+    @apply border-border;
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -62,23 +98,27 @@
   }
   
   .text-gradient {
-    @apply text-[#2e5ddd];
+    @apply text-[#2e5ddd] dark:text-blue-400;
   }
   
   .text-gradient-blue-yellow {
-    @apply text-[#2e5ddd];
+    @apply text-[#2e5ddd] dark:text-blue-400;
   }
   
   .text-shimmer {
-    @apply text-[#facf3d];
+    @apply text-[#f59e0b] dark:text-[#fbbf24];
   }
   
   .glass-card {
-    @apply backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl;
+    @apply backdrop-blur-sm bg-white/5 dark:bg-white/10 border border-white/10 dark:border-white/20 rounded-xl;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-sm bg-white/10 dark:bg-black/20 border border-white/20 dark:border-white/10 rounded-xl;
   }
   
   .hero-gradient {
-    @apply bg-gradient-to-b from-background to-[#2e5ddd]/5;
+    @apply bg-gradient-to-b from-background to-[#2e5ddd]/5 dark:to-[#2e5ddd]/10;
   }
   
   .btn-glow {
@@ -108,6 +148,39 @@
   
   .logo-container img {
     @apply h-auto max-h-12 w-auto object-contain;
+  }
+  
+  /* Testimonial hover effects */
+  .testimonial-card {
+    @apply relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out;
+  }
+  
+  .testimonial-card img {
+    @apply transition-all duration-500 ease-in-out filter grayscale;
+  }
+  
+  .testimonial-card:hover {
+    @apply transform scale-105 z-10;
+  }
+  
+  .testimonial-card:hover img {
+    @apply filter-none;
+  }
+  
+  .testimonial-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-500;
+  }
+  
+  .testimonial-card:hover .testimonial-overlay {
+    @apply opacity-100;
+  }
+  
+  .testimonial-content {
+    @apply absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full transition-transform duration-500;
+  }
+  
+  .testimonial-card:hover .testimonial-content {
+    @apply transform translate-y-0;
   }
 }
 
