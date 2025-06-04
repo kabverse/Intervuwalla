@@ -72,7 +72,7 @@ const WorkshopsPage = () => {
               {/* Bonus Insight */}
               <div className="glass-card p-6 bg-primary/5 max-w-2xl mx-auto mb-8">
                 <div className="flex items-start">
-                  <Lightbulb className="h-6 w-6 text-[hsl(var(--yellow))] mr-3 mt-1 flex-shrink-0" />
+                  <Lightbulb className="h-6 w-6 text-[#D97706] mr-3 mt-1 flex-shrink-0" />
                   <div className="text-left">
                     <p className="text-lg font-medium text-foreground mb-2">
                       💡 "Hiring managers decide within the first 5–10 minutes of an interview."
@@ -123,7 +123,7 @@ const WorkshopsPage = () => {
                         <span className="text-xl font-bold text-primary">₹199</span>
                         <span className="text-sm text-foreground/70 ml-2">per person</span>
                       </div>
-                      <span className="text-[hsl(var(--yellow))] font-medium text-sm">Only 12 spots left</span>
+                      <span className="text-[#D97706] font-medium text-sm">Only 12 spots left</span>
                     </div>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ const WorkshopsPage = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                     <div className="p-6 text-white">
-                      <p className="font-medium text-[hsl(var(--yellow))]/90">Your Coach</p>
+                      <p className="font-medium text-[#D97706]/90">Your Coach</p>
                       <h3 className="text-2xl font-bold">Anil Gupta</h3>
                       <p className="text-sm opacity-80 mt-1">Founder & Interview Coach</p>
                     </div>

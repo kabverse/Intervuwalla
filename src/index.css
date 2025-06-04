@@ -106,7 +106,7 @@
   }
   
   .text-shimmer {
-    @apply text-[#f59e0b] dark:text-[#fbbf24];
+    @apply text-[#D97706] dark:text-[#fbbf24];
   }
   
   .glass-card {

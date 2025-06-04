@@ -27,7 +27,7 @@ const Hero = () => {
             </div>
             
             <h1 className="heading-1 text-[#2e5ddd]">
-              Master Your <span className="text-[#facf3d]">Interview Skills</span> With Confidence
+              Master Your <span className="text-[#D97706]">Interview Skills</span> With Confidence
             </h1>
             
             <p className="text-xl text-foreground/80 max-w-lg">
@@ -81,7 +81,7 @@ const Hero = () => {
                   <p className="text-sm font-medium opacity-80">Featured Workshop</p>
                   <h3 className="text-xl font-bold">Professional Interview Techniques</h3>
                   <div className="mt-2 flex items-center">
-                    <span className="text-[#facf3d] font-semibold">₹199</span>
+                    <span className="text-[#D97706] font-semibold">₹199</span>
                     <span className="text-xs text-white/70 ml-2">per person</span>
                   </div>
                 </div>

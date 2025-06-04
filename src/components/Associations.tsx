@@ -41,8 +41,8 @@ const Associations = () => {
     <section className="section-padding bg-background">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-2 mb-4 text-[#60b7ff]">
-            Our <span className="text-[#facf3d]">Associations</span>
+          <h2 className="heading-2 mb-4 text-[#2e5ddd]">
+            Our <span className="text-[#D97706]">Associations</span>
           </h2>
           <p className="text-foreground/80 text-lg">
             We've proudly collaborated with leading educational institutions, corporate organizations, and advisory boards.
@@ -53,7 +53,7 @@ const Associations = () => {
           {/* Educational Institutes */}
           <div>
             <h3 className="text-xl font-semibold text-center mb-8">
-              <span className="bg-[#facf3d] text-black py-2 px-8 rounded-md inline-block">Visiting Faculty</span>
+              <span className="bg-[#D97706] text-white py-2 px-8 rounded-md inline-block">Visiting Faculty</span>
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6">
               {educationalInstitutes.map((institute, index) => (
@@ -72,7 +72,7 @@ const Associations = () => {
           {/* Corporate Engagements */}
           <div>
             <h3 className="text-xl font-semibold text-center mb-8">
-              <span className="bg-[#facf3d] text-black py-2 px-8 rounded-md inline-block">Corporate Sector</span>
+              <span className="bg-[#D97706] text-white py-2 px-8 rounded-md inline-block">Corporate Sector</span>
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6">
               {corporateEngagements.map((company, index) => (
@@ -91,7 +91,7 @@ const Associations = () => {
           {/* Advisory Boards */}
           <div>
             <h3 className="text-xl font-semibold text-center mb-8">
-              <span className="bg-[#facf3d] text-black py-2 px-8 rounded-md inline-block">Advisory Board Roles</span>
+              <span className="bg-[#D97706] text-white py-2 px-8 rounded-md inline-block">Advisory Board Roles</span>
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {advisoryBoards.map((board, index) => (

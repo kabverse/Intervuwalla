@@ -740,7 +740,7 @@ const ProgramDetail = () => {
                   </div>
                   
                   <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-4 shadow-sm">
-                    <div className="flex items-center text-[hsl(var(--yellow))] mb-2">
+                    <div className="flex items-center text-[#D97706] mb-2">
                       <Calendar className="h-5 w-5 mr-2" />
                       <span className="font-medium">Start Date</span>
                     </div>
@@ -806,7 +806,7 @@ const ProgramDetail = () => {
               
               <div className="mt-8 p-6 bg-yellow/10 rounded-xl border border-yellow/20">
                 <h3 className="text-xl font-semibold mb-3 flex items-center">
-                  <Users className="h-5 w-5 text-[hsl(var(--yellow))] mr-2" />
+                  <Users className="h-5 w-5 text-[#D97706] mr-2" />
                   Target Audience
                 </h3>
                 <p className="text-lg">{program.audience}</p>
@@ -870,7 +870,7 @@ const ProgramDetail = () => {
                       key={index} 
                       className="flex items-start p-4 rounded-lg bg-yellow/5 border border-yellow/10"
                     >
-                      <CheckCircle className="h-6 w-6 text-[hsl(var(--yellow))] mr-3 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-6 w-6 text-[#D97706] mr-3 mt-0.5 flex-shrink-0" />
                       <span className="text-lg">{outcome}</span>
                     </div>
                   ))}
@@ -897,7 +897,7 @@ const ProgramDetail = () => {
               <Button 
                 onClick={handleEnroll} 
                 size="lg" 
-                className="bg-[hsl(var(--yellow))] hover:bg-[hsl(var(--yellow))]/90 text-black rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-yellow/20 animate-pulse-soft"
+                className="bg-[#D97706] hover:bg-[#D97706]/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-yellow/20 animate-pulse-soft"
               >
                 Enroll Now for ₹{program.price.toLocaleString()}
                 <ArrowRight className="ml-2 h-5 w-5" />

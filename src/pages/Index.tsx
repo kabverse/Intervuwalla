@@ -109,7 +109,7 @@ const Index = () => {
                   <h3 className="text-xl font-semibold text-[#2e5ddd]">Workshop Registration</h3>
                   <p className="text-foreground/70">Join Anil Gupta's exclusive interview preparation workshop</p>
                   <div className="mt-1 flex items-center">
-                    <span className="text-lg font-bold text-[#facf3d]">₹199</span>
+                    <span className="text-lg font-bold text-[#D97706]">₹199</span>
                     <span className="text-xs text-foreground/70 ml-2">per person</span>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const Index = () => {
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="heading-2 mb-4 text-[#2e5ddd]">
-                Popular <span className="text-[#facf3d]">Courses</span>
+                Popular <span className="text-[#D97706]">Courses</span>
               </h2>
               <p className="text-foreground/80 text-lg">
                 Join thousands of professionals who have transformed their careers with our specialized interview courses.

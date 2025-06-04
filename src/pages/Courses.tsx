@@ -538,7 +538,7 @@ const Courses = () => {
                   
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-yellow/10 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Users className="h-5 w-5 text-[hsl(var(--yellow))]" />
+                      <Users className="h-5 w-5 text-[#D97706]" />
                     </div>
                     <div>
                       <h3 className="text-lg font-medium mb-2">Personalized Mentoring</h3>
@@ -594,7 +594,7 @@ const Courses = () => {
                 Join our affordable ₹199 workshop to get a taste of our teaching style and curriculum. It's the perfect way to see if our programs are right for you.
               </p>
               <Link to="/workshops">
-                <Button className="bg-[hsl(var(--yellow))] hover:bg-[hsl(var(--yellow))]/90 text-black rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-yellow/20 animate-pulse-soft">
+                <Button className="bg-[#D97706] hover:bg-[#D97706]/90 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg shadow-yellow/20 animate-pulse-soft">
                   Register for Workshop
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

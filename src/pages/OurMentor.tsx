@@ -105,7 +105,7 @@ const OurMentor = () => {
           <div className="container">
             <div className="max-w-6xl mx-auto mb-16">
               <h1 className="heading-1 mb-6 text-[#2e5ddd] text-center">
-                Our <span className="text-[#facf3d]">Mentor</span>
+                Our <span className="text-[#D97706]">Mentor</span>
               </h1>
               
               <div className="flex flex-col lg:flex-row gap-12 items-start">
@@ -131,7 +131,7 @@ const OurMentor = () => {
                 
                 <div className="lg:w-2/3">
                   <h2 className="text-3xl font-bold mb-2">Anil Gupta</h2>
-                  <h3 className="text-xl text-[#facf3d] mb-6">Thought Leader | Educator | Strategist | Mentor</h3>
+                  <h3 className="text-xl text-[#D97706] mb-6">Thought Leader | Educator | Strategist | Mentor</h3>
                   
                   <div className="space-y-6 text-foreground/90">
                     <div className="p-6 glass-card border-l-4 border-[#2e5ddd]">
@@ -154,7 +154,7 @@ const OurMentor = () => {
             {/* Team Members Section */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center text-[#2e5ddd]">
-                Our <span className="text-[#facf3d]">Team</span>
+                Our <span className="text-[#D97706]">Team</span>
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -176,7 +176,7 @@ const OurMentor = () => {
                       {member.description}
                     </p>
                     
-                    <div className="p-3 bg-[#facf3d]/10 rounded-lg border-l-4 border-[#facf3d]">
+                    <div className="p-3 bg-[#D97706]/10 rounded-lg border-l-4 border-[#D97706]">
                       <p className="text-sm font-medium text-[#2e5ddd]">
                         Mantra: <span className="italic">{member.mantra}</span>
                       </p>
@@ -191,7 +191,7 @@ const OurMentor = () => {
             
             {/* Workshop Gallery Section */}
             <div className="mt-16">
-              <h2 className="text-2xl font-bold mb-8 text-center">Workshop <span className="text-[#facf3d]">Gallery</span></h2>
+              <h2 className="text-2xl font-bold mb-8 text-center">Workshop <span className="text-[#D97706]">Gallery</span></h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {workshopImages.map((image) => (

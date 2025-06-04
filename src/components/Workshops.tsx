@@ -122,7 +122,7 @@ const Workshops = () => {
                       <Users className="h-4 w-4 mr-2 text-primary mt-0.5" />
                       <div>
                         {workshop.spotsLeft < 10 ? 
-                          <span className="text-[hsl(var(--yellow))] font-medium">Only {workshop.spotsLeft} spots left</span> : 
+                          <span className="text-[#D97706] font-medium">Only {workshop.spotsLeft} spots left</span> : 
                           <span>{workshop.spotsLeft} spots left</span>
                         }
                       </div>

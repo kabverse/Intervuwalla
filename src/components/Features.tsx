@@ -73,13 +73,13 @@ const Features = () => {
             <div className="space-y-8 relative z-10">
               <div className="space-y-4">
                 <h3 className="text-4xl lg:text-5xl font-bold text-[#2e5ddd] dark:text-blue-400 leading-tight group-hover:scale-105 transition-transform duration-300">
-                  Learn From <span className="text-[#facf3d] dark:text-[#daa520] block mt-2">Anil Gupta</span>
+                  Learn From <span className="text-[#D97706] dark:text-[#daa520] block mt-2">Anil Gupta</span>
                 </h3>
-                <div className="w-20 h-1 bg-gradient-to-r from-[#2e5ddd] to-[#facf3d] dark:from-blue-400 dark:to-[#daa520] rounded-full group-hover:w-32 transition-all duration-500"></div>
+                <div className="w-20 h-1 bg-gradient-to-r from-[#2e5ddd] to-[#D97706] dark:from-blue-400 dark:to-[#daa520] rounded-full group-hover:w-32 transition-all duration-500"></div>
               </div>
               
               <p className="text-xl text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
-                With over <span className="font-semibold text-[#facf3d] dark:text-[#daa520]">15 years</span> of experience in career coaching, Anil has helped thousands of professionals secure their dream jobs at top companies.
+                With over <span className="font-semibold text-[#D97706] dark:text-[#daa520]">15 years</span> of experience in career coaching, Anil has helped thousands of professionals secure their dream jobs at top companies.
               </p>
               
               <ul className="space-y-4">
