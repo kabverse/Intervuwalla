@@ -1,8 +1,13 @@
-
 import { useState } from 'react';
 import { Calendar, MapPin, Clock, Users, Check, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import RegistrationModal from './RegistrationModal';
+import { 
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { Card } from "@/components/ui/card";
 
 interface Workshop {
   id: string;
@@ -19,6 +24,15 @@ interface Workshop {
 const Workshops = () => {
   const [selectedWorkshop, setSelectedWorkshop] = useState<Workshop | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCollapsibleOpen, setIsCollapsibleOpen] = useState(false);
+  
+  // Scroll function to smoothly scroll to courses section
+  const scrollToCourses = () => {
+    const coursesSection = document.getElementById('courses-section');
+    if (coursesSection) {
+      coursesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   
   const workshops: Workshop[] = [
     {
@@ -50,7 +64,7 @@ const Workshops = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center rounded-full bg-[#2e5ddd]/10 px-3 py-1 text-sm font-medium text-[#2e5ddd] mb-4">
             <span className="font-medium">Limited Seats</span>
-            <span className="ml-1 text-[#2e5ddd]/60">Book Now</span>
+            <span className="ml-1 text-[#2e5ddd]/80">Book Now</span>
           </div>
           
           <h2 className="heading-2 mb-4 text-gradient-blue-yellow animate-pulse-soft">

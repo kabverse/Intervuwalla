@@ -39,8 +39,8 @@ const Features = () => {
     <section className="section-padding bg-secondary/30 relative overflow-hidden">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-2 mb-4 text-[#60b7ff]">
-            Everything You Need to <span className="text-[#facf3d]">Succeed</span>
+          <h2 className="heading-2 mb-4 text-[#2e5ddd]">
+            Everything You Need to Succeed
           </h2>
           <p className="text-muted-foreground text-lg">
             Intervuwalla combines cutting-edge technology with expert guidance from Anil Gupta to help you master the art of interviewing.
@@ -68,38 +68,55 @@ const Features = () => {
         </div>
 
         {/* Anil Gupta Feature Box */}
-        <div className="mt-16 glass-card p-8 relative overflow-hidden">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <h3 className="heading-3 text-[#60b7ff]">Learn From <span className="text-[#facf3d]">Anil Gupta</span></h3>
-              <p className="text-lg text-muted-foreground">
-                With over 15 years of experience in career coaching, Anil has helped thousands of professionals secure their dream jobs at top companies.
+        <div className="mt-16 glass-card p-8 relative overflow-hidden group hover:shadow-2xl transition-all duration-500">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8 relative z-10">
+              <div className="space-y-4">
+                <h3 className="text-4xl lg:text-5xl font-bold text-[#2e5ddd] dark:text-blue-400 leading-tight group-hover:scale-105 transition-transform duration-300">
+                  Learn From <span className="text-[#facf3d] dark:text-[#daa520] block mt-2">Anil Gupta</span>
+                </h3>
+                <div className="w-20 h-1 bg-gradient-to-r from-[#2e5ddd] to-[#facf3d] dark:from-blue-400 dark:to-[#daa520] rounded-full group-hover:w-32 transition-all duration-500"></div>
+              </div>
+              
+              <p className="text-xl text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                With over <span className="font-semibold text-[#facf3d] dark:text-[#daa520]">15 years</span> of experience in career coaching, Anil has helped thousands of professionals secure their dream jobs at top companies.
               </p>
-              <ul className="space-y-3">
-                <li className="flex items-center text-foreground/80">
-                  <Award className="mr-3 h-5 w-5 flex-shrink-0 text-[#60b7ff]" />
-                  <span>Industry-recognized leadership expert</span>
+              
+              <ul className="space-y-4">
+                <li className="flex items-center text-lg text-foreground/80 group/item hover:text-foreground transition-colors duration-200">
+                  <div className="mr-4 p-2 rounded-full bg-[#2e5ddd]/10 dark:bg-blue-400/10 group-hover/item:bg-[#2e5ddd]/20 dark:group-hover/item:bg-blue-400/20 transition-colors duration-200">
+                    <Award className="h-5 w-5 flex-shrink-0 text-[#2e5ddd] dark:text-blue-400" />
+                  </div>
+                  <span className="group-hover/item:translate-x-1 transition-transform duration-200">Industry-recognized leadership expert</span>
                 </li>
-                <li className="flex items-center text-foreground/80">
-                  <Users className="mr-3 h-5 w-5 flex-shrink-0 text-[#60b7ff]" />
-                  <span>Mentored 10,000+ career professionals</span>
+                <li className="flex items-center text-lg text-foreground/80 group/item hover:text-foreground transition-colors duration-200">
+                  <div className="mr-4 p-2 rounded-full bg-[#2e5ddd]/10 dark:bg-blue-400/10 group-hover/item:bg-[#2e5ddd]/20 dark:group-hover/item:bg-blue-400/20 transition-colors duration-200">
+                    <Users className="h-5 w-5 flex-shrink-0 text-[#2e5ddd] dark:text-blue-400" />
+                  </div>
+                  <span className="group-hover/item:translate-x-1 transition-transform duration-200">Mentored 10,000+ career professionals</span>
                 </li>
-                <li className="flex items-center text-foreground/80">
-                  <MessageSquare className="mr-3 h-5 w-5 flex-shrink-0 text-[#60b7ff]" />
-                  <span>Developed proprietary interview frameworks</span>
+                <li className="flex items-center text-lg text-foreground/80 group/item hover:text-foreground transition-colors duration-200">
+                  <div className="mr-4 p-2 rounded-full bg-[#2e5ddd]/10 dark:bg-blue-400/10 group-hover/item:bg-[#2e5ddd]/20 dark:group-hover/item:bg-blue-400/20 transition-colors duration-200">
+                    <MessageSquare className="h-5 w-5 flex-shrink-0 text-[#2e5ddd] dark:text-blue-400" />
+                  </div>
+                  <span className="group-hover/item:translate-x-1 transition-transform duration-200">Developed proprietary interview frameworks</span>
                 </li>
               </ul>
             </div>
-            <div className="relative h-full min-h-[300px] rounded-xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+            
+            <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden group-hover:scale-105 transition-transform duration-500">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10 group-hover:from-black/40 transition-all duration-300"></div>
               <img 
-                src="./images/image.png"
+                src="/images/image.png"
                 alt="Anil Gupta" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute bottom-0 left-0 p-6 z-20 text-white">
-                <p className="text-sm font-semibold">Anil Gupta</p>
+              <div className="absolute bottom-0 left-0 p-6 z-20 text-white group-hover:translate-y-[-4px] transition-transform duration-300">
+                <p className="text-lg font-semibold">Anil Gupta</p>
                 <p className="text-sm opacity-80">Founder & Lead Interview Coach</p>
+              </div>
+              <div className="absolute top-4 right-4 z-20">
+                <div className="w-3 h-3 bg-[#b8860b] dark:bg-[#daa520] rounded-full animate-pulse"></div>
               </div>
             </div>
           </div>

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Clock, Calendar, Users, CheckCircle, ArrowLeft, GraduationCap } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { link } from 'fs';
 
 // Define the program data interface
 interface ProgramData {
@@ -661,8 +662,10 @@ const ProgramDetail = () => {
 
   const handleEnroll = () => {
     // Placeholder for payment integration
-    alert("Payment integration would be implemented here. This would connect to Razorpay or collect user information.");
-    // In a real implementation, this would redirect to Razorpay or show a form
+    // alert("Payment integration would be implemented here. This would connect to Razorpay or collect user information.");
+  
+    // Redirect to Google Form or Razorpay link
+    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSd5dVh5qJPVqYOQvlw5nB4nNx02mxbcXyWGJzRANDBCZNX-lA/viewform?usp=header";
   };
 
   if (loading) {
