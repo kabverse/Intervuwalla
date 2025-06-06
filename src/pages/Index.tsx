@@ -39,7 +39,7 @@ const Index = () => {
       students: 983,
       rating: 4.7,
       category: "Coaching + Mentoring",
-      price: 12999
+      price: 12999,
     },
     {
       id: "leadership-development",
@@ -50,7 +50,7 @@ const Index = () => {
       students: 756,
       rating: 4.9,
       category: "Corporate Training",
-      price: 19999
+      price: 19999,
     },
     {
       id: "interview-preparation",
@@ -61,7 +61,7 @@ const Index = () => {
       students: 892,
       rating: 4.6,
       category: "Coaching + Mentoring",
-      price: 11999
+      price: 11999,
     },
     {
       id: "fintech",
@@ -72,7 +72,7 @@ const Index = () => {
       students: 634,
       rating: 4.5,
       category: "University / MBA Programs",
-      price: 16999
+      price: 16999,
     },
     {
       id: "strategic-selling",
@@ -152,11 +152,11 @@ const Index = () => {
         <section className="section-padding bg-background">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="heading-2 mb-4 text-[#2e5ddd]">
-                Popular <span className="text-[#D97706]">Courses</span>
+              <h2 className="heading-2 mb-4 text-[#2e5ddd] dark:text-blue-400">
+                Popular <span className="text-[#b8860b] dark:text-[#daa520]">Courses</span>
               </h2>
               <p className="text-foreground/80 text-lg">
-                Join thousands of professionals who have transformed their careers with our specialized interview courses.
+                Join thousands of professionals who have transformed their careers with our specialized programs.
               </p>
             </div>
             
@@ -169,7 +169,7 @@ const Index = () => {
             <div className="text-center mt-12">
               <a 
                 href="/courses" 
-                className="inline-flex items-center text-[#2e5ddd] font-medium hover:underline group"
+                className="inline-flex items-center text-[#2e5ddd] dark:text-blue-400 font-medium hover:underline group"
               >
                 View all courses
                 <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

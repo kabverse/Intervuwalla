@@ -33,7 +33,7 @@ const Hero = () => {
             </div>
             
             <h1 className="heading-1 text-[#2e5ddd] dark:text-blue-400">
-              Master Your <span className="text-yellow-500 animate-pulse">Interview Skills</span> With Confidence
+              Master Your <span className="text-[#D97706] animate-pulse">Interview Skills</span> With Confidence
             </h1>
             
             <p className="text-xl text-foreground/80 max-w-lg">
