@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CourseCard, { CourseProps } from '@/components/CourseCard';
@@ -16,14 +16,42 @@ import { Card, CardContent } from '@/components/ui/card';
 const Courses = () => {
   // Reference for the courses section
   const coursesRef = useRef<HTMLDivElement>(null);
+  // State to control which accordion section should be open
+  const [activeAccordion, setActiveAccordion] = useState("interview");
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Function to scroll to courses section
-  const scrollToCourses = () => {
-    coursesRef.current?.scrollIntoView({ behavior: 'smooth' });
+  // Function to scroll to courses section and open specific category
+  const scrollToCourses = (categoryId?: string) => {
+    if (categoryId) {
+      setActiveAccordion(categoryId);
+    }
+    // Use setTimeout to ensure state is updated before scrolling
+    setTimeout(() => {
+      coursesRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
+  // Map featured program IDs to accordion category IDs
+  const getCategoryId = (programId: string) => {
+    switch (programId) {
+      case "job-interview-prep":
+        return "interview";
+      case "coaching":
+        return "coaching";
+      case "leadership-program":
+        return "leadership";
+      case "business-communication":
+        return "business";
+      case "fintech-program":
+        return "fintech";
+      case "entrepreneurship":
+        return "entrepreneurship";
+      default:
+        return "university";
+    }
   };
   
   const courses: CourseProps[] = [
@@ -111,7 +139,10 @@ const Courses = () => {
       description: "Comprehensive interview preparation including job interview prep, resume review & building, and LinkedIn networking",
       icon: <Target className="h-8 w-8" />,
       color: "from-blue-500/20 to-blue-600/20",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      items: [
+        "Interview Preparation Program"
+      ]
     },
     {
       id: "coaching",
@@ -119,7 +150,10 @@ const Courses = () => {
       description: "Personalized guidance for career development and professional growth",
       icon: <MessageCircle className="h-8 w-8" />,
       color: "from-green-500/20 to-green-600/20",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      items: [
+        "Career Coaching & Mentoring",
+      ]
     },
     {
       id: "leadership-program",
@@ -127,7 +161,13 @@ const Courses = () => {
       description: "Advanced leadership training including social leadership, business negotiations, CRM, service strategy, and sales management",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-purple-500/20 to-purple-600/20",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
+      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      items: [
+        "Social Leadership Workshop",
+        "Business Negotiation",
+        "Customer Relation Management",
+        "Strategic Selling Skills & Sales Management"
+      ]
     },
     {
       id: "business-communication",
@@ -135,7 +175,10 @@ const Courses = () => {
       description: "Professional communication skills for modern workplace success",
       icon: <BookOpen className="h-8 w-8" />,
       color: "from-orange-500/20 to-orange-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      items: [
+        "Business Communication"
+      ]
     },
     {
       id: "fintech-program",
@@ -143,7 +186,10 @@ const Courses = () => {
       description: "Understanding financial technology and modern financial services",
       icon: <Briefcase className="h-8 w-8" />,
       color: "from-indigo-500/20 to-indigo-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      items: [
+        "Fintech"
+      ]
     },
     {
       id: "entrepreneurship",
@@ -151,15 +197,18 @@ const Courses = () => {
       description: "Business development and startup fundamentals (content to be shared with Maitri)",
       icon: <Users className="h-8 w-8" />,
       color: "from-yellow-500/20 to-yellow-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      items: [
+        "Entrepreneurship"
+      ]
     }
   ];
 
   // Program categories with updated details
   const programCategories = [
     {
-      id: "university",
-      title: "Job Interview Prep",
+      id: "interview",
+      title: "Job Interview Preparation",
       description: "Specialized preparation for academic and business school interviews",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-blue-500/20 to-blue-600/20",
@@ -236,7 +285,7 @@ const Courses = () => {
       ]
     },
     {
-      id: "corporate",
+      id: "business",
       title: "Business Communication",
       description: "Professional development programs for organizations and teams",
       icon: <Briefcase className="h-8 w-8" />,
@@ -358,11 +407,20 @@ const Courses = () => {
                     <p className="text-sm text-white/90 mb-4">{program.description}</p>
                     
                     
+                    {/* Program items */}
+                    <div className="space-y-1 mb-4">
+                      {program.items.map((item, idx) => (
+                        <div key={idx} className="text-xs text-white/80">
+                          • {item}
+                        </div>
+                      ))}
+                    </div>
+                    
                     <div className="mt-auto">
                       <Button 
                         variant="ghost" 
                         className="bg-white/80 backdrop-blur-sm hover:bg-white/95 text-foreground group-hover:translate-x-1 transition-transform"
-                        onClick={scrollToCourses}
+                        onClick={() => scrollToCourses(getCategoryId(program.id))}
                       >
                         Learn More
                         <ArrowRight className="ml-1 h-4 w-4 group-hover:ml-2 transition-all" />
@@ -380,7 +438,7 @@ const Courses = () => {
                 <h3 className="font-semibold text-xl">Detailed Program Curriculum</h3>
               </div>
               
-              <Accordion type="single" collapsible className="w-full" defaultValue="university">
+              <Accordion type="single" collapsible className="w-full" value={activeAccordion} onValueChange={setActiveAccordion}>
                 {programCategories.map((category) => (
                   <AccordionItem key={category.id} value={category.id} className="border-b border-primary/10">
                     <AccordionTrigger className="py-6 px-4 text-xl font-display font-semibold text-foreground hover:text-primary group">

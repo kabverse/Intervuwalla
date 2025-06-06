@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -95,32 +95,52 @@ const Index = () => {
       <main>
         <Hero />
         
-        {/* Registration Banner */}
-        <div className="py-6 bg-[#2e5ddd]/10 backdrop-blur-md">
-          <div className="container">
-            <div className="flex flex-col md:flex-row items-center justify-between rounded-xl glass-effect p-6">
+        {/* Enhanced Registration Banner */}
+        <div className="py-6 bg-gradient-to-r from-yellow-400/10 via-orange-400/10 to-red-400/10 backdrop-blur-md relative overflow-hidden">
+          {/* Animated background elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-1/4 w-32 h-32 bg-yellow-400/20 rounded-full blur-xl animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-orange-400/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          </div>
+          
+          <div className="container relative z-10">
+            <div className="flex flex-col md:flex-row items-center justify-between rounded-xl glass-effect p-6 border border-yellow-400/20">
               <div className="flex items-center mb-4 md:mb-0">
-                <img
-                  src="/images/f0e019fb-c25f-4348-abaf-73f954784463.png"
-                  alt="Anil Gupta"
-                  className="h-16 w-16 rounded-full object-cover border-2 border-[#2e5ddd] mr-4"
-                />
+                <div className="relative">
+                  <img
+                    src="/images/f0e019fb-c25f-4348-abaf-73f954784463.png"
+                    alt="Anil Gupta"
+                    className="h-16 w-16 rounded-full object-cover border-2 border-yellow-400 mr-4"
+                  />
+                  {/* Floating sparkle effect */}
+                  <div className="absolute -top-1 -right-1 text-yellow-400 animate-bounce">
+                    <Sparkles className="h-4 w-4" />
+                  </div>
+                </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#2e5ddd]">Workshop Registration</h3>
+                  <h3 className="text-xl font-semibold text-[#2e5ddd] dark:text-blue-400">Workshop Registration</h3>
                   <p className="text-foreground/70">Join Anil Gupta's exclusive interview preparation workshop</p>
                   <div className="mt-1 flex items-center">
-                    <span className="text-lg font-bold text-[#D97706]">₹199</span>
+                    <span className="text-lg font-bold text-yellow-600">₹199</span>
                     <span className="text-xs text-foreground/70 ml-2">per person</span>
+                    {/* Flashy "limited time" badge */}
+                    <span className="ml-3 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full animate-pulse font-bold">
+                      🔥 Limited Time
+                    </span>
                   </div>
                 </div>
               </div>
-              <Button 
-                className="bg-[#2e5ddd] text-white hover:bg-[#2e5ddd]/90 btn-hover-expand btn-glow"
-                size="lg"
-                onClick={() => window.location.href = '/workshops'}
-              >
-                Register Now
-              </Button>
+              <div className="relative">
+                <Button 
+                  className="relative z-10 bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700 btn-hover-expand btn-glow font-bold shadow-lg"
+                  size="lg"
+                  onClick={() => window.location.href = '/workshops'}
+                >
+                  🚀 Register Now
+                </Button>
+                {/* Glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-orange-500 to-red-600 rounded blur opacity-30 animate-pulse"></div>
+              </div>
             </div>
           </div>
         </div>

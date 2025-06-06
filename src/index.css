@@ -106,7 +106,7 @@
   }
   
   .text-shimmer {
-    @apply text-[#D97706] dark:text-[#fbbf24];
+    @apply text-yellow-500 dark:text-yellow-400;
   }
   
   .glass-card {
@@ -150,6 +150,15 @@
     @apply h-auto max-h-12 w-auto object-contain;
   }
   
+  /* Enhanced animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+  
   /* Testimonial hover effects */
   .testimonial-card {
     @apply relative overflow-hidden cursor-pointer transition-all duration-500 ease-in-out;
@@ -182,10 +191,154 @@
   .testimonial-card:hover .testimonial-content {
     @apply transform translate-y-0;
   }
+  
+  /* Enhanced flashy badge effects */
+  .badge-glow {
+    @apply relative;
+  }
+  
+  .badge-glow::before {
+    content: "";
+    @apply absolute -inset-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full blur opacity-40 animate-pulse;
+  }
+  
+  .badge-sparkle {
+    @apply relative;
+  }
+  
+  .badge-sparkle::after {
+    content: "✨";
+    @apply absolute -top-1 -right-1 text-xs animate-bounce;
+  }
+  
+  /* Mega flashy effects for key selling points */
+  .mega-flash {
+    @apply relative overflow-hidden;
+    animation: mega-glow 2s ease-in-out infinite;
+  }
+  
+  .mega-flash::before {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 -translate-x-full;
+    animation: sweep 3s ease-in-out infinite;
+  }
+  
+  .consumer-badge {
+    @apply relative inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white font-bold rounded-full shadow-xl transform hover:scale-110 transition-all duration-300;
+  }
+  
+  .consumer-badge::before {
+    content: "";
+    @apply absolute -inset-1 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 rounded-full blur opacity-50 animate-pulse;
+  }
+  
+  .price-flash {
+    @apply relative;
+    animation: price-glow 1.5s ease-in-out infinite;
+  }
 }
 
 @keyframes shimmer {
   to {
     background-position: 200% center;
   }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Flashy keyframes for sales elements */
+@keyframes flashy-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(251, 191, 36, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.8), 0 0 30px rgba(251, 191, 36, 0.6);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+.flashy-glow {
+  animation: flashy-glow 2s ease-in-out infinite;
+}
+
+.sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+/* Enhanced flashy keyframes for consumer-centric elements */
+@keyframes mega-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.5), 0 0 20px rgba(249, 115, 22, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.8), 0 0 50px rgba(249, 115, 22, 0.6), 0 0 70px rgba(239, 68, 68, 0.4);
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes price-glow {
+  0%, 100% {
+    color: #ca8a04;
+    text-shadow: 0 0 5px rgba(202, 138, 4, 0.5);
+  }
+  50% {
+    color: #eab308;
+    text-shadow: 0 0 15px rgba(234, 179, 8, 0.8), 0 0 25px rgba(202, 138, 4, 0.6);
+  }
+}
+
+@keyframes ultra-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1);
+  }
+}
+
+.ultra-bounce {
+  animation: ultra-bounce 2s ease-in-out infinite;
+}
+
+.mega-flash {
+  animation: mega-glow 2s ease-in-out infinite;
 }
