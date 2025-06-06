@@ -29,9 +29,9 @@ interface ProgramData {
 // Sample program data (would typically come from a database)
 const programsData: Record<string, ProgramData> = {
   "fintech": {
-    id: "u2",
+    id: "f1",
     name: "Fintech",
-    desc: "UFintech stands for Financial Technology; it is a transformational feature in the financial sector. It is helping in bringing financial inclusion through mobile apps and digital wallets. Through automation, AI, and blockchain, it helps in reducing manual processes and operational costs. Provides personalised and real-time services through different platforms. And lastly, through P2P lending, alternative credit scoring and digital loan disbursements it has brought innovation in credit and lending.",
+    desc: "Fintech stands for Financial Technology; it is a transformational feature in the financial sector. It is helping in bringing financial inclusion through mobile apps and digital wallets. Through automation, AI, and blockchain, it helps in reducing manual processes and operational costs. Provides personalised and real-time services through different platforms. And lastly, through P2P lending, alternative credit scoring and digital loan disbursements it has brought innovation in credit and lending.",
     modules: 8,
     audience: "Management graduates, banking professionals, startup founders and team members, and other finance related professionals.",
     slug: "fintech",
@@ -70,14 +70,54 @@ const programsData: Record<string, ProgramData> = {
     ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
+  "business-negotiation": {
+    id: "l3",
+    name: "Business Negotiation",
+    desc: "Business negotiation is a core leadership skill. It helps managing cross-border partnerships, securing deals, and resolving conflicts. Strong negotiation skills determine success of individual deals and strengthen long-terms business relationships alongside enhancing organizational reputation.",
+    modules: 10,
+    audience: "Management graduates (with 4+ years’ experience), mid-level executives, strategic partnerships & international trade professionals, individuals interested in learning the skill. ",
+    slug: "business-negotiation",
+    category: "Leadership Programs",
+    duration: "20 hours",
+    startDate: "Rolling admissions",
+    price: 19999,
+    features: [
+      "To build foundational and advanced negotiation skills relevant in international and cross-cultural business contexts",
+      "To develop strategies for value creation, conflict resolution, and stakeholder alignment",
+      "To apply negotiation frameworks to real-life scenarios and global business challenges",
+      "To enhance participants’ confidence, communication, and adaptability in high-stakes situations"
+    ],
+    curriculum: [
+      { title: "Introduction to Negotiation", description: "Evolution and fundamentals of CRM and its types. Understanding strategic importance of CRM in modern businesses." },
+      { title: "International Business Context ", description: ""},
+      { title: "Negotiation Planning ", description: ""},
+      { title: "Communication and Influence ", description: "" },
+      { title: "Cross-Cultural Negotiation ", description: ""},
+      { title: "Multi-party and Team Negotiations ", description: ""},
+      { title: "Negotiation Simulations ", description: ""},
+      { title: "Ethics and Power in Negotiation ", description: ""},
+      { title: "Conflict Resolution & Mediation ", description: ""},
+      { title: "Negotiation in the Digital World ", description: ""},
+    ],
+    learningOutcomes: [
+      "Apply structured negotiation frameworks across various business situations",
+      "Identify and leverage their BATNA and ZOPA effectively",
+      "Communicate persuasively while navigating diverse cultural settings",
+      "Build long-term trust-based relationships with stakeholders",
+      "Resolve conflicts and deadlocks using ethical and practical approaches",
+      "Lead team and multi-party negotiations with strategic clarity",
+      "Adapt to emerging digital tools and practices in global negotiations"
+],
+    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+  },
   "crm": {
-    id: "u3",
+    id: "l3",
     name: "Customer Relation Management",
     desc: "CRM plays a crucial role in aligning customer-centric strategies with business outcomes. Helps in attracting right audience and retain high value customers. Enables informed marketing, sale, and service strategies through customer data centralization. Improves conversion rate, allows ROI tracking and targeting and lastly, facilitates ticketing feedback loops.",
     modules: 9,
     audience: "Management and engineering graduates, sales and marketing professionals, startup founders and product managers, customer service leaders and CX leaders, banking, NBFC, telecom, and retail professionals.",
     slug: "crm",
-    category: "University / MBA Programs",
+    category: "Leadership Programs",
     duration: "20 hours",
     startDate: "Rolling admissions",
     price: 19999,
@@ -112,7 +152,7 @@ const programsData: Record<string, ProgramData> = {
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
   "strategic-selling": {
-    id: "u5",
+    id: "l4",
     name: "Strategic Selling Skills & Sales Management",
     desc: "Sales skill is the ability to sell strategically. It is a vital skill in today’s hyper-competitive and rapidly evolving markets. Sales professionals must have the ability to understand customer needs, built trust, handle objections and close deals efficiently. Effective selling drives revenue, builds long-term customer relationships and directly impacts business growth.",
     modules: 10,
@@ -151,162 +191,8 @@ const programsData: Record<string, ProgramData> = {
     ],
     image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
-  "business-negotiation": {
-    id: "u4",
-    name: "Business Negotiation Skills",
-    desc: "Business negotiation is a core leadership skill. It helps managing cross-border partnerships, securing deals, and resolving conflicts. Strong negotiation skills determine success of individual deals and strengthen long-terms business relationships alongside enhancing organizational reputation.",
-    modules: 10,
-    audience: "Management graduates (with 4+ years’ experience), mid-level executives, strategic partnerships & international trade professionals, individuals interested in learning the skill.",
-    slug: "business-negotiation",
-    category: "University / MBA Programs",
-    duration: "20 hours",
-    startDate: "Rolling admissions",
-    price: 22999,
-    features: [
-      "To build foundational and advanced negotiation skills relevant in international and cross-cultural business contexts",
-      "To develop strategies for value creation, conflict resolution, and stakeholder alignment",
-      "To apply negotiation frameworks to real-life scenarios and global business challenges",
-      "To enhance participants’ confidence, communication, and adaptability in high-stakes situations"
-    ],
-    curriculum: [
-      { title: "Introduction to Negotiation", description: ""},
-      { title: "International Business Context", description: ""},
-      { title: "Negotiation Planning", description: ""},
-      { title: "Communication and Influence", description: ""},
-      { title: "Cross-Cultural Negotiation", description: ""},
-      { title: "Multi-party and Team Negotiations", description: "" },
-      { title: "Negotiation Simulations", description: "" },
-      { title: "Ethics and Power in Negotiation", description: "" },
-      { title: "Conflict Resolution & Mediation", description: ""},
-      { title: "Negotiation in the Digital World", description: ""}
-    ],
-    learningOutcomes: [
-      "Apply structured negotiation frameworks across various business situations",
-      "Identify and leverage their BATNA and ZOPA effectively",
-      "Communicate persuasively while navigating diverse cultural settings",
-      "Build long-term trust-based relationships with stakeholders",
-      "Resolve conflicts and deadlocks using ethical and practical approaches",
-      "Lead team and multi-party negotiations with strategic clarity",
-      "Adapt to emerging digital tools and practices in global negotiations",
-    ],
-    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
-  },
-  "technical-interview": {
-    id: "p1",
-    name: "Technical Interview Preparation",
-    desc: "Master technical interviews for software engineering roles with comprehensive preparation on algorithms, data structures, and system design.",
-    modules: 8,
-    audience: "Software engineers, computer science graduates, tech professionals",
-    slug: "technical-interview",
-    category: "Professional Development",
-    duration: "10 hours (Customized for groups)",
-    startDate: "Rolling admissions",
-    price: 14999,
-    features: [
-      "In-depth coverage of algorithms and data structures",
-      "System design and architecture principles",
-      "Mock technical interviews with feedback",
-      "Problem-solving techniques and patterns",
-      "Time and space complexity optimization",
-      "Language-specific coding best practices"
-    ],
-    curriculum: [
-      { title: "Interview Fundamentals", description: "Understanding technical interview formats and expectations." },
-      { title: "Data Structures", description: "Arrays, linked lists, trees, graphs, hash tables, and their implementations." },
-      { title: "Algorithm Strategies", description: "Sorting, searching, recursion, and dynamic programming." },
-      { title: "Problem Solving", description: "Breaking down complex problems and developing optimal solutions." },
-      { title: "System Design Basics", description: "Principles of designing scalable distributed systems." },
-      { title: "Database Design", description: "Relational and NoSQL database design considerations." },
-      { title: "Mock Interviews", description: "Realistic interview simulations with industry professionals." },
-      { title: "Final Preparation", description: "Review, optimization, and interview strategy development." }
-    ],
-    learningOutcomes: [
-      "Demonstrate clear, confident, and tailored responses across all interview types",
-      "Apply structured frameworks to answer behavioural and situational questions",
-      "Adapt communication and body language based on interviewer style and setting",
-      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
-      "Present a professional image through attire, LinkedIn profile, and resume alignment",
-      "Engage in strategic questioning to show interest, fit, and long-term potential",
-      "Navigate job offers, rejections, and follow-up communications with professionalism"
-    ],
-    image: "/images/b88ae8ac-0388-4789-a31d-77d5248a39bb.png"
-  },
-  "behavioral-interview": {
-    id: "p2",
-    name: "Behavioral Interview Mastery",
-    desc: "Learn how to effectively communicate your experience, skills, and cultural fit through structured behavioral interviewing techniques.",
-    modules: 6,
-    audience: "Job seekers across industries, career changers, leadership candidates",
-    slug: "behavioral-interview",
-    category: "Professional Development",
-    duration: "10 hours (Customized for groups)",
-    startDate: "Rolling admissions",
-    price: 12999,
-    features: [
-      "STAR method mastery for answering behavioral questions",
-      "Personal branding and storytelling techniques",
-      "Leadership and teamwork scenario preparation",
-      "Conflict resolution and problem-solving frameworks",
-      "Cultural fit demonstration strategies",
-      "Video interview preparation and feedback"
-    ],
-    curriculum: [
-      { title: "Behavioral Interview Fundamentals", description: "Understanding the psychology and purpose behind behavioral questions." },
-      { title: "STAR Method", description: "Situation, Task, Action, Result framework for structured responses." },
-      { title: "Personal Branding", description: "Crafting your professional narrative and communicating your unique value." },
-      { title: "Leadership & Teamwork", description: "Demonstrating collaborative skills and leadership potential." },
-      { title: "Problem Solving & Resilience", description: "Showcasing your approach to challenges and setbacks." },
-      { title: "Final Preparation", description: "Mock interviews, feedback, and personalized improvement strategies." }
-    ],
-    learningOutcomes: [
-      "Demonstrate clear, confident, and tailored responses across all interview types",
-      "Apply structured frameworks to answer behavioural and situational questions",
-      "Adapt communication and body language based on interviewer style and setting",
-      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
-      "Present a professional image through attire, LinkedIn profile, and resume alignment",
-      "Engage in strategic questioning to show interest, fit, and long-term potential",
-      "Navigate job offers, rejections, and follow-up communications with professionalism"
-    ],
-    image: "/images/f0e019fb-c25f-4348-abaf-73f954784463.png"
-  },
-  "resume-optimization": {
-    id: "p3",
-    name: "Resume Optimization",
-    desc: "Transform your resume into a powerful marketing tool that highlights your achievements and gets past Applicant Tracking Systems.",
-    modules: 4,
-    audience: "Job seekers, career changers, professionals seeking advancement",
-    slug: "resume-optimization",
-    category: "Professional Development",
-    duration: "10 hours (Customized for groups)",
-    startDate: "Rolling admissions",
-    price: 9999,
-    features: [
-      "ATS optimization techniques",
-      "Industry-specific keyword analysis",
-      "Achievement-focused content development",
-      "Professional formatting and design",
-      "LinkedIn profile alignment",
-      "Personalized resume reviews and feedback"
-    ],
-    curriculum: [
-      { title: "Resume Fundamentals", description: "Modern resume structure, formats, and best practices." },
-      { title: "ATS Optimization", description: "Keyword optimization and formatting for applicant tracking systems." },
-      { title: "Achievement Highlighting", description: "Transforming responsibilities into measurable achievements." },
-      { title: "Final Optimization", description: "Personalized review, feedback, and final polishing." }
-    ],
-    learningOutcomes: [
-      "Demonstrate clear, confident, and tailored responses across all interview types",
-      "Apply structured frameworks to answer behavioural and situational questions",
-      "Adapt communication and body language based on interviewer style and setting",
-      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
-      "Present a professional image through attire, LinkedIn profile, and resume alignment",
-      "Engage in strategic questioning to show interest, fit, and long-term potential",
-      "Navigate job offers, rejections, and follow-up communications with professionalism"
-    ],
-    image: "/images/4dc0248d-9274-4883-97c4-872cb9c743d3.png"
-  },
   "business-communication": {
-    id: "u1",
+    id: "b1",
     name: "Business Communication",
     desc: "Effective business communication allows clarity, fosters collaboration, builds trust, and ensures alignment across teams, functions, and geographies. It gives organisations/companies competitive edge through better decision-making, stronger relationships, and enhanced reputation.",
     modules: 7,
@@ -388,7 +274,7 @@ const programsData: Record<string, ProgramData> = {
     image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
   },
   "interview-preparation": {
-    id: "c2",
+    id: "u1",
     name: "Interview Preparation Program",
     desc: " This course will help an individual build confidence, equip clarity, and strategy needed to stand out during interviews. Focusing on communication skills, strategy making, self-awareness and real-time feedback it prepares the learner to handle any interview scenario and present their best self, leaving a lasting impression.",
     modules: 13,
@@ -434,214 +320,89 @@ const programsData: Record<string, ProgramData> = {
     ],
     image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
   },
-  "leadership-development": {
-    id: "ct1",
-    name: "Leadership Development",
-    desc: "Executive coaching for senior management to enhance leadership capabilities.",
-    modules: 10,
-    audience: "Mid to senior-level managers and executives",
-    slug: "leadership-development",
-    category: "Corporate Training",
-    duration: "10 hours (Customized for groups)",
-    startDate: "Rolling admissions",
-    price: 34999,
-    features: [
-      "Strategic leadership vision development",
-      "Executive presence and influential communication",
-      "Team building and organizational culture shaping",
-      "Change management and transformation leadership",
-      "Decision-making frameworks for complex scenarios",
-      "Personal leadership style optimization"
-    ],
-    curriculum: [
-      { title: "Leadership Foundations", description: "Core principles, styles, and the evolution of leadership theory." },
-      { title: "Strategic Vision", description: "Developing and articulating compelling organizational direction." },
-      { title: "Executive Presence", description: "Authority projection, credibility building, and impression management." },
-      { title: "Influential Communication", description: "Persuasive messaging, stakeholder engagement, and storytelling." },
-      { title: "Team Development", description: "Building high-performance teams and managing diverse talents." },
-      { title: "Organizational Culture", description: "Culture assessment, design, and transformation strategies." },
-      { title: "Change Leadership", description: "Leading through uncertainty, resistance management, and agile adaptation." },
-      { title: "Executive Decision-Making", description: "Analytical frameworks, ethical considerations, and decisive action." },
-      { title: "Emotional Intelligence", description: "Self-awareness, relationship management, and empathetic leadership." },
-      { title: "Sustainable Leadership", description: "Work-life integration, burnout prevention, and legacy planning." }
-    ],
-    learningOutcomes: [
-      "Demonstrate clear, confident, and tailored responses across all interview types",
-      "Apply structured frameworks to answer behavioural and situational questions",
-      "Adapt communication and body language based on interviewer style and setting",
-      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
-      "Present a professional image through attire, LinkedIn profile, and resume alignment",
-      "Engage in strategic questioning to show interest, fit, and long-term potential",
-      "Navigate job offers, rejections, and follow-up communications with professionalism"
-    ],
-    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
-  },
-  "team-communication": {
-    id: "ct2",
-    name: "Team Communication",
-    desc: "Workshops focused on improving cross-functional team communication and collaboration.",
-    modules: 8,
-    audience: "Teams and departments within corporate organizations",
-    slug: "team-communication",
-    category: "Corporate Training",
-    duration: "10 hours (Customized for groups)",
+  "social-leadership": {
+    id: "l1",
+    name: "Social Leadership Workshop",
+    desc: "Social leadership is the key to building an inclusive, resilient, and high-performing organizations. Social leaders create influence not by authority, but through trust, empathy, collaboration, and ethical action. Social leadership skills empower leaders to mobilize people, navigate change, and drive sustainable impact. ",
+    modules: 12,
+    audience: "Mid-to-senior level professionals, corporate leaders, potential leaders, HR and L&D professionals, team leads, project managers and business unit heads.",
+    slug: "social-leadership",
+    category: "University / MBA Programs",
+    duration: "3 Days",
     startDate: "Rolling admissions",
     price: 24999,
     features: [
-      "Cross-functional collaboration frameworks",
-      "Conflict resolution and mediation techniques",
-      "Meeting efficiency and productivity optimization",
-      "Clear messaging and information sharing protocols",
-      "Virtual team communication strategies",
-      "Feedback culture development"
+      "Understand the concept and importance of social leadership ",
+      "Build trust and credibility as a leader",
+      "Enhance emotional intelligence and interpersonal skills",
+      "Learn techniques for critical thinking and conflict resolution",
+      "Influence without formal authority",
+      "Lead high-performing teams and drive innovation",
+      "Cultivate ethical leadership and align with organizational vision"
     ],
     curriculum: [
-      { title: "Communication Fundamentals", description: "Messaging clarity, channels, and communication styles." },
-      { title: "Cross-Functional Dynamics", description: "Understanding departmental perspectives and collaborative interfaces." },
-      { title: "Effective Meetings", description: "Structuring, facilitating, and maximizing meeting productivity." },
-      { title: "Conflict Resolution", description: "Constructive disagreement, mediation techniques, and solution focus." },
-      { title: "Virtual Communication", description: "Remote collaboration tools, digital etiquette, and engagement strategies." },
-      { title: "Feedback Systems", description: "Constructive feedback frameworks, receptivity, and implementation." },
-      { title: "Information Flow", description: "Knowledge sharing, transparency protocols, and communication architecture." },
-      { title: "Team Alignment", description: "Vision sharing, goal congruence, and collaborative planning." }
+      { title: "Welcome & Introduction: Includes objectives of the workshop, ice-breaker activity, and understanding what is social leadership and why it matters today.", description: "" },
+      { title: "Building Trust and Credibility", description: "" },
+      { title: "Emotional Intelligence (EI) for Leaders", description: "" },
+      { title: "Building & Leading an Effective Team", description: "" },
+      { title: "Critical Thinking & Decision Making", description: ""},
+      { title: "Influencing without Authority", description: ""},
+      { title: "Conflict Management", description: ""},
+      { title: "Leading Change and Innovation", description: ""},
+      { title: "Ethical Leadership & Driving Culture", description: ""},
+      { title: "Final Reflection, Action Planning & Certification", description: ""}
     ],
     learningOutcomes: [
-      "Demonstrate clear, confident, and tailored responses across all interview types",
-      "Apply structured frameworks to answer behavioural and situational questions",
-      "Adapt communication and body language based on interviewer style and setting",
-      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
-      "Present a professional image through attire, LinkedIn profile, and resume alignment",
-      "Engage in strategic questioning to show interest, fit, and long-term potential",
-      "Navigate job offers, rejections, and follow-up communications with professionalism"
+      "Gain actionable tools to improve team engagement and trust",
+      "Communicate with greater empathy and confidence",
+      "Resolve conflicts constructively and manage change effectively",
+      "Influence diverse stakeholders without relying on hierarchy",
+      "Lead with integrity and contribute to a positive organizational culture"
     ],
-    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
+    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   },
-  "strategic-hiring": {
-    id: "ct3",
-    name: "Strategic Hiring & Talent Management",
-    desc: "Training for HR professionals on identifying and nurturing top talent.",
-    modules: 11,
-    audience: "HR professionals and hiring managers",
-    slug: "strategic-hiring",
-    category: "Corporate Training",
-    duration: "10 hours (Customized for groups)",
-    startDate: "Rolling admissions",
-    price: 29999,
-    features: [
-      "Talent acquisition strategy development",
-      "Competency-based interviewing techniques",
-      "Candidate assessment and selection frameworks",
-      "Onboarding program optimization",
-      "Performance management systems",
-      "Succession planning and talent pipeline building"
-    ],
-    curriculum: [
-      { title: "Talent Strategy", description: "Aligning hiring practices with organizational objectives and culture." },
-      { title: "Sourcing Innovation", description: "Creative candidate attraction and diverse talent pool development." },
-      { title: "Competency Frameworks", description: "Identifying, defining, and assessing critical job competencies." },
-      { title: "Interview Excellence", description: "Structured interviewing, bias reduction, and candidate evaluation." },
-      { title: "Assessment Methods", description: "Testing protocols, work samples, and predictive hiring tools." },
-      { title: "Selection Science", description: "Data-driven decision making and predictive success metrics." },
-      { title: "Onboarding Design", description: "Integration systems, knowledge transfer, and early engagement." },
-      { title: "Performance Management", description: "Goal setting, feedback cycles, and development planning." },
-      { title: "Retention Strategies", description: "Engagement drivers, stay interviews, and turnover prevention." },
-      { title: "Succession Planning", description: "Talent review, critical role analysis, and pipeline development." },
-      { title: "Talent Analytics", description: "Hiring metrics, dashboard development, and data-driven improvements." }
-    ],
-    learningOutcomes: [
-      "Demonstrate clear, confident, and tailored responses across all interview types",
-      "Apply structured frameworks to answer behavioural and situational questions",
-      "Adapt communication and body language based on interviewer style and setting",
-      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
-      "Present a professional image through attire, LinkedIn profile, and resume alignment",
-      "Engage in strategic questioning to show interest, fit, and long-term potential",
-      "Navigate job offers, rejections, and follow-up communications with professionalism"
-    ],
-    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
-  },
-  "executive-leadership": {
-    id: "l1",
-    name: "Executive Leadership Development",
-    desc: "Comprehensive leadership training for senior executives and C-suite professionals.",
+
+  "entrepreneurship": {
+    id: "e1",
+    name: "Entrepreneurship",
+    desc: "Entrepreneurship is the foundation of innovation and economic growth. Entrepreneurs create value and drive social change, generate employment, and reshape industries. This program aims to empower aspiring entrepreneurs to transform ideas into sustainable ventures and understand startup ecosystems along with navigating challenges and scaling business.",
     modules: 12,
-    audience: "Senior executives, C-suite professionals, and aspiring leaders",
-    slug: "executive-leadership",
-    category: "Leadership Development Programs",
-    duration: "10 hours (Customized for groups)",
-    startDate: "Rolling admissions",
-    price: 39999,
-    features: [
-      "Strategic vision development and organizational transformation",
-      "Advanced decision-making frameworks for complex scenarios",
-      "Executive presence and influential communication mastery",
-      "Change leadership and crisis management capabilities",
-      "Building high-performance leadership teams",
-      "Sustainable leadership practices and legacy building"
-    ],
-    curriculum: [
-      { title: "Strategic Leadership Foundations", description: "Core principles of executive leadership and organizational impact." },
-      { title: "Vision & Strategy Development", description: "Creating compelling organizational vision and strategic direction." },
-      { title: "Executive Decision Making", description: "Advanced frameworks for complex decision-making under uncertainty." },
-      { title: "Leading Organizational Change", description: "Change management, transformation leadership, and cultural evolution." },
-      { title: "Executive Communication", description: "Influential communication, stakeholder management, and public speaking." },
-      { title: "Building Leadership Teams", description: "Developing and managing high-performance leadership teams." },
-      { title: "Crisis Leadership", description: "Leading through crisis, uncertainty, and organizational challenges." },
-      { title: "Innovation & Digital Leadership", description: "Leading digital transformation and fostering innovation culture." },
-      { title: "Global Leadership", description: "Cross-cultural leadership and managing global teams." },
-      { title: "Ethical Leadership", description: "Values-based leadership, governance, and ethical decision-making." },
-      { title: "Performance & Results", description: "Driving organizational performance and achieving sustainable results." },
-      { title: "Leadership Legacy", description: "Succession planning, mentoring, and building lasting leadership impact." }
-    ],
-    learningOutcomes: [
-      "Demonstrate clear, confident, and tailored responses across all interview types",
-      "Apply structured frameworks to answer behavioural and situational questions",
-      "Adapt communication and body language based on interviewer style and setting",
-      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
-      "Present a professional image through attire, LinkedIn profile, and resume alignment",
-      "Engage in strategic questioning to show interest, fit, and long-term potential",
-      "Navigate job offers, rejections, and follow-up communications with professionalism"
-    ],
-    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
-  },
-  "team-leadership": {
-    id: "l2",
-    name: "Team Leadership & Management",
-    desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
-    modules: 8,
-    audience: "Team leaders, department heads, and emerging managers",
-    slug: "team-leadership",
-    category: "Leadership Development Programs",
-    duration: "10 hours (Customized for groups)",
+    audience: "Management graduates, professionals with potential business plans, entrepreneurship interested individuals and future founders looking for training.",
+    slug: "crm",
+    category: "University / MBA Programs",
+    duration: "20 hours",
     startDate: "Rolling admissions",
     price: 19999,
     features: [
-      "Effective team building and collaboration strategies",
-      "Performance management and feedback systems",
-      "Conflict resolution and team dynamics optimization",
-      "Delegation and empowerment techniques",
-      "Motivational leadership and employee engagement",
-      "Goal setting and accountability frameworks"
+      "To foster an entrepreneurial mindset and attitude among professionals",
+      "To help participants identify viable business opportunities",
+      "To teach practical frameworks for building, launching, and scaling startups",
+      "To provide tools for managing startup finance, valuation, and funding",
+      "To build resilience in facing and overcoming entrepreneurial challenges"
     ],
     curriculum: [
-      { title: "Foundations of Team Leadership", description: "Understanding team dynamics, leadership styles, and management principles." },
-      { title: "Building High-Performance Teams", description: "Team formation, role clarity, and creating collaborative environments." },
-      { title: "Communication & Feedback", description: "Effective communication strategies and constructive feedback systems." },
-      { title: "Performance Management", description: "Goal setting, performance monitoring, and improvement planning." },
-      { title: "Conflict Resolution", description: "Managing team conflicts, mediation techniques, and resolution strategies." },
-      { title: "Delegation & Empowerment", description: "Effective delegation, empowering team members, and building autonomy." },
-      { title: "Motivation & Engagement", description: "Understanding motivation, employee engagement, and retention strategies." },
-      { title: "Leading Change at Team Level", description: "Managing team transitions, change adoption, and continuous improvement." }
+      { title: "Introduction to Entrepreneurship ", description: ""},
+      { title: "Developing an Entrepreneurial Mindset", description: ""},
+      { title: "Idea Generation and Validation", description: "" },
+      { title: "Business Models and Value Proposition", description: ""},
+      { title: "Market Research and Competitive Landscape", description: ""},
+      { title: "Go-to-Market Strategy", description: ""},
+      { title: "Revenue Models and Cost Structures", description: ""},
+      { title: "Financial Planning and Forecasting", description: ""},
+      { title: "Startup Legal & Compliance", description: ""},
+      { title: "Team Building and Strategic Partnerships", description: ""},
+      { title: "Startup Valuation & Fundraising", description: ""},
+      { title: "Challenges and Risk Mitigation", description: ""}
     ],
     learningOutcomes: [
-      "Demonstrate clear, confident, and tailored responses across all interview types",
-      "Apply structured frameworks to answer behavioural and situational questions",
-      "Adapt communication and body language based on interviewer style and setting",
-      "Prepare thoroughly for interviews, from research to checklists to managing nerves",
-      "Present a professional image through attire, LinkedIn profile, and resume alignment",
-      "Engage in strategic questioning to show interest, fit, and long-term potential",
-      "Navigate job offers, rejections, and follow-up communications with professionalism"
+      "Demonstrate entrepreneurial thinking and opportunity recognition",
+      "Design and validate a business model and go-to-market plan",
+      "Build a financial plan with realistic cost structures and revenue streams",
+      "Understand startup legal, compliance, and funding processes",
+      "Develop and deliver a compelling investor pitch",
+      "Manage startup uncertainties with resilience and adaptability"
     ],
-    image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
+    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
   }
 };
 

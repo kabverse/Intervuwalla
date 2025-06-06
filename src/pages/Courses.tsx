@@ -27,17 +27,18 @@ const Courses = () => {
   };
   
   const courses: CourseProps[] = [
+
     {
-      id: "business-communication",
-      title: "Business Communication",
-      description: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      id: "interview-preparation",
+      title: "Interview Preparation Program",
+      description: "Comprehensive guidance on acing job interviews through SWOT analysis, answer structuring, and managing interview anxiety.",
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+
       level: "All Levels",
-      students: 1245,
-      rating: 4.8,
-      category: "University / MBA Programs",
-      price: 14999,
-      featured: true
+      students: 892,
+      rating: 4.6,
+      category: "Coaching + Mentoring",
+      price: 11999
     },
     {
       id: "career-coaching",
@@ -52,6 +53,18 @@ const Courses = () => {
       price: 12999
     },
     {
+      id: "business-communication",
+      title: "Business Communication",
+      description: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      level: "All Levels",
+      students: 1245,
+      rating: 4.8,
+      category: "University / MBA Programs",
+      price: 14999,
+      featured: true
+    },
+    {
       id: "leadership-development",
       title: "Leadership Development",
       description: "Executive coaching for senior management to enhance leadership capabilities.",
@@ -62,18 +75,6 @@ const Courses = () => {
       rating: 4.9,
       category: "Corporate Training",
       price: 19999
-    },
-    {
-      id: "interview-preparation",
-      title: "Interview Preparation Program",
-      description: "Comprehensive guidance on acing job interviews through SWOT analysis, answer structuring, and managing interview anxiety.",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
-
-      level: "All Levels",
-      students: 892,
-      rating: 4.6,
-      category: "Coaching + Mentoring",
-      price: 11999
     },
     {
       id: "fintech",
@@ -165,45 +166,13 @@ const Courses = () => {
       image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
       programs: [
         { 
-          id: "c2", 
+          id: "u1", 
           name: "Interview Preparation Program", 
           desc: "Guidance on acing job interviews through SWOT analysis, answer structuring, rapport forming, and managing interview anxiety.",
           modules: 13,
           audience: "Job seekers, career changers, students and professionals",
           slug: "interview-preparation"
-        },
-        { 
-          id: "u1", 
-          name: "Business Communication", 
-          desc: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
-          modules: 7,
-          audience: "Professionals from Academia and Corporate background",
-          slug: "business-communication"
-        },
-        { 
-          id: "u3", 
-          name: "CRM", 
-          desc: "Focuses on sales and service automation, customer lifecycle management, campaign management and CRM in marketing.",
-          modules: 9,
-          audience: "MBA students and professionals from sales & marketing, customer service, banking, startup founders",
-          slug: "crm"
-        },
-        { 
-          id: "u4", 
-          name: "Business Negotiation Skills", 
-          desc: "Build foundational and advanced negotiation skills, while also developing strategies for value creation, conflict resolution and stakeholder alignment.",
-          modules: 10,
-          audience: "MBA students with 4+ years of experience, Mid-level executives transitioning to leadership, international trade, and strategic partnership professionals",
-          slug: "business-negotiation"
-        },
-        { 
-          id: "u5", 
-          name: "Strategic Selling Skills & Sales Management Program", 
-          desc: "Equip professionals with structured and modern sales techniques and to improve customer relationship management and consultative selling capabilities.",
-          modules: 10,
-          audience: "MBA executives (with 4+ years' experience), sales professionals, mid-level professional, and solution-based consultants",
-          slug: "strategic-selling"
-        },
+        }
       ]
     },
     {
@@ -234,19 +203,35 @@ const Courses = () => {
       programs: [
         { 
           id: "l1", 
-          name: "Executive Leadership Development", 
+          name: "Social Leadership Workshop", 
           desc: "Comprehensive leadership training for senior executives and C-suite professionals.",
           modules: 12,
           audience: "Senior executives, C-suite professionals, and aspiring leaders",
-          slug: "executive-leadership"
+          slug: "social-leadership"
         },
         { 
           id: "l2", 
-          name: "Team Leadership & Management", 
+          name: "Business Negotiation", 
+          desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
+          modules: 8,
+          audience: "Team leaders, department heads, and emerging managers",
+          slug: "business-negotiation"
+        },
+        { 
+          id: "l3", 
+          name: "Customer Relation Management", 
           desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
           modules: 8,
           audience: "Team leaders, department heads, and emerging managers",
           slug: "team-leadership"
+        },
+        { 
+          id: "l4", 
+          name: "Strategic Selling Skills & Sales Management", 
+          desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
+          modules: 8,
+          audience: "Team leaders, department heads, and emerging managers",
+          slug: "strategic-selling"
         }
       ]
     },
@@ -259,29 +244,13 @@ const Courses = () => {
       image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
       programs: [
         { 
-          id: "ct1", 
-          name: "Leadership Development", 
-          desc: "Executive coaching for senior management to enhance leadership capabilities.", 
-          modules: 10,
+          id: "b1", 
+          name: "Business Communication", 
+          desc: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.", 
+          modules: 7,
           audience: "Mid to senior-level managers and executives",
-          slug: "leadership-development"
-        },
-        { 
-          id: "ct2", 
-          name: "Team Communication", 
-          desc: "Workshops focused on improving cross-functional team communication and collaboration.", 
-          modules: 8,
-          audience: "Teams and departments within corporate organizations",
-          slug: "team-communication"
-        },
-        { 
-          id: "ct3", 
-          name: "Strategic Hiring & Talent Management", 
-          desc: "Training for HR professionals on identifying and nurturing top talent.", 
-          modules: 11,
-          audience: "HR professionals and hiring managers",
-          slug: "strategic-hiring"
-        },
+          slug: "business-communication"
+        }
       ]
     },
     {
@@ -293,7 +262,7 @@ const Courses = () => {
       image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
       programs: [
         { 
-          id: "u2", 
+          id: "f1", 
           name: "Fintech", 
           desc: "Understanding financial technology, lending & credit technologies, Blockchain & Cryptofinance, Cybersecurity and RegTech.",
           modules: 9,
@@ -311,29 +280,13 @@ const Courses = () => {
       image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
       programs: [
         { 
-          id: "ct1", 
-          name: "Leadership Development", 
-          desc: "Executive coaching for senior management to enhance leadership capabilities.", 
-          modules: 10,
-          audience: "Mid to senior-level managers and executives",
-          slug: "leadership-development"
-        },
-        { 
-          id: "ct2", 
-          name: "Team Communication", 
-          desc: "Workshops focused on improving cross-functional team communication and collaboration.", 
-          modules: 8,
-          audience: "Teams and departments within corporate organizations",
-          slug: "team-communication"
-        },
-        { 
-          id: "ct3", 
-          name: "Strategic Hiring & Talent Management", 
-          desc: "Training for HR professionals on identifying and nurturing top talent.", 
-          modules: 11,
-          audience: "HR professionals and hiring managers",
-          slug: "strategic-hiring"
-        },
+          id: "e1", 
+          name: "Entrepreneurship", 
+          desc: "Professional development programs for organizations and teams", 
+          modules: 12,
+          audience: "Management graduates, professionals with potential business plans, entrepreneurship interested individuals and future founders looking for training.",
+          slug: "entrepreneurship"
+        }
       ]
     }
   ];
