@@ -60,11 +60,11 @@ const Courses = () => {
       id: "interview-preparation",
       title: "Interview Preparation Program",
       description: "Comprehensive guidance on acing job interviews through SWOT analysis, answer structuring, and managing interview anxiety.",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      image: "/images/interview.png",
       level: "All Levels",
       students: 892,
       rating: 4.6,
-      category: "Coaching + Mentoring",
+      category: "Job Interview Preparation",
       price: 7999,
       originalPrice: 15999,
     },
@@ -72,11 +72,11 @@ const Courses = () => {
       id: "career-coaching",
       title: "Career Coaching & Mentoring",
       description: "Detailed understanding of career development strategies, decision-making & problem-solving, goal setting, and personal branding.",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      image: "/images/coaching.png",
       level: "All Levels",
       students: 983,
       rating: 4.7,
-      category: "Coaching + Mentoring",
+      category: "Career Coaching & Mentoring",
       price: 10999,
       originalPrice: 18999,
     },
@@ -84,11 +84,11 @@ const Courses = () => {
       id: "business-communication",
       title: "Business Communication",
       description: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      image: "/images/communication.png",
       level: "All Levels",
       students: 1245,
       rating: 4.8,
-      category: "University / MBA Programs",
+      category: "Business Communication",
       price: 7999,
       originalPrice: 15999,
     },
@@ -96,11 +96,11 @@ const Courses = () => {
       id: "leadership-development",
       title: "Leadership Development",
       description: "Executive coaching for senior management to enhance leadership capabilities.",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      image: "/images/leadership.png",
       level: "Advanced",
       students: 756,
       rating: 4.9,
-      category: "Corporate Training",
+      category: "Leadership Development",
       price: 12999,
       originalPrice: 21999,
     },
@@ -108,11 +108,11 @@ const Courses = () => {
       id: "fintech",
       title: "Fintech Program",
       description: "Understanding financial technology, lending & credit technologies, Blockchain & Cryptofinance, and RegTech.",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      image: "/images/fintech.png",
       level: "Intermediate",
       students: 634,
       rating: 4.5,
-      category: "University / MBA Programs",
+      category: "Fintech",
       price: 8999,
       originalPrice: 17999,
     },
@@ -120,11 +120,11 @@ const Courses = () => {
       id: "strategic-selling",
       title: "Strategic Selling Skills & Sales Management",
       description: "Equip professionals with structured sales techniques and improve customer relationship management capabilities.",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      image: "/images/strat.png",
       level: "Advanced",
       students: 567,
       rating: 4.7,
-      category: "University / MBA Programs",
+      category: "Leadership Development",
       price: 12999,
       originalPrice: 21999,
     }
@@ -138,7 +138,7 @@ const Courses = () => {
       description: "Comprehensive interview preparation including job interview prep, resume review & building, and LinkedIn networking",
       icon: <Target className="h-8 w-8" />,
       color: "from-blue-500/20 to-blue-600/20",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
+      image: "/images/interview.png"
     },
     {
       id: "coaching",
@@ -146,7 +146,7 @@ const Courses = () => {
       description: "Personalized guidance for career development and professional growth",
       icon: <MessageCircle className="h-8 w-8" />,
       color: "from-green-500/20 to-green-600/20",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
+      image: "/images/coaching.png"
     },
     {
       id: "leadership-program",
@@ -154,7 +154,7 @@ const Courses = () => {
       description: "Advanced leadership training including social leadership, business negotiations, CRM, service strategy, and sales management",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-purple-500/20 to-purple-600/20",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png"
+      image: "/images/leadership.png"
     },
     {
       id: "business-communication",
@@ -162,7 +162,7 @@ const Courses = () => {
       description: "Professional communication skills for modern workplace success",
       icon: <BookOpen className="h-8 w-8" />,
       color: "from-orange-500/20 to-orange-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+      image: "/images/communication.png"
     },
     {
       id: "fintech-program",
@@ -170,7 +170,7 @@ const Courses = () => {
       description: "Understanding financial technology and modern financial services",
       icon: <Briefcase className="h-8 w-8" />,
       color: "from-indigo-500/20 to-indigo-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+      image: "/images/fintech.png"
     },
     {
       id: "entrepreneurship",
@@ -178,7 +178,7 @@ const Courses = () => {
       description: "Business development and startup fundamentals (content to be shared with Maitri)",
       icon: <Users className="h-8 w-8" />,
       color: "from-yellow-500/20 to-yellow-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+      image: "/images/entrepreneurship.png"
     }
   ];
 
@@ -190,14 +190,14 @@ const Courses = () => {
       description: "Specialized preparation for academic and business school interviews",
       icon: <GraduationCap className="h-8 w-8" />,
       color: "from-blue-500/20 to-blue-600/20",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      image: "/images/interview.png",
       programs: [
         { 
           id: "u1", 
           name: "Interview Preparation Program", 
-          desc: "Guidance on acing job interviews through SWOT analysis, answer structuring, rapport forming, and managing interview anxiety.",
+          desc: "This course prepares individuals to navigate an interview confidently by enhancing their communication, confidence, and strategy.",
           modules: 13,
-          audience: "Job seekers, career changers, students and professionals",
+          audience: "Job Seekers, Career Changers, Students, Professionals.",
           slug: "interview-preparation"
         }
       ]
@@ -208,14 +208,14 @@ const Courses = () => {
       description: "Personalized guidance for career development and interview excellence",
       icon: <Users className="h-8 w-8" />,
       color: "from-yellow-500/20 to-yellow-600/20",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
+      image: "/images/coaching.png",
       programs: [
         { 
           id: "c1", 
           name: "Career Coaching & Mentoring", 
-          desc: "Detailed understanding of career development strategies, decision-making & problem-solving, goal setting, and personal branding.",
+          desc: "This course equips individuals with strategic tools and techniques through structured coaching to build a confident, growth-driven career path.",
           modules: 9,
-          audience: "Students, job seekers, career changers and professionals",
+          audience: "SProfessionals, Job Seekers, Students, Career Changers.",
           slug: "career-coaching"
         }
       ]
@@ -231,33 +231,33 @@ const Courses = () => {
         { 
           id: "l1", 
           name: "Social Leadership Workshop", 
-          desc: "Comprehensive leadership training for senior executives and C-suite professionals.",
+          desc: "Hands on program to help individuals learn build trust, inspire teams, and drive ethical impact through practical tools for modern leadership.",
           modules: 12,
-          audience: "Senior executives, C-suite professionals, and aspiring leaders",
+          audience: "Professionals, Leaders, HR and L&D Professionals, Managers and Unit Heads.",
           slug: "social-leadership"
         },
         { 
           id: "l2", 
           name: "Business Negotiation", 
-          desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
+          desc: "This course equips individuals with negotiations skills across global, digital, and cultural contexts through practical tools, strategies, and simulations. ",
           modules: 8,
-          audience: "Team leaders, department heads, and emerging managers",
+          audience: "Management Graduates, Executives, Strategic Professionals, and Interested Individuals.",
           slug: "business-negotiation"
         },
         { 
           id: "l3", 
           name: "Customer Relation Management", 
-          desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
+          desc: "Learn to manage and enhance customer relationships through CRM tools, data analytics and strategic implementation.",
           modules: 8,
-          audience: "Team leaders, department heads, and emerging managers",
+          audience: "Graduates, Sales and Marketing Professionals, Founders, and Retail Professional.",
           slug: "crm"
         },
         { 
           id: "l4", 
           name: "Strategic Selling Skills & Sales Management", 
-          desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
+          desc: "This course prepares individuals develop modern sales skills by combine learning of psychology, strategy, and digital tools results across industries.",
           modules: 8,
-          audience: "Team leaders, department heads, and emerging managers",
+          audience: "Management Graduates, Sales Professionals, and Solution-based Professionals.",
           slug: "strategic-selling"
         }
       ]
@@ -268,14 +268,14 @@ const Courses = () => {
       description: "Professional development programs for organizations and teams",
       icon: <Briefcase className="h-8 w-8" />,
       color: "from-primary/20 to-indigo-600/20",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      image: "/images/communication.png",
       programs: [
         { 
           id: "b1", 
           name: "Business Communication", 
-          desc: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.", 
+          desc: "Master professional essentials— Ethics, negotiation, teamwork, written, verbal, and non-verbal skills.", 
           modules: 7,
-          audience: "Mid to senior-level managers and executives",
+          audience: "Management Graduates and Corporate Professionals.",
           slug: "business-communication"
         }
       ]
@@ -286,14 +286,14 @@ const Courses = () => {
       description: "Professional development programs for organizations and teams",
       icon: <Briefcase className="h-8 w-8" />,
       color: "from-primary/20 to-indigo-600/20",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      image: "/images/fintech.png",
       programs: [
         { 
           id: "f1", 
           name: "Fintech", 
-          desc: "Understanding financial technology, lending & credit technologies, Blockchain & Cryptofinance, Cybersecurity and RegTech.",
+          desc: "This course explores the fundamentals of fintech, digital payments, lending, wealth management and regulatory technology.",
           modules: 9,
-          audience: "MBA students, professionals from corporate background",
+          audience: "Management Graduates, Startup Founders, other Finance Related Professionals.",
           slug: "fintech"
         }
       ]
@@ -304,14 +304,14 @@ const Courses = () => {
       description: "Professional development programs for organizations and teams",
       icon: <Briefcase className="h-8 w-8" />,
       color: "from-primary/20 to-indigo-600/20",
-      image: "/images/6c75556a-1a5a-4cbc-95db-eb24dc7b6bcb.png",
+      image: "/images/entrepreneurship.png",
       programs: [
         { 
           id: "e1", 
           name: "Entrepreneurship", 
-          desc: "Professional development programs for organizations and teams", 
+          desc: "Master entrepreneurial thinking, business planning, market strategies, and fundraising essentials.", 
           modules: 12,
-          audience: "Management graduates, professionals with potential business plans, entrepreneurship interested individuals and future founders looking for training.",
+          audience: "Management Graduates, Potential Business Professionals, Future Founders.",
           slug: "entrepreneurship"
         }
       ]
@@ -350,11 +350,11 @@ const Courses = () => {
           <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
         </section>
         
-        {/* Featured Programs Section */}
+        {/* Programs Categories Section */}
         <section className="py-16 bg-white relative">
           <div className="container relative z-10">
             <h2 className="heading-2 mb-4 text-center">
-              <span className="text-gradient-blue-yellow">Featured Programs</span>
+              <span className="text-gradient-blue-yellow">Programs Categories</span>
             </h2>
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Discover our comprehensive program categories designed to help you excel in different professional contexts

@@ -39,7 +39,7 @@ const programsData: Record<string, ProgramData> = {
     modules: 8,
     audience: "Management graduates, banking professionals, startup founders and team members, and other finance related professionals.",
     slug: "fintech",
-    category: "University / MBA Programs",
+    category: "Fintech",
     duration: "20 hours",
     startDate: "Rolling admissions",
     price: 8999,
@@ -76,7 +76,7 @@ const programsData: Record<string, ProgramData> = {
       "Assess fintech startup models and pitch innovative ideas.",
       "Predict future fintech trends and their implications for the industry."
     ],
-    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+    image: "/images/fintech.png"
   },
   "business-negotiation": {
     id: "l3",
@@ -120,7 +120,7 @@ const programsData: Record<string, ProgramData> = {
       "Lead team and multi-party negotiations with strategic clarity",
       "Adapt to emerging digital tools and practices in global negotiations"
     ],
-    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+    image: "/images/negotiation.png"
   },
   "crm": {
     id: "l3",
@@ -165,7 +165,7 @@ const programsData: Record<string, ProgramData> = {
       "Use data and analytics to improve customer engagement",
       "Develop and present a CRM strategy for a real or simulated business"
     ],
-    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+    image: "/images/crm.png"
   },
   "strategic-selling": {
     id: "l4",
@@ -174,7 +174,7 @@ const programsData: Record<string, ProgramData> = {
     modules: 10,
     audience: "Management graduates, sales professionals, mid-level professionals, and solution-based professionals.",
     slug: "strategic-selling",
-    category: "University / MBA Programs",
+    category: "Leadership Programs",
     duration: "20 hours",
     startDate: "Rolling admissions",
     price: 12999,
@@ -209,7 +209,7 @@ const programsData: Record<string, ProgramData> = {
       "Utilize digital tools to enhance reach and engagement",
       "Effectively manage key accounts and dealer/channel partners"
     ],
-    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+    image: "/images/strat.png"
   },
   "business-communication": {
     id: "b1",
@@ -218,7 +218,7 @@ const programsData: Record<string, ProgramData> = {
     modules: 7,
     audience: "Management graduates and corporate professionals. ",
     slug: "business-communication",
-    category: "University / MBA Programs",
+    category: "Business Communication",
     duration: "20 hours",
     startDate: "Rolling admissions",
     price: 7999,
@@ -254,7 +254,7 @@ const programsData: Record<string, ProgramData> = {
       "Influence others through strategic negotiation techniques",
       "Collaborate efficiently and lead discussions under time constraints"
     ],
-    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+    image: "/images/communication.png"
   },
   "career-coaching": {
     id: "c1",
@@ -263,7 +263,7 @@ const programsData: Record<string, ProgramData> = {
     modules: 9,
     audience: "Professionals, Job Seekers, Students, Career Changers.",
     slug: "career-coaching",
-    category: "Coaching + Mentoring for Students",
+    category: "Career Coaching and Mentoring",
     duration: "8 hours for individuals (Customized for groups)",
     startDate: "Rolling admissions",
     price: 10999,
@@ -299,7 +299,7 @@ const programsData: Record<string, ProgramData> = {
       "Build a resilient mindset and adapt to evolving professional environments",
       "Leverage LinkedIn, personal branding, and networking to unlock new opportunities"
     ],
-    image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
+    image: "/images/coaching.png"
   },
   "interview-preparation": {
     id: "u1",
@@ -308,7 +308,7 @@ const programsData: Record<string, ProgramData> = {
     modules: 13,
     audience: "Job seekers, career changers, students and professionals",
     slug: "interview-preparation",
-    category: "Coaching + Mentoring for Students",
+    category: "Job Interview Preparation",
     duration: "10 hours for individuals (Customized for groups)",
     startDate: "Rolling admissions",
     price: 7999,
@@ -350,7 +350,7 @@ const programsData: Record<string, ProgramData> = {
       "Engage in strategic questioning to show interest, fit, and long-term potential",
       "Navigate job offers, rejections, and follow-up communications with professionalism"
     ],
-    image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png"
+    image: "/images/interview.png"
   },
   "social-leadership": {
     id: "l1",
@@ -359,7 +359,7 @@ const programsData: Record<string, ProgramData> = {
     modules: 12,
     audience: "Mid-to-senior level professionals, corporate leaders, potential leaders, HR and L&D professionals, team leads, project managers and business unit heads.",
     slug: "social-leadership",
-    category: "University / MBA Programs",
+    category: "Leadership Program",
     duration: "3 Days",
     startDate: "Rolling admissions",
     price: 12999,
@@ -395,7 +395,7 @@ const programsData: Record<string, ProgramData> = {
       "Influence diverse stakeholders without relying on hierarchy",
       "Lead with integrity and contribute to a positive organizational culture"
     ],
-    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+    image: "/images/leadership.png"
   },
 
   "entrepreneurship": {
@@ -405,7 +405,7 @@ const programsData: Record<string, ProgramData> = {
     modules: 12,
     audience: "Management graduates, professionals with potential business plans, entrepreneurship interested individuals and future founders looking for training.",
     slug: "entrepreneurship",
-    category: "University / MBA Programs",
+    category: "Entrepreneurship",
     duration: "20 hours",
     startDate: "Rolling admissions",
     price: 8999,
@@ -442,7 +442,7 @@ const programsData: Record<string, ProgramData> = {
       "Develop and deliver a compelling investor pitch",
       "Manage startup uncertainties with resilience and adaptability"
     ],
-    image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png"
+    image: "/images/entrepreneurship.png"
   }
 };
 
