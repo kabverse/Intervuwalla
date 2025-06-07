@@ -93,7 +93,7 @@ const Courses = () => {
       originalPrice: 15999,
     },
     {
-      id: "leadership-development",
+      id: "",
       title: "Leadership Development",
       description: "Executive coaching for senior management to enhance leadership capabilities.",
       image: "/images/leadership.png",
