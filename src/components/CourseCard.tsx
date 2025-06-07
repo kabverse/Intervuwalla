@@ -15,6 +15,7 @@ export interface CourseProps {
   rating: number;
   category: string;
   price: number;
+  originalPrice: number;
   featured?: boolean;
 }
 
@@ -28,6 +29,7 @@ const CourseCard = ({
   rating, 
   category,
   price,
+  originalPrice,
   featured = true
 }: CourseProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -96,7 +98,7 @@ const CourseCard = ({
         <div className="pt-2 flex items-center justify-between">
           <div className="font-semibold">
             <span className="text-xl text-yellow-600">₹{price}</span>
-            {featured && <span className="ml-2 text-sm line-through text-muted-foreground">₹{Math.floor(price * 1.2)}</span>}
+            {featured && <span className="ml-2 text-sm line-through text-muted-foreground">₹{originalPrice}</span>}
           </div>
           
           <Link to={`/programs/${id}`}>

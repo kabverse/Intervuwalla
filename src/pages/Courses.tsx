@@ -65,7 +65,8 @@ const Courses = () => {
       students: 892,
       rating: 4.6,
       category: "Coaching + Mentoring",
-      price: 11999,
+      price: 7999,
+      originalPrice: 15999,
     },
     {
       id: "career-coaching",
@@ -76,7 +77,8 @@ const Courses = () => {
       students: 983,
       rating: 4.7,
       category: "Coaching + Mentoring",
-      price: 12999,
+      price: 10999,
+      originalPrice: 18999,
     },
     {
       id: "business-communication",
@@ -87,8 +89,8 @@ const Courses = () => {
       students: 1245,
       rating: 4.8,
       category: "University / MBA Programs",
-      price: 14999,
-      featured: true
+      price: 7999,
+      originalPrice: 15999,
     },
     {
       id: "leadership-development",
@@ -99,7 +101,8 @@ const Courses = () => {
       students: 756,
       rating: 4.9,
       category: "Corporate Training",
-      price: 19999,
+      price: 12999,
+      originalPrice: 21999,
     },
     {
       id: "fintech",
@@ -110,7 +113,8 @@ const Courses = () => {
       students: 634,
       rating: 4.5,
       category: "University / MBA Programs",
-      price: 16999,
+      price: 8999,
+      originalPrice: 17999,
     },
     {
       id: "strategic-selling",
@@ -121,8 +125,8 @@ const Courses = () => {
       students: 567,
       rating: 4.7,
       category: "University / MBA Programs",
-      price: 18999,
-      featured: true
+      price: 12999,
+      originalPrice: 21999,
     }
   ];
 
@@ -246,7 +250,7 @@ const Courses = () => {
           desc: "Essential skills for managing teams, driving performance, and fostering collaboration.",
           modules: 8,
           audience: "Team leaders, department heads, and emerging managers",
-          slug: "team-leadership"
+          slug: "crm"
         },
         { 
           id: "l4", 

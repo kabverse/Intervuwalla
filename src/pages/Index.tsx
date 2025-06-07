@@ -19,16 +19,16 @@ const Index = () => {
 
   const featuredCourses: CourseProps[] = [
     {
-      id: "business-communication",
-      title: "Business Communication",
-      description: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
-      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      id: "interview-preparation",
+      title: "Interview Preparation Program",
+      description: "Comprehensive guidance on acing job interviews through SWOT analysis, answer structuring, and managing interview anxiety.",
+      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
       level: "All Levels",
-      students: 1245,
-      rating: 4.8,
-      category: "University / MBA Programs",
-      price: 14999,
-      featured: true
+      students: 892,
+      rating: 4.6,
+      category: "Coaching + Mentoring",
+      price: 7999,
+      originalPrice: 15999,
     },
     {
       id: "career-coaching",
@@ -39,7 +39,20 @@ const Index = () => {
       students: 983,
       rating: 4.7,
       category: "Coaching + Mentoring",
-      price: 12999,
+      price: 10999,
+      originalPrice: 18999,
+    },
+    {
+      id: "business-communication",
+      title: "Business Communication",
+      description: "Sharpening communication capabilities across written, verbal, interpersonal, ethical, and cross-cultural dimensions.",
+      image: "/images/d0a96913-1092-4852-a457-0a92c9c7f577.png",
+      level: "All Levels",
+      students: 1245,
+      rating: 4.8,
+      category: "University / MBA Programs",
+      price: 7999,
+      originalPrice: 15999,
     },
     {
       id: "leadership-development",
@@ -50,18 +63,8 @@ const Index = () => {
       students: 756,
       rating: 4.9,
       category: "Corporate Training",
-      price: 19999,
-    },
-    {
-      id: "interview-preparation",
-      title: "Interview Preparation Program",
-      description: "Comprehensive guidance on acing job interviews through SWOT analysis, answer structuring, and managing interview anxiety.",
-      image: "/images/06341b9c-e889-4384-ad9e-959eb12dd489.png",
-      level: "All Levels",
-      students: 892,
-      rating: 4.6,
-      category: "Coaching + Mentoring",
-      price: 11999,
+      price: 12999,
+      originalPrice: 21999,
     },
     {
       id: "fintech",
@@ -72,7 +75,8 @@ const Index = () => {
       students: 634,
       rating: 4.5,
       category: "University / MBA Programs",
-      price: 16999,
+      price: 8999,
+      originalPrice: 17999,
     },
     {
       id: "strategic-selling",
@@ -83,8 +87,8 @@ const Index = () => {
       students: 567,
       rating: 4.7,
       category: "University / MBA Programs",
-      price: 18999,
-      featured: true
+      price: 12999,
+      originalPrice: 21999,
     }
   ];
 
