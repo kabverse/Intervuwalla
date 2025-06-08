@@ -40,7 +40,7 @@ const WorkshopsPage = () => {
               </div>
               
               <h1 className="heading-1 mb-6 text-gradient-blue-yellow animate-pulse-soft">
-                💬 85% of Our Attendees Crack Their Next Interview —> <span className="text-shimmer">Will You Be Next?</span>
+                💬 85% of Our Attendees Crack Their Next Interview — <span className="text-shimmer">Will You Be Next?</span>
               </h1>
               
               <p className="text-xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed">
