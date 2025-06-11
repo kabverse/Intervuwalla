@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { Calendar, MapPin, Clock, Users, Check, ArrowRight, Zap, AlertTriangle } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import RegistrationModal from './RegistrationModal';
 import { 
   Collapsible,
   CollapsibleContent,
@@ -176,7 +175,9 @@ const Workshops = () => {
                         <div className="relative">
                           <Button 
                             className="relative z-10 rounded-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold shadow-lg transform hover:scale-105 transition-all duration-300"
-                            onClick={() => handleOpenModal(workshop)}
+                            onClick={() => {
+                              window.location.href = "https://rzp.io/rzp/Ve76MNyd";
+                            }}
                           >
                             🔥 Register Now
                             <ArrowRight className="ml-1 h-4 w-4 animate-bounce" />
@@ -193,14 +194,6 @@ const Workshops = () => {
           ))}
         </div>
       </div>
-      
-      {selectedWorkshop && (
-        <RegistrationModal 
-          isOpen={isModalOpen} 
-          onClose={() => setIsModalOpen(false)} 
-          workshop={selectedWorkshop} 
-        />
-      )}
     </section>
   );
 };
