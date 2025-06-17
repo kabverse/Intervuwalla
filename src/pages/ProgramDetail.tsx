@@ -20,14 +20,15 @@ interface ProgramData {
   duration: string;
   startDate: string;
   price: number;
-  originalPrice: number;
+  originalPrice?: number;
   features: string[];
   curriculum: { title: string; description: string }[];
-  image: string;
+  image?: string;
   learningOutcomes?: string[];
-  seatsLeft: number;
-  students: number;
-  rating: number;
+  seatsLeft?: number;
+  students?: number;
+  rating?: number;
+  razorpayLink?: string;
 }
 
 // Sample program data (would typically come from a database)
@@ -47,6 +48,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 12,
     students: 850,
     rating: 4.7,
+    razorpayLink: "https://rzp.io/rzp/W96bpIFl",
     features: [
       "Understand the fintech ecosystem and its disruption of traditional finance",
       "Explore digital payment systems like UPI, wallets, and their business models",
@@ -93,6 +95,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 8,
     students: 640,
     rating: 4.8,
+    razorpayLink: "https://rzp.io/rzp/1VJi6QhC",
     features: [
       "To build foundational and advanced negotiation skills relevant in international and cross-cultural business contexts",
       "To develop strategies for value creation, conflict resolution, and stakeholder alignment",
@@ -137,6 +140,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 15,
     students: 720,
     rating: 4.6,
+    razorpayLink: "https://rzp.io/rzp/I9WbUO8",
     features: [
       "Understand core concepts and types of CRM",
       "Learn the customer lifecycle and key CRM metrics like CLV and churn",
@@ -182,6 +186,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 18,
     students: 920,
     rating: 4.9,
+    razorpayLink: "https://rzp.io/rzp/nCceeix",
     features: [
       "To equip professionals with structured and modern selling techniques",
       "To improve relationship-building and consultative selling capabilities",
@@ -226,6 +231,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 25,
     students: 1180,
     rating: 4.8,
+    razorpayLink: "https://rzp.io/rzp/NZNqIaWA",
     features: [
       "Master clear, persuasive written and verbal communication",
       "Build strong interpersonal skills and executive presence",
@@ -271,6 +277,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 10,
     students: 650,
     rating: 4.7,
+    razorpayLink: "https://rzp.io/rzp/I7MdP5o",
     features: [
       "Understand roles of mentoring and coaching in career guidance",
       "Strengthen communication, active listening, and workplace interaction skills",
@@ -316,6 +323,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 5,
     students: 450,
     rating: 4.9,
+    razorpayLink: "https://rzp.io/rzp/4WwEqlw0",
     features: [
       "Understand the interview landscape, job market trends, and goal-setting techniques",
       "Identify personal weaknesses and boost confidence using self-awareness tools",
@@ -367,6 +375,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 20,
     students: 380,
     rating: 4.8,
+    razorpayLink: "https://rzp.io/rzp/Ve76MNyd",
     features: [
       "Understand the concept and importance of social leadership ",
       "Build trust and credibility as a leader",
@@ -413,6 +422,7 @@ const programsData: Record<string, ProgramData> = {
     seatsLeft: 14,
     students: 560,
     rating: 4.6,
+    razorpayLink: "https://rzp.io/rzp/MxFTnltp",
     features: [
       "To foster an entrepreneurial mindset and attitude among professionals",
       "To help participants identify viable business opportunities",
@@ -479,8 +489,13 @@ const ProgramDetail = () => {
   });
 
   const handleEnroll = () => {
-    // Redirect to Google Form or Razorpay link
-    window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSd5dVh5qJPVqYOQvlw5nB4nNx02mxbcXyWGJzRANDBCZNX-lA/viewform?usp=header";
+    // Open Razorpay payment link in new tab
+    if (program?.razorpayLink) {
+      window.open(program.razorpayLink, '_blank');
+    } else {
+      // Fallback to Google Form if no Razorpay link
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSd5dVh5qJPVqYOQvlw5nB4nNx02mxbcXyWGJzRANDBCZNX-lA/viewform?usp=header";
+    }
   };
 
   if (loading) {
@@ -497,10 +512,10 @@ const ProgramDetail = () => {
       <div className="min-h-screen bg-background">
         <Navbar />
         <div className="container py-20 text-center">
-          <h1 className="text-2xl md:text-4xl font-bold mb-4">Program Not Found</h1>
+          <h1 className="heading-2 mb-4">Program Not Found</h1>
           <p className="mb-6">We couldn't find the program you're looking for.</p>
           <Link to="/courses">
-            <Button variant="outline" className="w-full sm:w-auto">
+            <Button variant="outline">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Programs
             </Button>
@@ -514,72 +529,73 @@ const ProgramDetail = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      <main className="pt-16 md:pt-24">
-        {/* Hero Section - Mobile First */}
-        <section className="relative py-8 md:py-16 bg-gradient-to-br from-primary/10 to-yellow/5 overflow-hidden">
-          {/* Animated background elements - smaller on mobile */}
+      <main className="pt-24">
+        {/* Hero Section */}
+        <section className="relative py-16 bg-gradient-to-br from-primary/10 to-yellow/5 overflow-hidden">
+          {/* Animated background elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-5 right-10 md:top-10 md:right-20 w-16 h-16 md:w-32 md:h-32 bg-yellow/20 rounded-full blur-xl animate-float"></div>
-            <div className="absolute bottom-5 left-10 md:bottom-10 md:left-20 w-20 h-20 md:w-40 md:h-40 bg-primary/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-10 right-20 w-32 h-32 bg-yellow/20 rounded-full blur-xl animate-float"></div>
+            <div className="absolute bottom-10 left-20 w-40 h-40 bg-primary/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
           
-          <div className="container relative z-10 px-4">
-            <Link to="/courses" className="inline-flex items-center text-primary hover:text-primary/80 mb-4 md:mb-6 transition-colors group touch-manipulation">
+          <div className="container relative z-10">
+            <Link to="/courses" className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors group">
               <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
-              <span className="text-sm md:text-base">Back to All Programs</span>
+              Back to All Programs
             </Link>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="order-2 lg:order-1">
-                {/* Mobile-optimized badges */}
-                <div className="flex flex-wrap gap-2 md:gap-3 mb-4 md:mb-6">
-                  <Badge variant="flashy" className="text-xs md:text-sm px-2 py-1">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                {/* Flashy badges */}
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <Badge variant="flashy" className="text-sm">
                     <Sparkles className="mr-1 h-3 w-3 animate-spin" />
                     🔥 Most Popular
                   </Badge>
-                  <Badge variant="urgent" className="text-xs md:text-sm px-2 py-1">
+                  <Badge variant="urgent" className="text-sm">
                     <Zap className="mr-1 h-3 w-3 animate-bounce" />
-                    Limited Time!
+                    Limited Time Offer!
                   </Badge>
-                  <Badge variant="premium" className="text-xs md:text-sm">
+                  <Badge variant="premium">
                     {program.category}
                   </Badge>
-                  {/* Mobile-optimized seats badge */}
+                  {/* Flashy limited seats badge */}
                   <div ref={seatsRef} className="relative">
-                    <Badge variant="urgent" className="text-xs md:text-sm animate-pulse px-2 py-1">
+                    <Badge variant="urgent" className="text-sm animate-pulse">
                       <Timer className="mr-1 h-3 w-3 animate-pulse" />
-                      🚨 <span className="font-black text-sm md:text-lg mx-1">{seatsCount}</span> Seats Left!
+                      🚨 Only <span className="font-black text-lg mx-1">{seatsCount}</span> Seats Left!
                     </Badge>
                   </div>
                 </div>
                 
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+                <h1 className="heading-1 mb-6">
                   <span className="text-gradient-blue-yellow">{program.name}</span>
                 </h1>
                 
-                <p className="text-base md:text-xl text-foreground/80 mb-6 md:mb-8 leading-relaxed">
+                <p className="text-xl text-foreground/80 mb-8">
                   {program.desc}
                 </p>
                 
-                {/* Mobile-optimized pricing section */}
-                <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-4 md:p-6 rounded-xl md:rounded-2xl border-2 border-orange-200 dark:border-orange-800 mb-6 md:mb-8 relative overflow-hidden">
+                {/* Enhanced pricing section with more flashy elements */}
+                <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 p-6 rounded-2xl border-2 border-orange-200 dark:border-orange-800 mb-8 relative overflow-hidden">
+                  {/* Animated background sparkle effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-100 via-orange-100 to-red-100 opacity-50 animate-pulse"></div>
                   
                   <div className="relative z-10">
-                    <div className="flex items-center gap-2 md:gap-4 mb-3 md:mb-4">
-                      <Badge variant="urgent" className="text-sm md:text-lg px-3 md:px-6 py-2 md:py-3 animate-bounce relative">
+                    <div className="flex items-center gap-4 mb-4">
+                      <Badge variant="urgent" className="text-lg px-6 py-3 animate-bounce relative">
                         <div className="absolute -inset-1 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 rounded-full blur opacity-40 animate-pulse"></div>
-                        <span className="relative text-xs md:text-base">🎯 MEGA SALE!</span>
+                        <span className="relative">🎯 MEGA SALE - ENDS SOON!</span>
                       </Badge>
                     </div>
                     
-                    <div className="flex flex-col sm:flex-row items-start sm:items-baseline gap-3 md:gap-6">
+                    <div className="flex items-baseline gap-6">
                       <div className="relative">
-                        <span className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 bg-clip-text text-transparent animate-pulse">
+                        <span className="text-6xl font-black bg-gradient-to-r from-green-600 via-emerald-600 to-green-700 bg-clip-text text-transparent animate-pulse">
                           ₹{program.price.toLocaleString()}
                         </span>
-                        <div className="absolute -top-2 -right-8 md:-top-3 md:-right-10">
-                          <Badge variant="success" className="text-xs md:text-sm animate-bounce">
+                        <div className="absolute -top-3 -right-10">
+                          <Badge variant="success" className="text-sm animate-bounce">
                             ⚡ BEST PRICE!
                           </Badge>
                         </div>
@@ -587,221 +603,206 @@ const ProgramDetail = () => {
                       
                       {program.originalPrice && (
                         <div className="flex flex-col">
-                          <span className="text-2xl md:text-3xl lg:text-4xl line-through text-red-600 font-bold opacity-80 relative">
+                          <span className="text-4xl line-through text-red-600 font-bold opacity-80 relative">
                             ₹{program.originalPrice.toLocaleString()}
                             <div className="absolute inset-0 bg-red-500 h-1 top-1/2 transform -translate-y-1/2 rotate-12"></div>
                           </span>
-                          <Badge variant="urgent" className="mt-2 text-xs md:text-sm animate-pulse">
+                          <Badge variant="urgent" className="mt-2 text-sm animate-pulse">
                             💥 Save ₹{(program.originalPrice - program.price).toLocaleString()}!
                           </Badge>
                         </div>
                       )}
                     </div>
                     
-                    <div className="mt-4 md:mt-6 flex flex-wrap gap-2">
-                      <Badge variant="success" className="text-xs md:text-sm animate-pulse">
-                        🏆 50% OFF Today!
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      <Badge variant="success" className="text-sm animate-pulse">
+                        🏆 50% OFF Today Only!
                       </Badge>
-                      <Badge variant="flashy" className="text-xs md:text-sm">
+                      <Badge variant="flashy" className="text-sm">
                         <Sparkles className="mr-1 h-3 w-3 animate-spin" />
                         Premium Course
                       </Badge>
                     </div>
                     
-                    <div className="mt-3 md:mt-4 text-sm md:text-lg text-orange-700 dark:text-orange-300 font-bold animate-pulse">
-                      🔥 Limited time offer - secure your spot now!
+                    <div className="mt-4 text-lg text-orange-700 dark:text-orange-300 font-bold animate-pulse">
+                      🔥 This incredible discount won't last long! Secure your spot before it's gone!
                     </div>
                   </div>
                 </div>
                 
-                {/* Mobile-optimized stats grid */}
-                <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6 md:mb-8">
-                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-sm text-center" ref={modulesRef}>
-                    <div className="flex items-center justify-center text-primary mb-1 md:mb-2">
-                      <GraduationCap className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2" />
-                      <span className="font-medium text-xs md:text-sm">Modules</span>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-4 shadow-sm" ref={modulesRef}>
+                    <div className="flex items-center text-primary mb-2">
+                      <GraduationCap className="h-5 w-5 mr-2" />
+                      <span className="font-medium">Modules</span>
                     </div>
-                    <span className="text-xl md:text-2xl font-semibold text-yellow-600 animate-pulse">{modulesCount || program.modules}</span>
+                    <span className="text-2xl font-semibold text-yellow-600 animate-pulse">{modulesCount || program.modules}</span>
                   </div>
 
-                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-sm text-center">
-                    <div className="flex items-center justify-center text-primary mb-1 md:mb-2">
-                      <Clock className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2" />
-                      <span className="font-medium text-xs md:text-sm">Duration</span>
+                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-4 shadow-sm">
+                    <div className="flex items-center text-primary mb-2">
+                      <Clock className="h-5 w-5 mr-2" />
+                      <span className="font-medium">Duration</span>
                     </div>
-                    <span className="text-lg md:text-2xl font-semibold text-yellow-600 animate-pulse">{program.duration}</span>
+                    <span className="text-2xl font-semibold text-yellow-600 animate-pulse">{program.duration}</span>
                   </div>
                   
-                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-sm text-center" ref={studentsRef}>
-                    <div className="flex items-center justify-center text-[#D97706] mb-1 md:mb-2">
-                      <Users className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2" />
-                      <span className="font-medium text-xs md:text-sm">Students</span>
+                  <div className="flex flex-col bg-background/60 backdrop-blur-sm rounded-lg p-4 shadow-sm" ref={studentsRef}>
+                    <div className="flex items-center text-[#D97706] mb-2">
+                      <Users className="h-5 w-5 mr-2" />
+                      <span className="font-medium">Students</span>
                     </div>
-                    <span className="text-lg md:text-xl font-semibold text-yellow-600 animate-pulse">{studentsCount || program.students}+</span>
+                    <span className="text-lg font-semibold text-yellow-600 animate-pulse">{studentsCount || program.students}+</span>
                   </div>
                 </div>
                 
-                {/* Mobile-optimized rating and badge */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-6 text-sm mb-6 md:mb-8">
+                <div className="flex items-center space-x-6 text-sm mb-8">
                   {program.rating && (
                     <div className="flex items-center">
-                      <Star className="w-4 h-4 md:w-5 md:h-5 text-yellow-500 mr-1" />
+                      <Star className="w-5 h-5 text-yellow-500 mr-1" />
                       <span className="font-semibold">{program.rating}</span>
                       <span className="text-muted-foreground ml-1">({program.students} students)</span>
                     </div>
                   )}
-                  <Badge variant="success" className="text-xs md:text-sm">All Levels</Badge>
+                  <Badge variant="success">All Levels</Badge>
                 </div>
                 
-                {/* Mobile-optimized CTA button */}
                 <div className="flex gap-4 mb-6">
                   <Button 
                     onClick={handleEnroll} 
                     size="lg" 
-                    className="w-full sm:w-auto relative bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold shadow-lg transform hover:scale-105 active:scale-95 transition-all duration-300 text-base md:text-lg px-6 md:px-8 py-4 md:py-4 touch-manipulation"
+                    className="relative bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold shadow-lg transform hover:scale-105 transition-all duration-300 text-lg px-8 py-4"
                   >
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 rounded blur opacity-30 animate-pulse"></div>
                     <span className="relative">🚀 ENROLL NOW</span>
                   </Button>
                 </div>
                 
-                {/* Mobile-optimized urgency section */}
-                <div className="bg-red-50 dark:bg-red-900/20 p-4 md:p-6 rounded-xl border border-red-200 dark:border-red-800 relative overflow-hidden">
+                {/* Enhanced urgency indicators */}
+                <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-xl border border-red-200 dark:border-red-800 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-red-100 to-orange-100 opacity-60 animate-pulse"></div>
                   <div className="relative z-10">
                     <div className="flex items-center gap-2 text-red-700 dark:text-red-300 mb-2">
-                      <Timer className="h-5 w-5 md:h-6 md:w-6 animate-pulse" />
-                      <span className="font-bold text-base md:text-lg">⚡ ENROLLMENT CLOSING SOON!</span>
+                      <Timer className="h-6 w-6 animate-pulse" />
+                      <span className="font-bold text-lg">⚡ ENROLLMENT CLOSING SOON!</span>
                     </div>
-                    <div className="text-red-600 dark:text-red-400 font-semibold text-sm md:text-base">
-                      Join thousands who've transformed their careers!
+                    <div className="text-red-600 dark:text-red-400 font-semibold">
+                      Don't miss out - join the thousands who've transformed their careers with this exclusive pricing!
                     </div>
                   </div>
                 </div>
               </div>
               
-              {/* Mobile-optimized image section */}
-              <div className="relative order-1 lg:order-2">
+              <div className="relative">
                 {program.image ? (
-                  <div className="relative rounded-xl md:rounded-2xl overflow-hidden shadow-xl md:shadow-2xl animate-float">
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl animate-float">
                     <img 
                       src={program.image} 
                       alt={program.name} 
-                      className="w-full h-auto max-h-64 md:max-h-none object-cover"
+                      className="w-full h-auto"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   </div>
                 ) : (
-                  <div className="bg-gradient-to-br from-primary/20 to-yellow/20 h-48 md:h-80 rounded-xl md:rounded-2xl flex items-center justify-center text-primary/50">
+                  <div className="bg-gradient-to-br from-primary/20 to-yellow/20 h-80 rounded-2xl flex items-center justify-center text-primary/50">
                     Program Image
                   </div>
                 )}
                 
-                <div className="absolute -right-3 -bottom-3 md:-right-6 md:-bottom-6 -z-10 w-full h-full rounded-xl md:rounded-2xl bg-primary/10"></div>
+                <div className="absolute -right-6 -bottom-6 -z-10 w-full h-full rounded-2xl bg-primary/10"></div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Mobile-optimized stats section */}
-        <section className="py-12 md:py-16 bg-muted/30">
-          <div className="container px-4">
+        {/* Program Stats with animated counters */}
+        <section className="py-16 bg-muted/30">
+          <div className="container">
             <div className="max-w-4xl mx-auto">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+              <div className="grid md:grid-cols-4 gap-8 text-center">
                 <div className="space-y-2" ref={modulesRef}>
-                  <div className="text-3xl md:text-4xl font-bold text-yellow-600 animate-pulse">{modulesCount || program.modules}</div>
-                  <div className="text-muted-foreground text-sm md:text-base">Modules</div>
+                  <div className="text-4xl font-bold text-yellow-600 animate-pulse">{modulesCount || program.modules}</div>
+                  <div className="text-muted-foreground">Modules</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-2xl md:text-4xl font-bold text-yellow-600 animate-pulse">{program.duration}</div>
-                  <div className="text-muted-foreground text-sm md:text-base">Duration</div>
+                  <div className="text-4xl font-bold text-yellow-600 animate-pulse">{program.duration}</div>
+                  <div className="text-muted-foreground">Duration</div>
                 </div>
                 <div className="space-y-2" ref={studentsRef}>
-                  <div className="text-3xl md:text-4xl font-bold text-yellow-600 animate-pulse">{studentsCount || program.students}+</div>
-                  <div className="text-muted-foreground text-sm md:text-base">Students</div>
+                  <div className="text-4xl font-bold text-yellow-600 animate-pulse">{studentsCount || program.students}+</div>
+                  <div className="text-muted-foreground">Students</div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center justify-center">
-                    <Award className="h-8 w-8 md:h-10 md:w-10 text-yellow-600 animate-pulse" />
+                    <Award className="h-10 w-10 text-yellow-600 animate-pulse" />
                   </div>
-                  <div className="text-muted-foreground text-sm md:text-base">Certificate</div>
+                  <div className="text-muted-foreground">Certificate</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Mobile-optimized features section */}
-        <section className="py-12 md:py-16 bg-white">
-          <div className="container px-4">
+        {/* Program Features */}
+        <section className="py-16 bg-white">
+          <div className="container">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-center">
+              <h2 className="heading-2 mb-8 text-center">
                 <span className="text-gradient-blue-yellow">Program Highlights</span>
               </h2>
               
-              <div className="grid gap-3 md:gap-4 mb-6 md:mb-8">
+              <div className="grid gap-4 mb-8">
                 {program.features.map((feature, index) => (
                   <div 
                     key={index} 
-                    className="flex items-start p-3 md:p-4 rounded-lg bg-primary/5 border border-primary/10"
+                    className="flex items-start p-4 rounded-lg bg-primary/5 border border-primary/10"
                   >
-                    <CheckCircle className="h-5 w-5 md:h-6 md:w-6 text-primary mr-2 md:mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm md:text-lg leading-relaxed">{feature}</span>
+                    <CheckCircle className="h-6 w-6 text-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-lg">{feature}</span>
                   </div>
                 ))}
               </div>
               
-              <div className="mt-6 md:mt-8 p-4 md:p-6 bg-yellow/10 rounded-xl border border-yellow/20">
-                <h3 className="text-lg md:text-xl font-semibold mb-3 flex items-center">
-                  <Users className="h-4 w-4 md:h-5 md:w-5 text-[#D97706] mr-2" />
+              <div className="mt-8 p-6 bg-yellow/10 rounded-xl border border-yellow/20">
+                <h3 className="text-xl font-semibold mb-3 flex items-center">
+                  <Users className="h-5 w-5 text-[#D97706] mr-2" />
                   Target Audience
                 </h3>
-                <p className="text-sm md:text-lg leading-relaxed">{program.audience}</p>
+                <p className="text-lg">{program.audience}</p>
               </div>
             </div>
           </div>
         </section>
         
-        {/* Mobile-optimized curriculum section */}
-        <section className="py-12 md:py-16 bg-gradient-to-br from-background to-primary/5">
-          <div className="container px-4">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-center">
+        {/* Curriculum */}
+        <section className="py-16 bg-gradient-to-br from-background to-primary/5">
+          <div className="container">
+            <h2 className="heading-2 mb-8 text-center">
               <span className="text-gradient-blue-yellow">Program Curriculum</span>
             </h2>
             
             <div className="max-w-4xl mx-auto">
               <div className="relative">
-                {/* Mobile-optimized timeline */}
-                <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-yellow to-primary/50 opacity-30 hidden md:block"></div>
+                {/* Curriculum timeline */}
+                <div className="absolute left-3 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-yellow to-primary/50 opacity-30"></div>
                 
-                <div className="space-y-4 md:space-y-8">
+                <div className="space-y-8">
                   {program.curriculum.map((module, idx) => (
                     <Card key={idx} className="relative z-10">
-                      <CardContent className="p-4 md:p-6">
+                      <CardContent className="p-6">
                         <div className="flex">
-                          {/* Desktop connection dot */}
-                          <div className="absolute left-0 top-1/2 transform -translate-x-2 -translate-y-1/2 hidden md:block">
+                          {/* Connection dot */}
+                          <div className="absolute left-0 top-1/2 transform -translate-x-2 -translate-y-1/2">
                             <div className="w-7 h-7 rounded-full bg-white flex items-center justify-center border-2 border-primary/30 shadow-md">
                               <div className="w-2.5 h-2.5 rounded-full bg-primary"></div>
                             </div>
                           </div>
                           
-                          <div className="md:pl-8 w-full">
-                            <div className="flex items-start gap-3 mb-2">
-                              {/* Mobile module number */}
-                              <div className="md:hidden flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-semibold">
-                                {idx + 1}
-                              </div>
-                              <div className="flex-1">
-                                <h3 className="text-lg md:text-xl font-semibold mb-2">
-                                  <span className="hidden md:inline">Module {idx + 1}: </span>
-                                  {module.title}
-                                </h3>
-                                {module.description && (
-                                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed">{module.description}</p>
-                                )}
-                              </div>
-                            </div>
+                          <div className="pl-8">
+                            <h3 className="text-xl font-semibold mb-2">
+                              Module {idx + 1}: {module.title}
+                            </h3>
+                            <p className="text-muted-foreground">{module.description}</p>
                           </div>
                         </div>
                       </CardContent>
@@ -813,23 +814,23 @@ const ProgramDetail = () => {
           </div>
         </section>
 
-        {/* Mobile-optimized learning outcomes */}
+        {/* Learning Outcomes Section */}
         {program.learningOutcomes && (
-          <section className="py-12 md:py-16 bg-white">
-            <div className="container px-4">
+          <section className="py-16 bg-white">
+            <div className="container">
               <div className="max-w-3xl mx-auto">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-center">
+                <h2 className="heading-2 mb-8 text-center">
                   <span className="text-gradient-blue-yellow">Learning Outcomes</span>
                 </h2>
                 
-                <div className="grid gap-3 md:gap-4">
+                <div className="grid gap-4">
                   {program.learningOutcomes.map((outcome, index) => (
                     <div 
                       key={index} 
-                      className="flex items-start p-3 md:p-4 rounded-lg bg-yellow/5 border border-yellow/10"
+                      className="flex items-start p-4 rounded-lg bg-yellow/5 border border-yellow/10"
                     >
-                      <CheckCircle className="h-5 w-5 md:h-6 md:w-6 text-[#D97706] mr-2 md:mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm md:text-lg leading-relaxed">{outcome}</span>
+                      <CheckCircle className="h-6 w-6 text-[#D97706] mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-lg">{outcome}</span>
                     </div>
                   ))}
                 </div>
@@ -838,36 +839,36 @@ const ProgramDetail = () => {
           </section>
         )}
         
-        {/* Mobile-optimized CTA section */}
-        <section className="py-12 md:py-16 relative overflow-hidden">
+        {/* CTA Section */}
+        <section className="py-16 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-yellow/20 to-primary/20 opacity-50"></div>
-          <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-yellow/30 rounded-full mix-blend-multiply filter blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-32 h-32 md:w-64 md:h-64 bg-primary/30 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-yellow/30 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/30 rounded-full mix-blend-multiply filter blur-3xl"></div>
           
-          <div className="container relative z-10 px-4">
-            <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-sm p-6 md:p-10 rounded-xl md:rounded-2xl shadow-xl border border-white/20 text-center">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4 text-gradient-blue-yellow">
+          <div className="container relative z-10">
+            <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-sm p-10 rounded-2xl shadow-xl border border-white/20 text-center">
+              <h2 className="heading-2 mb-4 text-gradient-blue-yellow">
                 Ready to Transform Your Skills?
               </h2>
-              <p className="text-base md:text-lg mb-6 md:mb-8 text-foreground/90">
+              <p className="text-lg mb-8 text-foreground/90">
                 Join our {program.name} program and take the next step in your professional journey.
               </p>
               
-              <div className="flex flex-col gap-4 justify-center items-center mb-4 md:mb-6">
-                <div className="text-center w-full">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                <div className="text-center">
                   {program.originalPrice && (
-                    <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 mb-4 md:mb-6 justify-center">
-                      <div className="flex flex-col items-center">
-                        <span className="text-2xl md:text-3xl line-through text-red-500 font-bold opacity-80 relative">
+                    <div className="flex items-center gap-6 mb-6 justify-center">
+                      <div className="flex flex-col">
+                        <span className="text-3xl line-through text-red-500 font-bold opacity-80 relative">
                           ₹{program.originalPrice.toLocaleString()}
                           <div className="absolute inset-0 bg-red-500 h-1 top-1/2 transform -translate-y-1/2 rotate-12"></div>
                         </span>
-                        <span className="text-4xl md:text-5xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent animate-pulse">
+                        <span className="text-5xl font-black bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent animate-pulse">
                           ₹{program.price.toLocaleString()}
                         </span>
                       </div>
-                      <Badge variant="urgent" className="bg-red-600 hover:bg-red-700 text-sm md:text-lg px-3 md:px-4 py-2 animate-bounce">
-                        <Zap className="mr-1 h-3 w-3 md:h-4 md:w-4 animate-bounce" />
+                      <Badge variant="urgent" className="bg-red-600 hover:bg-red-700 text-lg px-4 py-2 animate-bounce">
+                        <Zap className="mr-1 h-4 w-4 animate-bounce" />
                         Save ₹{(program.originalPrice - program.price).toLocaleString()}!
                       </Badge>
                     </div>
@@ -875,19 +876,19 @@ const ProgramDetail = () => {
                   <Button 
                     onClick={handleEnroll} 
                     size="lg" 
-                    className="w-full sm:w-auto bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white rounded-full px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl font-bold shadow-lg shadow-yellow/20 transform hover:scale-105 active:scale-95 transition-all duration-300 relative touch-manipulation"
+                    className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white rounded-full px-12 py-6 text-xl font-bold shadow-lg shadow-yellow/20 transform hover:scale-105 transition-all duration-300 relative"
                   >
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full blur opacity-30 animate-pulse"></div>
                     <span className="relative">🎯 ENROLL NOW</span>
-                    <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
+                    <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                  <p className="mt-3 md:mt-4 text-xs md:text-sm text-foreground/70">
+                  <p className="mt-4 text-sm text-foreground/70">
                     30-day money-back guarantee
                   </p>
                 </div>
               </div>
               
-              <p className="mt-3 md:mt-4 text-xs md:text-sm text-foreground/70">
+              <p className="mt-4 text-sm text-foreground/70">
                 Have questions? <Link to="/contact" className="text-primary hover:underline">Contact our admissions team</Link>
               </p>
             </div>
