@@ -12,7 +12,7 @@ import { Card } from "@/components/ui/card";
 interface Workshop {
   id: string;
   title: string;
-  dates: string[];
+  dates: string;
   time: string;
   location: string;
   capacity: number;
@@ -38,8 +38,8 @@ const Workshops = () => {
     {
       id: "w1",
       title: "Professional Interview Mastery",
-      dates: ["Monday", "Thursday"],
-      time: "7:00 PM - 9:00 PM",
+      dates: "Sunday",
+      time: "2:00 PM - 4:00 PM",
       location: "Virtual",
       capacity: 50,
       spotsLeft: 12,
@@ -123,8 +123,8 @@ const Workshops = () => {
                       <div className="flex items-start">
                         <Calendar className="h-4 w-4 mr-2 text-primary mt-0.5" />
                         <div>
-                          <div className="font-medium">Twice Weekly</div>
-                          <div className="text-foreground/70">{workshop.dates.join(' & ')}</div>
+                          <div className="font-medium">Sunday</div>
+                          <div className="text-foreground/70"></div>
                         </div>
                       </div>
                       <div className="flex items-start">
