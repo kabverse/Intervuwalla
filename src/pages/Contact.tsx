@@ -44,11 +44,23 @@ const Contact = () => {
     };
   
     try {
+      // 1. Send message to your mailbox
       await emailjs.send(
-        'service_jhlbehc',
-        'template_jbj1scn',
+        'service_d5bsngw',          // your service ID
+        'template_qp1mbwh',         // your internal message template
         templateParams,
-        'xSa4Q0qrbGVXWZ85s'
+        '4hGnFaIOGxgG2cVUG'         // your public key
+      );
+  
+      // 2. Send auto-reply to user
+      await emailjs.send(
+        'service_d5bsngw',
+        'template_sca2feb',       // your auto-reply template ID
+        {
+          user_name: formData.name,
+          user_email: formData.email, // ensure this matches EmailJS template variable
+        },
+        '4hGnFaIOGxgG2cVUG'
       );
   
       setIsSuccess(true);
