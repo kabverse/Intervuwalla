@@ -41,20 +41,20 @@ const WorkshopsPage = () => {
   const testimonials = [
     {
       name: "Kabeer Ghai",
-      role: "Product Manager at Google",
-      text: "Got 3 offers after Anil's workshop. The confidence boost was incredible!",
+      role: "Web Developer",
+      text: "The salary negotiation tips alone saved me ₹3L+ in my offer!",
       rating: 5
     },
     {
       name: "Kanishk Kataria",
-      role: "Software Engineer at Microsoft",
+      role: "Software Engineer",
       text: "Worth every rupee. Cracked my dream job within 2 weeks of the session.",
       rating: 5
     },
     {
       name: "Maitri Jha",
-      role: "MBA Graduate",
-      text: "The salary negotiation tips alone saved me ₹3L+ in my offer!",
+      role: "Content Strategist",
+      text: "Got 3 offers after Anil's workshop. The confidence boost was incredible!",
       rating: 5
     }
   ];
