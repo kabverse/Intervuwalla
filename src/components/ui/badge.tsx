@@ -16,14 +16,16 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground",
-        flashy:
-          "relative border-transparent bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-bold shadow-lg hover:from-yellow-500 hover:to-orange-600 transform hover:scale-105 transition-all duration-300",
-        urgent:
-          "relative border-transparent bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold shadow-lg flashy-glow animate-bounce hover:from-red-600 hover:to-orange-600",
-        premium:
-          "relative border-transparent bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold shadow-lg hover:from-purple-600 hover:to-pink-600 transform hover:scale-110 transition-all duration-300",
         success:
-          "relative border-transparent bg-gradient-to-r from-green-500 to-emerald-500 text-white font-bold shadow-lg hover:from-green-600 hover:to-emerald-600"
+          "border-transparent bg-green-100 text-green-800 hover:bg-green-200 dark:bg-green-900 dark:text-green-300",
+        warning:
+          "border-transparent bg-yellow-100 text-yellow-800 hover:bg-yellow-200 dark:bg-yellow-900 dark:text-yellow-300",
+        premium:
+          "border-transparent bg-gradient-to-r from-purple-100 to-pink-100 text-purple-800 hover:from-purple-200 hover:to-pink-200 dark:from-purple-900 dark:to-pink-900 dark:text-purple-300",
+        flashy:
+          "border-transparent bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-bold shadow-lg hover:from-yellow-500 hover:to-orange-600 animate-pulse",
+        urgent:
+          "border-transparent bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold shadow-lg hover:from-red-600 hover:to-orange-600 animate-bounce"
       },
     },
     defaultVariants: {
